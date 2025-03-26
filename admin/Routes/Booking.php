@@ -2,7 +2,6 @@
 
 include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Controller/CartController.php";
 
-include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Controller/EdepartmentController.php";
 
 class Booking extends CartController
 {
@@ -109,11 +108,7 @@ class Booking extends CartController
       return parent::get_by_cart();
     }
 
-    public function all_department(){
-     
-      $edepartment = new EdepartmentController(); 
-      return $edepartment->get(); ;
-    }
+ 
     
     //public function user($token){
       //  return parent::users($token);

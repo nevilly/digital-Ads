@@ -1,7 +1,7 @@
 # SETTINGS
-App: MWANADS
+App: DIGITAL ADS
 version: V0.1
-APP_NAME: MwanaAds
+APP_NAME: DIGITALADS
 Author: Nehemia David Mwansasu
 
 # Database
@@ -9,7 +9,7 @@ DB_USER: root
 DB_HOST: localhost
 DB_PASS:
 DB_PORT: 3306
-DB: ajira
+DB: digitalads
 
 # SECRET
     SECRET: c50fd491dfa9842a07975f9c9ea4465a0be4b9de95d6d0db393759d0ce1cdd6a

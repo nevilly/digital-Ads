@@ -1,8 +1,6 @@
 <?php
 
 include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Module/CartModule.php";
-include_once  $_SERVER["DOCUMENT_ROOT"]. "/api/v1/Controller/EmployeeController.php";
-
 class CartController extends CartModule
 {
     public function __construct()
@@ -58,31 +56,8 @@ class CartController extends CartModule
 
         if($sql->num_rows > 0){
             $data = $sql->fetch_all(MYSQLI_ASSOC);
-             $table = array();
-          foreach ($data as $datum) {
-                # code...
-            $tableGet = new EmployeeController();
-           
-
-               $id =  $datum['id'];
-               $pId =  $datum['pId'];
-               $userID =  $datum['userID'];
-               $tablename =  $datum['tablename'];
-               $qty =  $datum['qty'];
-               $total_price =  $datum['total_price'];
-
-               if ($pId != '') {
-                   # code...
-                $table = $tableGet->get_displayRate_by_pid($pId,$tablename);
-               }
-
-            
-
-            $data['t'] = $table;
-           // echo $table;
-
-
-            } 
+             
+     
         }
 
         return $data;

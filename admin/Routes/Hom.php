@@ -1,8 +1,8 @@
 <?php
 
-include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Controller/EmployeeController.php";
+include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Controller/AdslotController.php";
 
-class Hom extends EmployeeController{
+class Hom extends AdslotController{
     static $APP;
     static $page;
     static $view;
@@ -24,10 +24,10 @@ class Hom extends EmployeeController{
             $data = self::user($p->token);
         else{
             $data = self::all_employee();
-             $display_rate = self::all_displayRate();
-             $sponser_content = self::all_sponser_content();
-             $social_medias = self::all_social_medias();
-             $vedeo_production = self::allvedeo_production();
+            $display_rate = self::all_displayRate();
+            $sponser_content = self::all_sponser_content();
+            $social_medias = self::all_social_medias();
+            $vedeo_production = self::allvedeo_production();
             
         }
   

@@ -4,8 +4,13 @@
 
         <!-- Start Content-->
         <div class="container-fluid">
+            <div class='hearder-container'>
+   <svg class="header-svg" width="1818" height="962" viewBox="0 0 1818 962" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M950.5 548.443C360.621 606.34 72.7865 835.196 0 962H1818V0C1818 29 1815.08 37.0564 1810.5 55C1695.21 391.5 1573 513 1126.5 537L950.5 548.443Z" fill="white"/>
+  <path d="M950.5 548.443C1004.91 543.103 1066.93 540.202 1126.5 537C1573 513 1695.21 391.5 1810.5 55C1744.57 204 1695.26 300.912 1568 396C1373.67 541.206 1101 529.795 950.5 548.443Z" fill="#888888"/>
+  </svg>
+</div>
             
-            <r>
          
             <!-- end row -->
  <div class="row" style = 'margin-bottom:5px;margin-top:8%;'>

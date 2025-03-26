@@ -134,6 +134,21 @@
 
 
         }
+
+
+
+        .header-svg{
+  background: url('https://images.unsplash.com/photo-1662530787378-966cc9f87a8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');
+  background-position: right center;
+  background-size: cover;
+  width:100%;
+  height:100%;
+}
+
+
+.header-container{
+  width:100vw;
+}
     </style>
 </head>
 <script type="text/javascript">
