@@ -20,17 +20,6 @@ Clone the repo: git clone https://github.com/nevilly/digital-Ads.git
 Fork, Clone, or Download on GitHub
 
 
-Basic Usage
-After downloading repository, follow simple process to use api 
- 1 create file in htdocs  and name it "api"
- 2 put all files downloaded from gitHub in "api" file
- 3 go to C:\xampp\apache\conf\extra
- 6 open file  httpd-vhosts.conf
- 7 add this block of line  VirtualHost :8
-    
-    ServerAdmin myApi.code
-    DocumentRoot "C:/xampp/htdocs/api"
-
 
 
 
