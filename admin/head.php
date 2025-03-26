@@ -130,25 +130,43 @@
                 margin-bottom: 1rem;
             }
 
-
-
-
         }
 
+        .custom-card {
+            border-radius: 30px;
+            overflow: hidden;
+            max-width: 18rem;
+            margin: 20px;
+                height: 450px; /* Set fixed height for the card */
+            background-color: #1C1F37;
+        }
 
+        .card-img-custom {
+            border-radius: 30px;
+            margin: 4px;
+            width: calc(100% - 8px);
+            height: auto;
+        }
 
-        .header-svg{
-  background: url('https://images.unsplash.com/photo-1662530787378-966cc9f87a8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');
-  background-position: right center;
-  background-size: cover;
-  width:100%;
-  height:100%;
-}
+        .card-body {
+            padding: 1.5rem;
+        }
 
+        .price {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2rem;
+            margin-left: 1.8rem;
+        }
 
-.header-container{
-  width:100vw;
-}
+           .bottom-section {
+            margin-top: auto;
+            padding-top: 1rem;
+
+            border-radius: 0px 0px 24px 24px;
+            width: 100%;
+        }
+
     </style>
 </head>
 <script type="text/javascript">
@@ -156,8 +174,8 @@
    // let client = {a : "<?=$this->token;?>",uri:"<?=Util::staticUrl();?>"}
 </script>
 <!-- body start -->
-<body class="loading" data-layout-color="light"  data-layout-mode="default" data-layout-size="fluid" data-topbar-color="light" data-leftbar-position="fixed" data-leftbar-color="light" data-leftbar-size='default' data-sidebar-user='true'>
+<body class="loading" data-layout-color="light"  data-layout-mode="default" data-layout-size="fluid" data-topbar-color="light" data-leftbar-position="fixed" data-leftbar-color="light" data-leftbar-size='default' data-sidebar-user='true' style = 'background-color: #141627;'>
 
 <!-- Begin page -->
-<div id="wrapper">
+<div id="wrapper" style = 'background-color: #141627;'>
 	

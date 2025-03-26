@@ -1,7 +1,7 @@
 
 <!-- Footer Start -->
-<footer class="footer">
-    <div class="container-fluid">
+<footer class="footer" style = 'background-color: #141627;'>
+    <div class="container-fluid" style = 'background-color: #141627;'>
         <div class="row">
             <div class="col-md-6">
                 <script>document.write(new Date().getFullYear())</script> &copy; <?= self::$APP.' ';  echo getenv("Version");?> by <a href="https://www.linkedin.com/in/frankgalos/">Nehemia Mwansasu</a>
@@ -24,9 +24,9 @@
 <!-- END wrapper -->
 
 <!-- Right Sidebar -->
-<div class="right-bar">
+<div class="right-bar" style = 'background-color: #141627;'>
 
-    <div data-simplebar class="w-100 h-100" >
+    <div data-simplebar class="w-100 h-100"style = 'background-color: #141627;' >
 
         <div class="rightbar-title">
             <a href="javascript:void(0);" class="right-bar-toggle float-end">

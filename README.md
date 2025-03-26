@@ -2,7 +2,7 @@
 
 
 ## Table of Contents
-- [Installation](#installation)
+- [Download and Installation](#Download and Installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -30,11 +30,12 @@ To use the Digital-ads website, follow these steps:
 2. put all files downloaded from gitHub in created file "api" file.
 3. go to C:\xampp\apache\conf\extra
 4. open file with a name  httpd-vhosts.conf
-5. add this block of line  in side VirtualHost tag 
-     ServerAdmin myApi.code
-     DocumentRoot "C:/xampp/htdocs/api"
+5. add this block of line inside VirtualHost tag 
+     
 
-    ##<VirtualHost *:80>
+  ('
+
+    ##<VirtualHost :80>
 	    ##ServerAdmin webmaster@dummy-host2.example.com
 	    ##DocumentRoot "C:/xampp/htdocs/dummy-host2.example.com"
 	    ##ServerName dummy-host2.example.com
@@ -44,16 +45,18 @@ To use the Digital-ads website, follow these steps:
 	    ServerAdmin myApi.code
 	    DocumentRoot "C:/xampp/htdocs/api"
 
-<<<<<<< HEAD
 	    ##ServerName localhost
 	    ##DocumentRoot "C:/xampp/htdocs"
     ##</VirtualHost>
+
+
+  ')  
 6. restart xampp
-7. type link on browser : http://localhost/admin/
+7. Enter link on browser: http://localhost/admin/
 
 
 
-=======
+
 
 
 

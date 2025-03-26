@@ -50,67 +50,34 @@ class Hom extends AdslotController{
               $placement_type =  $datum['placement_type'];
               $createDate =  $datum['createDate'];
 
-              $avatar = !empty($img) && $img !== ''? Util::Url()."/public/uploads/mwananchiAds/$img" : Util::Url()."/public/uploads/mwananchiAds/mlog.jpg";
+             $avatar = !empty($img) && $img !== ''? Util::Url()."/public/uploads/mwananchiAds/$img" : Util::Url()."/public/uploads/mwananchiAds/mlog.jpg";
 
 
 
 
-               $dr .=" <div class=\"col-xl-4\">
-                   
-                    <div class=\"card\" style=\"max-width: 400px;\">
-                        <!-- Image Slider -->
-                        <div id=\"productCarousel\" class=\"carousel slide\">
-                            <div class=\"carousel-inner\" >
-                                <div class=\"carousel-item active\">
-                                    <img src=\"$avater\" style = \" width:100%;\" alt=\"Size 20x30\">
-                                </div>
-                                <div class=\"carousel-item active\">
-                                    <img src=\"$avatar\" class=\"d-block w-100 \" alt=\"Size 20x30\", style= \"width:50%;  \">
-                                </div>
-                              <div class=\"carousel-item active\">
-                                    <img src=\"$avatar\"  alt=\"Size 20x30\", style= \"height:50px  \">
-                                </div>
-                            </div>
-                            <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#productCarousel\" data-bs-slide=\"prev\">
-                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
-                                <span class=\"visually-hidden\">Previous</span>
-                            </button>
-                            <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#productCarousel\" data-bs-slide=\"next\">
-                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
-                                <span class=\"visually-hidden\">Next</span>
-                            </button>
-                            <div class=\"carousel-indicators\">
-                                <button type=\"button\" data-bs-target=\"#productCarousel\" data-bs-slide-to=\"0\" class=\"active\"></button>
-                                <button type=\"button\" data-bs-target=\"#productCarousel\" data-bs-slide-to=\"1\"></button>
-                                <button type=\"button\" data-bs-target=\"#productCarousel\" data-bs-slide-to=\"2\"></button>
-                            </div>
-                        </div>
+               $dr .=" 
+                      <div class=\"card custom-card\" >
+           <img src=\"$avatar\" class=\"card-img-top card-img-custom\" alt=\"Product Image\" style = \"margin-top: 20px;\">
 
-                        <!-- Card Body -->
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">$ad_type</h5>
-                            <p class=\"card-text\">Select your preferred size to see corresponding product images.</p>
-                            
-                            <!-- Size Selection -->
-                            <div class=\"mb-3\">
-                                <h6>Select Size (px):</h6>
-                                <div class=\"d-flex gap-2\">
-                                    <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
-                                    <div class=\"size-option border p-2 rounded\" data-size=\"30\">30x40</div>
-                                    <div class=\"size-option border p-2 rounded\" data-size=\"40\">40x60</div>
-                                </div>
-                            </div>
 
-                            <input type ='text' hidden value='$id' id = 't_id'>
-                              <input type ='text' hidden value='m_display_rate_card' id = 'tablename'>
-                            <!-- Price -->
-                            <div class=\"d-flex justify-content-between align-items-center\">
-                                <h4 class=\"text-primary\">$rate</h4>
-                                 <button data-bs-toggle=\"modal\" data-bs-target=\"#addBooking$id\" class=\"btn btn-primary \">Add to Cart</button>
+         <div class=\"card-body\">
+            <div class =\"d-flex justify-content-between align-items-center\"> 
 
-                            </div>
-                        </div>
-                    </div>
+             <h5 class=\"card-title\" style =\"color: #D0D4E7;\">$ad_type</h5>
+
+             <button class=\"btn btn-sm \" data-bs-toggle=\"modal\" data-bs-target=\"#addModal$id\" >
+               <i class=\"bi bi-info-circle\" style =\"font-size: 26px; color:#EC502C;\"></i>
+                                </button>
+            </div>
+           
+            <p class=\"card-text\">Select info to see preferred size to to corresponding product Ads images.</p>
+
+        </div>
+        <div class=\" d-flex justify-content-between align-items-center\" style = \"background-color: #D1F366;margin-left: -1rem;  margin-right: -1rem;\">
+                <span class=\"price \" >rate</span>
+                <button data-bs-toggle=\"modal\" data-bs-target=\"#addBooking$id\" class=\"btn btn-primary\">Book Now</button>
+            </div>
+    
                 </div><!-- end col -->
 
 
@@ -198,6 +165,60 @@ class Hom extends AdslotController{
     </div>
 
 
+
+
+     <div class=\"modal fade\" tabindex=\"1\"  id=\"addModal$id\" style=\" color:white;\">
+        <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+            <div class=\"modal-content\" style=\"background-color: #1C1F37;   border-radius: 30px; color:white;\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title\" style=\"color:white;\" >BANNER INFO </h5>
+                    <button type=\"button\" class=\"btn-close\" style=\" color:white;\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                </div>
+             
+               <div class=\"modal-body\">
+
+               <img src=\"$avatar\" class=\"card-img-top\" alt=\"Product Image\" style = ' width:  100%;'>
+                             
+
+
+                    
+            <div class=\"card-body\">
+                <h4 class=\"card-title\" style=\"color:white;\">$ad_type</h4>
+                <p class=\"card-text\">Select your preferred size to see corresponding product images.</p>
+                
+            
+                <div class=\"mb-3\">
+                    <h5 style=\" color:white;\">Select Size (px):</h5>
+                    <div class=\"d-flex gap-2\">
+                        <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
+                        <div class=\"size-option border p-2 rounded\" data-size=\"30\">30x40</div>
+                        <div class=\"size-option border p-2 rounded\" data-size=\"40\">40x60</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"mb-3\">
+                <div class=\"me-sm-2\">
+                    <div class=\" d-flex justify-content-between align-items-center\" >
+                        <span class=\"price\" >Rate : $rate</span>
+                        <span class=\"price \" >Price : $price</span>
+         
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+
+                <div class=\"modal-footer d-flex justify-content-between align-items-center\">
+                    <h4 class=\"text-primary\">$rate</h4>
+                    <button type=\"button\" class=\"btn btn-primary addEmployee\"  data-bs-dismiss=\"modal\"  >Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
                  ";
            } 
 
@@ -221,7 +242,7 @@ class Hom extends AdslotController{
               $createDate =  $datum['createDate'];
 
 
-               $sc .=" <div class=\"col-xl-4\">
+               $sc .=" <div class=\"col-xl-4\" style = \"display:none;\">
                    
                     <div class=\"card\" style=\"max-width: 400px;\">
                         <!-- Image Slider -->
@@ -282,7 +303,7 @@ class Hom extends AdslotController{
 
 
 
-                <div class=\"modal fade\" tabindex=\"1\"  id=\"addBookingSc$idsc\">
+                <div class=\"modal fade\" tabindex=\"1\"  id=\"addBookingSc\">
         <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
             <div class=\"modal-content\">
                 <div class=\"modal-header\">
@@ -419,7 +440,7 @@ class Hom extends AdslotController{
                             <!-- Price -->
                             <div class=\"d-flex justify-content-between align-items-center\">
                                 <h4 class=\"text-primary\">$rate_per_content</h4>
-                                <button class=\"btn btn-primary\" onclick = \"Owesis.notificationGen()\">Add to Cartx</button>
+                                <button class=\"btn btn-primary\" >Add to Cartx</button>
                             </div>
                         </div>
                     </div>
@@ -453,12 +474,12 @@ class Hom extends AdslotController{
 
 
                $scm .="    <div class=\"col-xl-4 col-md-6\">
-                    <div class=\"card\">
+                    <div class=\"\">
 
-                        <div class=\"card-body widget-user\">
-                            <div class=\"d-flex align-items-center\">
-                                <div class=\"flex-shrink-0 avatar-lg me-3\">
-                                    <img src=\"../public/uploads/mwananchiAds/Banner_300x250.png\" class=\"img-fluid rounded-circle\" alt=\"user\">
+                        <div class=\"card-body myCard\" style=\"border-radius:30px; background-color: #1C1F37;\" >
+                            <div class=\"d-flex align-items-center\" >
+                                <div class=\"flex-shrink-0 avatar-lg me-3\" >
+                                    <img src=\"../public/uploads/mwananchiAds/Banner_300x250.png\" class=\"img-fluid \" alt=\"user\" style=\"border-radius:10px; background-color: #1C1F37; width:150px\">
                                 </div>
                                 <div class=\"flex-grow-1 overflow-hidden\">
                                     <h5 class=\"mt-0 mb-1\">$platform</h5>
@@ -470,7 +491,7 @@ class Hom extends AdslotController{
                               <!-- Price -->
                             <div class=\"d-flex justify-content-between align-items-center\">
                                 <h4 class=\"text-primary\">$rate</h4>
-                                <button class=\"btn btn-primary\">Add to Cart</button>
+                                <button class=\"btn btn-primary\"style=\"border-radius:30px; background-color: #D1F366; color:black\">Booking Now</button>
                             </div>
                         </div>
                     </div>

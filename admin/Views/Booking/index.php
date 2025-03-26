@@ -1,7 +1,5 @@
 
 
-
-    
     
  <div class="container-fluid">
 
@@ -19,8 +17,6 @@
                     </div>
                 </div>
             </div>
-
-            
 
 
             <!----Left Sid----->

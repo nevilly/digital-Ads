@@ -6,7 +6,7 @@ if(!$session->logout())
     echo "<script>window.location.href='/admin/'</script>";
 ?>
 
-<div class="account-pages mt-5 mb-5">
+<div class="account-pages mt-5 mb-5" style = 'background-color: #141627;'>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6 col-xl-4">

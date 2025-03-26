@@ -12,7 +12,7 @@ $notNo =  Util::CartNotification();
 ?>
 
 <!-- Topbar Start -->
-<div class="navbar-custom">
+<div class="navbar-custom" style = 'background-color: #141627'>
     <ul class="list-unstyled topnav-menu float-end mb-0">
 
         <li class="d-none d-lg-block">
@@ -226,17 +226,17 @@ $notNo =  Util::CartNotification();
     </ul>
 
     <!-- LOGO -->
-    <div class="logo-box">
+    <div class="logo-box" style = 'background-color: #141627'>
 
         <a href="/admin/" class="logo logo-light text-center">
-                           <span class="logo-sm">
+                           <span class="logo-sm" >
                                 <?= self::$APP.' '; //echo getenv("Version");?>
                             </span> 
             <span class="logo-lg">
                                 <?= self::$APP.' '; // echo getenv("Version");?>
                             </span>
         </a>
-        <a href="/admin/" class="logo logo-dark text-center">
+        <a href="/admin/" class="logo logo-dark text-center" style = 'background-color: #141627'>
                             <span class="logo-sm">
                                 <?= self::$APP.' ';  //echo getenv("Version");?>
                             </span>
@@ -267,9 +267,9 @@ $notNo =  Util::CartNotification();
 <!-- end Topbar -->
 
 <!-- ========== Left Sidebar Start ========== -->
-<div class="left-side-menu">
+<div class="left-side-menu" style = 'background-color: #141627'>
 
-    <div class="h-100 w-100" data-simplebar>
+    <div class="h-100 w-100" data-simplebar  >
 
         <!-- User box -->
         <div class="user-box text-center">
