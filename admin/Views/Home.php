@@ -1,4 +1,7 @@
 
+    
+<?php return ; ?>
+
     <div class="content">
 
         <!-- Start Content-->

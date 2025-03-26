@@ -60,27 +60,27 @@ class Booking extends CartController
 
 
                $booking .="
-                    <div class=\"row cart-item mb-3\">
+                    <div class=\"row cart-item mb-3\" style=\"background-color: #1C1F37; border-radius:30px;  \">
+                        
                         <div class=\"col-md-3\">
-                            <img src=\"$avatar\"  alt=\"$ad_type\" class=\"img-fluid rounded\">
-
-
+                            <img src=\"$avatar\"  alt=\"$ad_type\" class=\"img-fluid rounded\" style= \"margin-top:2rem; \">
                         </div>
-                        <div class=\"col-md-5\">
-                            <h5 class=\"card-title\">$ad_type</h5>
+
+                        <div class=\"col-md-5\" style= \"margin-top:1.5rem; \">
+                            <h5 class=\"card-title\" style= \"color:white;f \">$ad_type</h5>
                             <p class=\"text-muted\">Platform: $selectPlatform</p>
                             <p class=\"text-muted\">Dimension: $dimension</p>
                             <p class=\"text-muted\">Rate: $rate</p>
                         </div>
-                        <div class=\"col-md-2\">
+                        <div class=\"col-md-2\" style= \"margin-top:2rem; \">
                             <div class=\"input-group\">
                                 <h4 class=\"btn-sm\" type=\"button\">Booking</h4>
                                 
                                 <button class=\"btn btn-outline-secondary btn-sm\" type=\"button\">$bookDate</button>
                             </div>
                         </div>
-                        <div class=\"col-md-2 text-end\">
-                            <p class=\"fw-bold\">$price</p>
+                        <div class=\"col-md-2 text-end\" style= \"margin-top:2rem;\">
+                            <p class=\"fw-bold\" style= \"color:white;font-size:18px; color:#D1F366;\">$price Tsh</p>
                             <button class=\"btn btn-sm btn-outline-danger\">
                                     <i class=\"bi bi-trash\" ></i>
                                 </button>

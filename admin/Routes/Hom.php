@@ -74,7 +74,7 @@ class Hom extends AdslotController{
 
         </div>
         <div class=\" d-flex justify-content-between align-items-center\" style = \"background-color: #D1F366;margin-left: -1rem;  margin-right: -1rem;\">
-                <span class=\"price \" >rate</span>
+                <span class=\"price \" >$rate</span>
                 <button data-bs-toggle=\"modal\" data-bs-target=\"#addBooking$id\" class=\"btn btn-primary\">Book Now</button>
             </div>
     

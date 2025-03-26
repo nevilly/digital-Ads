@@ -5,9 +5,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6 col-xl-4">
                 <div class="text-center">
-                    <a href="/admin">
-                        <img src="../public/assets/images/logo-dark.png" alt="AUQUICK" height="22" class="mx-auto">
-                    </a>
+                 <!--    <a href="/admin">
+                        <img src="../public/assets/images/logo-dark.png" alt="" height="22" class="mx-auto">
+                    </a> -->
                     <p class="text-muted mt-2 mb-4 text-primary"></p>
 
                 </div>

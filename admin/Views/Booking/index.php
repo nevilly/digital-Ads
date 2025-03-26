@@ -4,9 +4,9 @@
  <div class="container-fluid">
 
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-8" style="background-color: #141627;">
                 <div class="card mb-4">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #141627;">
                          <?=$booking;?>
                         <!-- Continue Shopping Button -->
                         <div class="text-start mb-4">
@@ -19,15 +19,15 @@
             </div>
 
 
-            <!----Left Sid----->
+            <!----Left Sid----->  
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card" style="background-color: #1C1F37; border-radius:30px;  ">
 
                     <div class="card-body">
                       
-                        <h4 class="header-title mt-0 mb-3">Booking Summary</h4>
+                        <h4 class="header-title mt-0 mb-3"  style="background-color: #1C1F37; color:white;">Booking Summary</h4>
 
-                        <div class="card cart-summary">
+                        <div class="card cart-summary" style="background-color: #1C1F37; color:white;">
             <div class="card-body">
                 
                 <div class="d-flex justify-content-between mb-3">
@@ -52,9 +52,12 @@
         </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" style="background-color: #1C1F37; color:white;border-radius:30px;" >
+                       
+   
+
                         <div class="card-body">
-                           
+                            <h4 class="header-title mt-0 mb-3"  style="background-color: #1C1F37; color:white;">Booking Calender</h4>
  <div class="span12">
             <table class="table-condensed table-bordered table-striped">
                 <thead>

@@ -13,6 +13,8 @@ class Home {
     public function render($params = ''){
         $p = json_decode($params);
 
+    
+
         if(file_exists(__DIR__."/../Views/$p->view.php")) {
             return include_once __DIR__ . "/../Views/$p->view.php";
         }elseif (file_exists(__DIR__."/../Views/$p->view/$p->page.php"))
