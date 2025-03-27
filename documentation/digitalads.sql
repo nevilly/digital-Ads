@@ -1,0 +1,326 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 27, 2025 at 01:37 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `digitalads`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `pId` varchar(255) NOT NULL,
+  `tablename` varchar(255) NOT NULL,
+  `qty` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `ad_type` varchar(255) NOT NULL,
+  `selectPlatform` varchar(255) NOT NULL,
+  `device` varchar(255) NOT NULL,
+  `dimension` varchar(255) NOT NULL,
+  `ad_unit` varchar(255) NOT NULL,
+  `rate` varchar(255) NOT NULL,
+  `payed` enum('0','1') NOT NULL,
+  `bookDate` text NOT NULL,
+  `img` text NOT NULL,
+  `userID` varchar(255) NOT NULL,
+  `createdDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `pId`, `tablename`, `qty`, `price`, `ad_type`, `selectPlatform`, `device`, `dimension`, `ad_unit`, `rate`, `payed`, `bookDate`, `img`, `userID`, `createdDate`) VALUES
+(44, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 05:36:27'),
+(45, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:04:47'),
+(46, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:09:59'),
+(47, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Youtube', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '2025-03-16', 'Banner_728x90.png', '', '2025-03-26 06:31:36'),
+(48, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:33:07'),
+(49, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:36:59'),
+(50, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Instagram', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '2025-03-30', 'Banner_728x90.png', '', '2025-03-26 07:52:36'),
+(51, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 07:54:37'),
+(52, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 08:27:37'),
+(53, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 08:28:05'),
+(54, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '2025-04-06', 'Banner_728x90.png', '', '2025-03-26 08:41:53'),
+(55, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 11:31:12'),
+(56, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 16:00:55'),
+(57, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:30:35'),
+(58, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:32:41'),
+(59, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:33:00'),
+(60, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:33:59'),
+(61, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:34:18'),
+(62, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:35:17'),
+(63, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:45:12'),
+(64, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:49:23'),
+(65, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:51:34'),
+(66, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:53:59'),
+(67, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:54:43'),
+(68, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:03:09'),
+(69, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:03:11'),
+(70, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:06:58'),
+(71, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:14:51'),
+(72, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 23:00:38'),
+(73, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 23:15:37'),
+(74, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 00:36:52'),
+(75, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 02:26:26'),
+(76, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 02:35:21'),
+(77, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 02:35:27');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_display_rate_card`
+--
+
+CREATE TABLE `m_display_rate_card` (
+  `id` int(11) NOT NULL,
+  `ad_type` varchar(255) NOT NULL,
+  `img` text NOT NULL,
+  `descr` text NOT NULL,
+  `ad_unit` varchar(255) NOT NULL,
+  `dimension` varchar(255) NOT NULL,
+  `device` varchar(255) NOT NULL,
+  `rate` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `placement_type` varchar(255) NOT NULL,
+  `createDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `m_display_rate_card`
+--
+
+INSERT INTO `m_display_rate_card` (`id`, `ad_type`, `img`, `descr`, `ad_unit`, `dimension`, `device`, `rate`, `price`, `placement_type`, `createDate`) VALUES
+(1, 'Standard Banner', 'Banner_728x90.png', '', 'Leader board & Square Banner', '728x90', 'Desktop & Mobile', 'CPM 1.5 USD ', '3967', 'RON', '0000-00-00 00:00:00'),
+(2, 'High-Impact Ad', 'Banner_300x250.png', '', 'Roadblock', '720x266', 'Desktop Only', ' 475616 ', '475616', '24 Hour Maximum \r\n(1 per month)', '2025-03-26 03:49:28'),
+(3, 'Special Execution', 'Banner_300x600-600x441.png', '', 'Pushdown & Interstitial', '728x90', 'Desktop & Mobile', '475,616 ', '475666', 'MW| MS|CZ', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_social_media`
+--
+
+CREATE TABLE `m_social_media` (
+  `id` int(11) NOT NULL,
+  `platform` varchar(255) NOT NULL,
+  `brand` varchar(255) NOT NULL,
+  `rate` varchar(255) NOT NULL,
+  `descr` text NOT NULL,
+  `img` text NOT NULL,
+  `duration` text NOT NULL,
+  `createDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `m_social_media`
+--
+
+INSERT INTO `m_social_media` (`id`, `platform`, `brand`, `rate`, `descr`, `img`, `duration`, `createDate`) VALUES
+(1, 'Facebook', 'Mwananchi, MwanaSpoti, Citizen', 'TSZ 211,385', '', 'fbLogo.png', 'Permanent ', '2025-03-25 00:37:42'),
+(2, 'Instagram', ' Mwananchi, MwanaSpoti, Citizen', 'TSZ 211,385', '', '', ' Permanent ', '2025-03-25 00:37:47'),
+(3, 'X', 'Mwananchi, MwanaSpoti, Citizen', 'TSZ 211,385', '', '', 'Permanent', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_sponsered_content`
+--
+
+CREATE TABLE `m_sponsered_content` (
+  `id` int(11) NOT NULL,
+  `content_type` varchar(255) NOT NULL,
+  `img` text NOT NULL,
+  `desr` text NOT NULL,
+  `specification` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `platform` varchar(255) NOT NULL,
+  `rate_per_content` varchar(255) NOT NULL,
+  `duration` varchar(255) NOT NULL,
+  `createDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `m_sponsered_content`
+--
+
+INSERT INTO `m_sponsered_content` (`id`, `content_type`, `img`, `desr`, `specification`, `price`, `platform`, `rate_per_content`, `duration`, `createDate`) VALUES
+(1, 'Article (Generated by \r\nclient)', '', '', ' Image or Video with 2 social media posts on corresponding handles,\r\nImage or Video with no social media posts', 2536620, 'Mwananchi, MwanaSpoti, \r\nCitizen ', 'TZS 2,536,620', 'Permanent ', '2025-03-25 23:59:40'),
+(2, 'Article (Generated by \r\nNation)', '', '', ' Image or Video with 2 social media posts on corresponding handles', 5284626, 'Mwananchi, MwanaSpoti, Citizen\r\n', ' TZS 5,284,626', ' Permanent', '2025-03-25 23:59:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_vedeo_production`
+--
+
+CREATE TABLE `m_vedeo_production` (
+  `id` int(11) NOT NULL,
+  `platform` varchar(255) NOT NULL,
+  `rate` varchar(255) NOT NULL,
+  `specification` varchar(255) NOT NULL,
+  `v_length` varchar(255) NOT NULL,
+  `img` text NOT NULL,
+  `descr` text NOT NULL,
+  `createDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `m_vedeo_production`
+--
+
+INSERT INTO `m_vedeo_production` (`id`, `platform`, `rate`, `specification`, `v_length`, `img`, `descr`, `createDate`) VALUES
+(1, 'Client’s own documentary', 'TSZ 15,00O,000', 'Client supplies a complete documentary. MCL airs on it YT channel on client’s behalf. \r\nRecommended length is under 30 minutes.', '30 min', '', '', '0000-00-00 00:00:00'),
+(2, 'Mini Documentary ', 'TZS 27,000,000', 'MCL produces a short-form documentary for the client (end-to-end), showcasing their cause, issue, business.', '2-10 minutes', '', '', '2025-03-25 01:44:45'),
+(3, 'Full Documentary ', 'TZS 50,000,000', ' MCL produces long-form documentary for the client (end-to-end), showcasing their cause, \r\nissue, business. ', '30 minutes', '', '', '2025-03-25 01:44:45'),
+(4, 'Custom Documentary ', 'Price on request', ' MCL will work with you to figure out what you need the best value for money from your spend.', '30 mins', '', '', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `gender` enum('male','female','notspecified') NOT NULL DEFAULT 'notspecified',
+  `avatar` text DEFAULT NULL,
+  `bio` text DEFAULT NULL,
+  `position` varchar(255) DEFAULT NULL,
+  `birth` date DEFAULT NULL,
+  `password` text NOT NULL,
+  `experience` text DEFAULT NULL,
+  `qualifications` text DEFAULT NULL,
+  `industry` text DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `country` text DEFAULT NULL,
+  `phone_number` int(11) NOT NULL,
+  `fb` text DEFAULT NULL,
+  `google` text DEFAULT NULL,
+  `apple` text DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `last_login` datetime NOT NULL,
+  `privilege` enum('0','1','2') NOT NULL DEFAULT '0',
+  `type` enum('company','individual') NOT NULL DEFAULT 'individual',
+  `status` enum('0','1') NOT NULL DEFAULT '0',
+  `notified` enum('0','1') NOT NULL DEFAULT '0',
+  `token` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `gender`, `avatar`, `bio`, `position`, `birth`, `password`, `experience`, `qualifications`, `industry`, `address`, `country`, `phone_number`, `fb`, `google`, `apple`, `created_at`, `last_login`, `privilege`, `type`, `status`, `notified`, `token`) VALUES
+(1, 'Jery', 'jerry', 'reddeath', 'frankslayer1@gmail.com', 'notspecified', '', NULL, NULL, NULL, 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'Dar es salaam', NULL, 2147483647, NULL, NULL, NULL, '2025-02-14 07:40:32', '2025-03-27 03:29:59', '2', 'individual', '1', '0', 'SWh4TnJCOEp5UVVPQWxrM3ZkWWowS0pnYU50aTZodzVoalN5enJoZithWmM5aUN5T2FTOW9xL2t6Q04rWHpYNnk5NXNjRHBPM1BkbGdhMTVEeVhOaUNGOGg5REhBby9yeGZxNVdlM1pjTDBVYlFqRm1YZEE3U0FBcWR0eXI1ZVcxK0dRWkk0ckh1YVRTSGYzTURTVUpxTDFqelM2Zkg5RnNMR2F5R2pjS1F1NWRPVkpKdkpBRGtiWE5pSVQ3VVpnTUtCemphSFdKZ0wzU1FnRGh2MWY0RkkwcGxoYnFrMHg0NDUyUFBYVVhtNE1TTFBMTUlHTExVbVRhVi9xUTRDaXg0djFhUmJPdjFrQUdmODVpVW1TY1E9PQ=='),
+(2, 'ermy', 'mwnss', 'mzee Coder', 'emwansasu@gmail.com', 'male', NULL, 'hkhk', NULL, '2024-10-09', 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'dar', NULL, 57575, '7867868', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2', 'individual', '1', '0', ''),
+(3, 'James', 'Mchicha', 'JamesBond', 'Jmchicha@gmail.com', 'male', NULL, 'Ok simple Brief', 'CEO', '2025-01-16', 'd20d3ce6dd8b2a24e26efd84a', 'fgdsgsdg', NULL, NULL, NULL, 'Tz', 436345, NULL, NULL, NULL, '2025-02-21 12:17:08', '0000-00-00 00:00:00', '1', 'company', '1', '0', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_display_rate_card`
+--
+ALTER TABLE `m_display_rate_card`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_social_media`
+--
+ALTER TABLE `m_social_media`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_sponsered_content`
+--
+ALTER TABLE `m_sponsered_content`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_vedeo_production`
+--
+ALTER TABLE `m_vedeo_production`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT for table `m_display_rate_card`
+--
+ALTER TABLE `m_display_rate_card`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `m_social_media`
+--
+ALTER TABLE `m_social_media`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `m_sponsered_content`
+--
+ALTER TABLE `m_sponsered_content`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `m_vedeo_production`
+--
+ALTER TABLE `m_vedeo_production`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

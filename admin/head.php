@@ -28,6 +28,7 @@
     <link href="<?=Util::staticUrl()?>assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <link href="<?=Util::staticUrl()?>assets/libs/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <link href="<?=Util::staticUrl()?>assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+
 <style>
 
 
@@ -168,6 +169,26 @@
         }
 
     </style>
+
+
+<style>
+    .nContainer{
+        width: 100%;
+        height: 100vh;
+        background-color: green;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nContainer h1{
+          font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+</style>
 </head>
 <script type="text/javascript">
       let client = {a : "<?=$this->token;?>",uri:"<?=Util::staticUrl();?>", u: "<?=$_SESSION['name']; ?>"}
