@@ -9,6 +9,7 @@
   - [VirtualHost](#VirtualHost)
 - [Authentification](#Authentification)
 - [Usage](#Usage)
+- [Technical-Documentation](#Technical-Documentation)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -23,11 +24,9 @@
 To use the Digital-ads website, follow these steps:
 
 1. Download and install the latest release XAMPP. https://www.apachefriends.org/fr/download.html
-2. create database in Mysql and import file named database which will find it in documentation folder in
-3. Take file sql database file from documentation folder and import to Mysql 
+ 
 2. Clone the repo: git clone https://github.com/nevilly/digital-Ads.git
-3. 
-
+ 
 
 
 ## Setup
@@ -60,8 +59,8 @@ For this website i use php API the following step to make it work
 	    ##DocumentRoot "C:/xampp/htdocs"
     ##</VirtualHost>
 
-4. restart xampp
-5. Enter link on browser: http://localhost/admin/
+4. restart xampp.
+5. Enter link on browser: http://localhost/admin/.
 
 
 
@@ -77,7 +76,28 @@ For this website i use php API the following step to make it work
 All credential username and password found in Documentation folder:
 
 
+## Technical-Documentation
+  
+Break down of Technology Stack on this project.
 
+--  Frontend
+		HTML: HTML5 for structuring web content.
+
+		JavaScript:  JavaScript (ES6+) for interactivity.
+
+		CSS:
+
+			Bootstrap 5 for responsive design and pre-built components.
+
+			Plain CSS for custom styling.
+
+--  Backend
+    PHP API: Robust framework for traditional server-side rendering.
+
+--  Database
+        Relational (SQL):
+
+	       MySQL: Popular for web apps.
 
 
 
