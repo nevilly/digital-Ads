@@ -247,7 +247,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script type="text/javascript">
   var  typed = new Typed('.auto-type',{
-    strings: ["Ads","custumer","Company"],
+    strings: ["Ads","customer","Company"],
     typeSpeed:150,
     backSpeed:150,
     loop:true

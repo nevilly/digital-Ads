@@ -2,15 +2,18 @@
 
 
 ## Table of Contents
+- [Prerequisites](#Prerequisites)
 - [Download](#Download)
 - [Setup](#Setup)
   - [API](#API)
-  - [Database](#Database)
   - [VirtualHost](#VirtualHost)
+  - [Database](#Database)
+  
 - [Authentification](#Authentification)
 - [Usage](#Usage)
 - [Technical-Documentation](#Technical-Documentation)
-- [Contributing](#contributing)
+- [API-Intergration](#API-Intergration)
+- [Security](#Security)
 - [License](#license)
 
 
@@ -71,7 +74,7 @@ For this website i use php API the following step to make it work
 - Grab digitalads.sql file and import to Mysql database digitalads.
 
 
-## Authentification
+## 🔑 Authentification
 
 All credential username and password found in Documentation folder:
 
@@ -80,32 +83,33 @@ All credential username and password found in Documentation folder:
   
 Break down of Technology Stack on this project.
 
---  Frontend
-		HTML: HTML5 for structuring web content.
+1. Frontend: HTML5 + Bootstrap 5 + Vanilla JS.
 
-		JavaScript:  JavaScript (ES6+) for interactivity.
+2. Backend: Node.js + Express.js.
 
-		CSS:
+3. Database: Mysql / Localhost.
 
-			Bootstrap 5 for responsive design and pre-built components.
+4. Version Control: Git.
 
-			Plain CSS for custom styling.
+       
 
---  Backend
-    PHP API: Robust framework for traditional server-side rendering.
+ 
+## API-Intergration
+1. Purpose:  API can  manage user accounts, Process payments.
+2. Authentication: it use  API keys, OAuth 2.0, JWT tokens.
+3. Base URL: Provide the root endpoint http://localhost/admin/.
 
---  Database
-        Relational (SQL):
-
-	       MySQL: Popular for web apps.
-
+ 
 
 
+## 🔒 Security
+
+1. HTTPS is mandatory.
+
+2. Passwords are hashed before storage.
 
 
 
-Contributions Welcome!
-Open to PRs, bug reports, and feature ideas. See CONTRIBUTING.md for guidelines.
 
-License: MIT
->>>>>>> 4b11f843f00d13dbd1e5423d5bad37607ecb6afb
+T
+>>>>>>>>>>>>>> Thank you
