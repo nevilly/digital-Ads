@@ -1,4 +1,4 @@
-"# digital-Ads" 
+# digital-Ads Website
 
 
 ## Table of Contents
@@ -8,7 +8,6 @@
   - [API](#API)
   - [VirtualHost](#VirtualHost)
   - [Database](#Database)
-  
 - [Authentification](#Authentification)
 - [Usage](#Usage)
 - [Technical-Documentation](#Technical-Documentation)
@@ -83,12 +82,9 @@ All credential username and password found in Documentation folder:
   
 Break down of Technology Stack on this project.
 
-1. Frontend: HTML5 + Bootstrap 5 + Vanilla JS.
-
-2. Backend: Node.js + Express.js.
-
+1. Frontend: HTML5 + Bootstrap 5 + JS.
+2. Backend: PHP + AJAX.
 3. Database: Mysql / Localhost.
-
 4. Version Control: Git.
 
        

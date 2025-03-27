@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2025 at 01:37 AM
+-- Generation Time: Mar 27, 2025 at 06:28 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -51,40 +51,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `pId`, `tablename`, `qty`, `price`, `ad_type`, `selectPlatform`, `device`, `dimension`, `ad_unit`, `rate`, `payed`, `bookDate`, `img`, `userID`, `createdDate`) VALUES
-(44, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 05:36:27'),
-(45, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:04:47'),
-(46, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:09:59'),
-(47, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Youtube', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '2025-03-16', 'Banner_728x90.png', '', '2025-03-26 06:31:36'),
-(48, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:33:07'),
-(49, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 06:36:59'),
-(50, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Instagram', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '2025-03-30', 'Banner_728x90.png', '', '2025-03-26 07:52:36'),
-(51, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 07:54:37'),
-(52, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 08:27:37'),
-(53, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 08:28:05'),
-(54, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '2025-04-06', 'Banner_728x90.png', '', '2025-03-26 08:41:53'),
-(55, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 11:31:12'),
-(56, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 16:00:55'),
-(57, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:30:35'),
-(58, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:32:41'),
-(59, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:33:00'),
-(60, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:33:59'),
-(61, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:34:18'),
-(62, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:35:17'),
-(63, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:45:12'),
-(64, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:49:23'),
-(65, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:51:34'),
-(66, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:53:59'),
-(67, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 18:54:43'),
-(68, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:03:09'),
-(69, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:03:11'),
-(70, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:06:58'),
-(71, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 19:14:51'),
-(72, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 23:00:38'),
-(73, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-26 23:15:37'),
-(74, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 00:36:52'),
-(75, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 02:26:26'),
-(76, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 02:35:21'),
-(77, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 02:35:27');
+(79, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 04:33:41'),
+(80, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 07:22:07'),
+(81, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 08:21:51');
 
 -- --------------------------------------------------------
 
@@ -236,7 +205,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `gender`, `avatar`, `bio`, `position`, `birth`, `password`, `experience`, `qualifications`, `industry`, `address`, `country`, `phone_number`, `fb`, `google`, `apple`, `created_at`, `last_login`, `privilege`, `type`, `status`, `notified`, `token`) VALUES
-(1, 'Jery', 'jerry', 'reddeath', 'frankslayer1@gmail.com', 'notspecified', '', NULL, NULL, NULL, 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'Dar es salaam', NULL, 2147483647, NULL, NULL, NULL, '2025-02-14 07:40:32', '2025-03-27 03:29:59', '2', 'individual', '1', '0', 'SWh4TnJCOEp5UVVPQWxrM3ZkWWowS0pnYU50aTZodzVoalN5enJoZithWmM5aUN5T2FTOW9xL2t6Q04rWHpYNnk5NXNjRHBPM1BkbGdhMTVEeVhOaUNGOGg5REhBby9yeGZxNVdlM1pjTDBVYlFqRm1YZEE3U0FBcWR0eXI1ZVcxK0dRWkk0ckh1YVRTSGYzTURTVUpxTDFqelM2Zkg5RnNMR2F5R2pjS1F1NWRPVkpKdkpBRGtiWE5pSVQ3VVpnTUtCemphSFdKZ0wzU1FnRGh2MWY0RkkwcGxoYnFrMHg0NDUyUFBYVVhtNE1TTFBMTUlHTExVbVRhVi9xUTRDaXg0djFhUmJPdjFrQUdmODVpVW1TY1E9PQ=='),
+(1, 'John', 'joel', 'reddeath', 'emwansasu@gmail.com', 'notspecified', '', NULL, NULL, NULL, 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'Dar es salaam', NULL, 2147483647, NULL, NULL, NULL, '2025-02-14 07:40:32', '2025-03-27 08:20:02', '2', 'individual', '1', '0', 'SWh4TnJCOEp5UVVPQWxrM3ZkWWowS0pnYU50aTZodzVoalN5enJoZithWmM5aUN5T2FTOW9xL2t6Q04rWHpYNnk5NXNjRHBPM1BkbGdhMTVEeVhOaUNGOGg5REhBby9yeGZxNVdlM1pjTDBVYlFqRm1YZEE3U0FBcWR0eXI1ZVcxK0dRWkk0ckh1YVRTSGYzTURTVUpxTDFqelM2Zkg5RnNMR2F5R2pjS1F1NWRPVkpKdkpBRGtiWE5pSVQ3VVpnTUtCemphSFdKZ0wzU1FnRGh2MWY0RkkwcGxoYnFrMHg0NDUyUFBYVVhtNE1TTFBMTUlHTExVbVRhVi9xUTRDaXg0djFhUmJPdjFrQUdmODVpVW1TY1E9PQ=='),
 (2, 'ermy', 'mwnss', 'mzee Coder', 'emwansasu@gmail.com', 'male', NULL, 'hkhk', NULL, '2024-10-09', 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'dar', NULL, 57575, '7867868', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2', 'individual', '1', '0', ''),
 (3, 'James', 'Mchicha', 'JamesBond', 'Jmchicha@gmail.com', 'male', NULL, 'Ok simple Brief', 'CEO', '2025-01-16', 'd20d3ce6dd8b2a24e26efd84a', 'fgdsgsdg', NULL, NULL, NULL, 'Tz', 436345, NULL, NULL, NULL, '2025-02-21 12:17:08', '0000-00-00 00:00:00', '1', 'company', '1', '0', '');
 
@@ -288,7 +257,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `m_display_rate_card`
