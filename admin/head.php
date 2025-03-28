@@ -64,20 +64,82 @@
             color: #6c757d;
         }
 
+
+
+
+
+    .header-slider {
+            background: linear-gradient(65deg, #141627, #2a5298);
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            border-radius: 5rem;
+        }
+        
+        .carousel-item {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 1.5rem;
+        }
+        
+        .carousel-caption {
+        top: 0%;
+        left: 1%;
+        transform: translateY(-50%);
+        width: 50%;
+        text-align: left;
+        background: rgba(0, 82, 156, 0.9);
+        padding: 30px 40px;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        border-left: 5px solid #fff;
+        position: relative;
+        height: 65vh;
     
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+        .carousel-caption {
+            width: 60%;
+            padding: 20px;
+            left: 5%;
+        }
+        
+        .carousel-caption h1 {
+            font-size: 1.8rem;
+        }
+        
+        .carousel-caption p {
+            font-size: 1rem;
+        }
+    }
+        
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
-            padding: 15px;
+            padding: 20px;
         }
-
-      .carousel-item.active {
-    display: block;
-    height: 200px;
-    background-color: grey;
-}
-
+        
+        .carousel-indicators [data-bs-target] {
+            background-color: white;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            margin: 0 8px;
+        }
 
         
         .size-option {
@@ -169,6 +231,9 @@
             border-radius: 0px 0px 24px 24px;
             width: 100%;
         }
+
+
+
 
     </style>
 
