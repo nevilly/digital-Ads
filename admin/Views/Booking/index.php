@@ -10,7 +10,7 @@
                          <?=$booking;?>
                         <!-- Continue Shopping Button -->
                         <div class="text-start mb-4">
-                            <a href="/admin/Hom/" class="btn btn-outline-primary">
+                            <a href="/admin/Hom/" class="btn btn-outline-primary" data-bs-toggle=\"modal\" data-bs-target=\"#addModalDelete$id\"  >
                                 <i class="bi bi-arrow-left me-2"></i>Continue Booking
                             </a>
                         </div>
@@ -183,4 +183,7 @@
                 </div>
             </div>
         </div>
+
+
+
 

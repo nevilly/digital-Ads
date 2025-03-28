@@ -60,7 +60,7 @@ class Booking extends CartController
 
 
                $booking .="
-                    <div class=\"row cart-item mb-3\" style=\"background-color: #1C1F37; border-radius:30px;  \">
+                    <div class=\"row cart-item mb-3\" style=\"background-color: #1C1F37; border-radius:30px; \">
                         
                         <div class=\"col-md-3\">
                             <img src=\"$avatar\"  alt=\"$ad_type\" class=\"img-fluid rounded\" style= \"margin-top:2rem; \">
@@ -81,12 +81,46 @@ class Booking extends CartController
                         </div>
                         <div class=\"col-md-2 text-end\" style= \"margin-top:2rem;\">
                             <p class=\"fw-bold\" style= \"color:white;font-size:18px; color:#D1F366;\">$price Tsh</p>
-                            <button class=\"btn btn-sm btn-outline-danger\">
+                            <button data-bs-toggle=\"modal\" data-bs-target=\"#cartdelete$id\" class=\"btn btn-sm btn-outline-danger\">
                                     <i class=\"bi bi-trash\" ></i>
                                 </button>
                         </div>
                     </div>
                     <hr>
+
+
+
+                    <div class=\"modal fade\" tabindex=\"1\"  id=\"cartdelete$id\" style=\" color:white;\">
+        <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+            <div class=\"modal-content\" style=\"background-color: #1C1F37;   border-radius: 30px; color:white;\">
+                <div class=\"modal-header center\">
+                    <h5 class=\"modal-title\" style=\"color:white;\" >DELETE </h5>
+                    <button type=\"button\" class=\"btn-close\" style=\" color:white;\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                </div>
+             
+               <div class=\"modal-body\">
+
+           
+
+                    
+            <div class=\"card-body\">
+                <h4 class=\"card-title\" style=\"color:white\">Delete</h4>
+                <p class=\"card-text\"> Are sure you want to delete? </p>
+                
+               <input type=\"text\" value= \"$id\" id=\"deleteCart\" hidden>
+           
+            </div>
+                
+        </div>
+
+                <div class=\"modal-footer d-flex  align-items-center\">
+                   <button type=\"button\" class=\"btn btn-danger\"  data-bs-dismiss=\"modal\"  >No</button>
+                    <button type=\"button\" class=\"btn btn-primary cDelete\"   >Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 ";
             } 

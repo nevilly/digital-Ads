@@ -95,9 +95,9 @@ class CartController extends CartModule
      * @param $user_id
      * @return bool
      */
-    public function deleteApplication($id, $user_id)
+    public function deleteCart($id, $user_id)
     {
-        return (parent::deleteApplication($id,$user_id)->num_rows > 0);
+        return (parent::deleteCart($id,$user_id));
     }
 
 }

@@ -104,8 +104,6 @@ Break down of Technology Stack on this project.
 
 2. Passwords are hashed before storage.
 
-
-
-
-T
->>>>>>>>>>>>>> Thank you
+--------------------------------------------------------------
+>> Thank you
+-----------------------------------------------------------

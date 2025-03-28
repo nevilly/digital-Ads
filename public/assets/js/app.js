@@ -517,6 +517,7 @@ class Owesis{
         this.users();
         this.roles();
         this.deleteEmployee();
+        this.deleteCart();
         
         //Mwananchi Project
         this.cart();
@@ -575,6 +576,44 @@ class Owesis{
         });
     }
 
+
+    deleteCart(){
+        let self = this;
+        $('.cDelete').on("click",function(){
+            let id = $("input[id=\"deleteCart\"]").val();
+            console.log('-------------');
+            console.log(id);
+            
+            if( id !==''){
+                $.ajax({
+                    method:"POST",
+                    url:'/api/v1/Cart/remove',
+                    data:{id},
+                    beforeSend: function(request) {
+                         request.setRequestHeader("Authorization", "Owesis "+client.a);
+                     },
+                    success:function (res){
+                        console.log(res.status);
+                          if(res.status == 200){
+                            alert(res.payload);
+                            window.location.reload(true);
+                        }
+                        console.log(res);
+                    }
+                    
+                });
+
+            }else{
+                $('.form-control').css({borderColor:'red'});
+                setTimeout(function (){
+                    alert("All fields are required!");
+                },1000)
+            }
+
+
+
+        });
+    }
 
     deleteEmployee(){
         let self = this;

@@ -244,6 +244,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+
+
+
+
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script type="text/javascript">
   var  typed = new Typed('.auto-type',{
@@ -254,30 +260,6 @@
   }); 
 </script>
 
-<script>
-    // Initialize carousel
-    const carousel = new bootstrap.Carousel(document.getElementById('productCarousel'));
-
-    // Size selection functionality
-    document.querySelectorAll('.size-option').forEach((option, index) => {
-        option.addEventListener('click', function() {
-            // Remove active class from all sizes
-            document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('active'));
-            // Add active class to clicked size
-            this.classList.add('active');
-            // Slide to corresponding image
-            carousel.to(index);
-        });
-    });
-
-    // Update size selection when carousel slides
-    carousel._element.addEventListener('slid.bs.carousel', event => {
-        const activeIndex = event.to;
-        document.querySelectorAll('.size-option').forEach((option, index) => {
-            option.classList.toggle('active', index === activeIndex);
-        });
-    });
-</script>
 
 
 </body>

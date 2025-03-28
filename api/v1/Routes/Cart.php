@@ -220,19 +220,19 @@ class Cart extends CartController
      * @throws Exception
      */
     public function remove($params){
-        if($this->clean->Method() !== "POST"  && !Util::tokenValidate())
+        if($this->clean->Method() !== "POST" )
             return array('status'=>403,'payload'=>"Unauthorized Access");
 
         $status = 403;
         $data = 'Unauthorized Access';
 
-        $userd = new UsersController();
-        $user_id = ($userd->getUserIdByToken(Util::$token))->id;
+        //$userd = new UsersController();
+       // $user_id = ($userd->getUserIdByToken(Util::$token))->id;
 
-        if(!empty($user_id) && !empty($this->data->id)) {
-            if(parent::deleteApplication($this->data->id, $user_id)){
+        if( !empty($this->data->id)) {
+            if(parent::deleteCart($this->data->id, '')){
                 $status = 200;
-                $data = "Application was successful deleted!";
+                $data = "Booking was successful Removed!";
             }
         }
         return array('status'=>$status, 'payload'=>$data);

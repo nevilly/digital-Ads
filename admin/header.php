@@ -195,9 +195,13 @@ $notNo =  Util::CartNotification();
 
     <ul class="list-unstyled topnav-menu topnav-menu-left mb-0">
         <li>
-            <button class="button-menu-mobile disable-btn waves-effect">
+            <button class="button-menu-mobile  waves-effect">
                 <i class="fe-menu"></i>
             </button>
+
+          <!--   <button class="button-menu-mobile disable-btn waves-effect">
+                <i class="fe-menu"></i>
+            </button> -->
         </li>
 
         <li>

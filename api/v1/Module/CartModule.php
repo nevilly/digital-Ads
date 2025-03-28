@@ -110,9 +110,9 @@ class CartModule extends Database
         return $status;
     }
 
-    public function deleteApplication($id, $user)
+    public function deleteCart($id, $user)
     {
-        $where = !empty($id) && !empty($user) ? "id='$id' AND user='$user'" :'';
+        $where = !empty($id) ? "id='$id'" :'';
 
         return parent::delete(parent::encode(['table'=>$this->table,'where'=>$where]));
     }
