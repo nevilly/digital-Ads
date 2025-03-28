@@ -12,7 +12,7 @@ $notNo =  Util::CartNotification();
 ?>
 
 <!-- Topbar Start -->
-<div class="navbar-custom" style = 'background-color: #141627'>
+<div class="navbar-custom " style = 'background-color: #141627'>
     <ul class="list-unstyled topnav-menu float-end mb-0">
 
         <li class="d-none d-lg-block">
@@ -195,7 +195,7 @@ $notNo =  Util::CartNotification();
 
     <ul class="list-unstyled topnav-menu topnav-menu-left mb-0">
         <li>
-            <button class="button-menu-mobile  waves-effect">
+            <button class="button-menu-mobile  button-menu-mobile  waves-effect">
                 <i class="fe-menu"></i>
             </button>
 

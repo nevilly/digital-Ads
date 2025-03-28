@@ -6,17 +6,7 @@
 
 
 
-<style>
-    .nContainer{
-        width: 100%;
-        height: 100vh;
-        background-color: green;
-        color:white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
+
 
 
 

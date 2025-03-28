@@ -133,12 +133,14 @@
 
         }
 
+
+
         .custom-card {
             border-radius: 30px;
             overflow: hidden;
-            max-width: 18rem;
-            margin: 20px;
-                height: 450px; /* Set fixed height for the card */
+            max-width: 15rem;
+            margin: 8px;
+            height: 350px; /* Set fixed height for the card */
             background-color: #1C1F37;
         }
 
@@ -150,19 +152,19 @@
         }
 
         .card-body {
-            padding: 1.5rem;
+            padding: .5rem;
         }
 
         .price {
             font-weight: bold;
             color: #28a745;
-            font-size: 1.2rem;
-            margin-left: 1.8rem;
+            font-size: 1rem;
+            margin-left: 1.5rem;
         }
 
            .bottom-section {
             margin-top: auto;
-            padding-top: 1rem;
+            padding-top: 1.5rem;
 
             border-radius: 0px 0px 24px 24px;
             width: 100%;

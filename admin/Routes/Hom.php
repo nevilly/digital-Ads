@@ -476,7 +476,7 @@ class Hom extends AdslotController{
                $scm .="    <div class=\"col-xl-4 col-md-6\">
                     <div class=\"\">
 
-                        <div class=\"card-body myCard\" style=\"border-radius:30px; background-color: #1C1F37;\" >
+                        <div class=\"card-body myCard\" style=\"border-radius:30px; background-color: #1C1F37; margin-bottom:1rem;\" >
                             <div class=\"d-flex align-items-center\" >
                                 <div class=\"flex-shrink-0 avatar-lg me-3\" >
                                     <img src=\"../public/uploads/mwananchiAds/Banner_300x250.png\" class=\"img-fluid \" alt=\"user\" style=\"border-radius:10px; background-color: #1C1F37; width:150px\">
