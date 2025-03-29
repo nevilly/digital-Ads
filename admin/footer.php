@@ -244,7 +244,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+ 
 
 
 
@@ -259,6 +259,44 @@
     loop:true
   }); 
 </script>
+
+
+<script type="text/javascript">
+	// Select the textarea element
+const textarea = document.getElementById('autoTypeTextarea');
+
+// Text to be auto-typed
+const textToType = "Hello! This text is being automatically typed into the textarea. ✨";
+let index = 0;
+
+// Typing function
+function typeText() {
+  if (index < textToType.length) {
+    textarea.classList.add('cursor');
+    textarea.value += textToType.charAt(index);
+    index++;
+    setTimeout(typeText, 50);
+  } else {
+    textarea.classList.remove('cursor');
+  }
+}
+</script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67e6bae9338fd8190ed1c41d/1inekk8t9';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
 
 

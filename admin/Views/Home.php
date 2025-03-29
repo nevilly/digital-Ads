@@ -59,6 +59,58 @@
             color:black;
         }
 
+        .textarea-container {
+            position: relative;
+        }
+        .textarea-buttons  {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            width: 30%;
+           
+            width: 40%;
+        }
+        .textarea-buttons > select {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            width: 15rem;
+            border-radius: 24px;
+            background-color: white;
+            border-radius: 24px;
+            border:1px solid blue;
+        }
+
+        .textarea-buttons > div >.n-ask {
+            height: 50px;       
+            border:1px solid blue;
+            border-radius: 24px;border:1px solid blue; height: 30px;
+        }
+        textarea {
+            padding-bottom: 60px; /* Make space for buttons */
+        }
+
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+            transition: transform 0.3s;
+             transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 
+                    0 4px 6px -2px rgba(0, 0, 0, 0.08);
+        transform: translateY(-3px);
+        }
+
+
+
     </style>
 
 
@@ -68,24 +120,14 @@
 
 
 
-    <div class="content" style="background-color:white; padding:0px;margin:-5px;">
+    <div class="content" style="background-color:white; padding:-2rem;margin:-5px;">
 
         <!-- Start Content-->
         <div class="container-fluid">
 
 
         <header class="header-clip">
-            <!-- Bootstrap Navbar 
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Logo</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-              
-                </div>
-            </nav>-->
-
+          
 
             <div class="container container-fluid flex-grow-1 header-content">
                 <div class="row">
@@ -93,8 +135,8 @@
                         <h1 class="" style = "color:white ; font-weight:bold; ">Empowering All To </h1>
                         <h1 style = "color:white ; font-weight:bold; "><span class = 'auto-type'></span> </h1>
                        
-                        <p class="lead"></p>
-                        <a src='/admin/Hom'><button class="btn btn-light btn-lg">Book Now</button></a>
+                       
+                        <a href="/admin/Hom"><button class="btn btn-light btn-lg" style = "background-color:white; border:1px solid #141627;border-radius:23px;padding:15px,15px, 0px, 0px;width: 200px; margin-top:10px;"  >Book Ads</button></a>
                     </div>
                     <div class="col-md-8 " >
 
@@ -139,38 +181,162 @@
 
 
 
-<div class="container mt-5">
-    <div class="card">
-        <div class="card-header" style ="color:#0062cc;">
-          <h4> <i class="bi bi-robot me-2"></i>Ask Mwananchi, Our AI chatbot </h4>
-        </div>
-        <div class="card-body">
-            
-           
-
-            <!-- Textarea with buttons -->
-            <div class="textarea-container">
-                <textarea class="form-control" style= '  border:1px solid #141627;
-    box-shadow: 0 0 10px #719ECE; border-radius:10px;' rows="4" placeholder="Add notes..."></textarea>
-                <div class="textarea-buttons">
-                    <button class="btn btn-sm btn-primary me-1">
-                        <i class="bi bi-save"></i> Ask
-                    </button>
-              
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header" style ="color:#0062cc;">
+                  <h4> <i class="bi bi-robot me-2"></i>Ask Mwananchi, Our AI chatbot </h4>
                 </div>
-            </div>
+                <div class="card-body">
+                    
+                   
 
-         
+                    <!-- Textarea with buttons -->
+                    <div class="textarea-container">
+                        <textarea class="form-control" id="autoTypeTextarea" style= 'border:1px solid #141627;
+                            box-shadow: 0 0 10px #719ECE; border-radius:10px;' rows="4" placeholder="Add notes..."></textarea>
+                        
+
+                    <div class="textarea-buttons">
+                           
+                       
+                                 
+                            <div class="d-flex gap-4">
+                                <select class="form-select my-1 n-ask my-md-0 btn btn-sm  me-2" id="selectPlatform" name="selectPlatform" style="">
+                                    <option  value = 'Facebook' ><i class="bi bi-save"></i>I want to know the Rate</option>
+                                    <option value = 'Instagram'>Instagram</option>
+                                    <option value = 'Youtube'>Youtube</option>
+                                    <option value = 'Mwananchi'>Mwananchi</option>
+                                    <option value = 'Citizen'>Citizen</option>
+                                    <option value = 'Mwanaspoti'>Mwanaspoti</option>
+                                    <option value = 'X'>X</option>
+                                </select>
+
+                                <select class="form-select my-1 n-ask my-md-0 btn btn-sm  me-2" id="selectPlatform" name="selectPlatform" style="">
+                                    <option  value = 'Facebook' ><i class="bi bi-save"></i>I want to know the Rate</option>
+                                    <option value = 'Instagram'>Instagram</option>
+                                    <option value = 'Youtube'>Youtube</option>
+                                    <option value = 'Mwananchi'>Mwananchi</option>
+                                    <option value = 'Citizen'>Citizen</option>
+                                    <option value = 'Mwanaspoti'>Mwanaspoti</option>
+                                    <option value = 'X'>X</option>
+                                </select>
+                            </div>
+                        
+
+                         
+                      
+                        </div>
+                    </div>
+
+                 
+                </div>
+               
+            </div>
         </div>
-       
-    </div>
-</div>
-         
+
+
+        <div class="container py-5">
+
+            <h2 style = "padding:10$;"> Top CHoice</h2>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                <!-- Card 1 -->
+                <div class="col"  >
+                    <div class="card  shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/youtube.jpg" alt="Product Image">
+                        <div class="card-body" style = >
+                            <h5 class="card-title">Banner</h5>
+                            <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content..</p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">Memory: 8GB</small>
+                                <small class="text-muted">Camera: 12MP</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 text-danger">$299</span>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card mb-5 shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/youtube.jpg" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Article</h5>
+                            <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content.</p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">Memory: 16GB</small>
+                                <small class="text-muted">Camera: 16MP</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 text-danger">0.00 Sh</span>
+                                <button class="btn btn-primary"> Check</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/SharedScreenshot.jpg " class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Vedeo</h5>
+                            <p class="card-text">Video Ad in Mwananchi are displayed on all pages across the platform and will be played automatically..</p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">Memory: 32GB</small>
+                                <small class="text-muted">Camera: 20MP</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 text-danger">$699</span>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card  shadow-lg">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Road Block</h5>
+                            <p class="card-text">Roadblock Ads in Mwananchi are high-impact ads that will block all the ad placements on the platform for 24 hours.</p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">Memory: 32GB</small>
+                                <small class="text-muted">Camera: 20MP</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 text-danger">0.00Sh</span>
+                                <button class="btn btn-primary">Check</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+            </div>
+        </div>
+
+
+
+
+                 
 
 
             <!-- end row -->
 
-        </div> <!-- container-fluid -->
+    </div> <!-- container-fluid -->
 
     </div> <!-- content -->
 
