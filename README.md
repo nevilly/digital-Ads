@@ -4,14 +4,14 @@
 
 1. User Interface & Navigation
 
-   -The platform should be simple, intuitive, and easy to navigate. ✔️✔️
-   - Users should be able to search and filter available ad slots based on position, size, and price. ✔️✔️
-   - Avoid directly copying the reference example—creativity is encouraged. ✔️✔️
+   - simpleplatform, intuitive, and easy to navigate.        ✔️✔️
+   - search and filter ad slots, position, size, and price.  ✔️✔️
+   - Avoid directly copying example—creativity is encouraged.✔️✔️
 
 2. Ad Booking System
 
-   - [x] Users should be able to select the number of ads they want to book. ✔️✔️
-   - The system must calculate the total cost in real time. ✔️✔️
+   -  to select the number of ads they want to book.         ✔️✔️
+   - The system must calculate the total cost in real time.  ✔️✔️
 
 3. Checkout & Invoice Generation
 
