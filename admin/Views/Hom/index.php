@@ -1,6 +1,135 @@
+<style>
+    .search-wrapper {
+            display: flex;
+            gap: 10px;
+            width: 400px;
+            margin: 50px auto;
+            align-items: center;
+            position: relative;
+        }
 
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        .filter-btn:hover {
+            background-color: #f5f5f5;
+            border-color: #007bff;
+            color: #007bff;
+        }
+
+        .filter-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 110%;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 100;
+        }
+
+        .filter-dropdown.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .filter-option {
+            margin-bottom: 10px;
+        }
+
+        .filter-option label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .filter-option label:hover {
+            background-color: #f8f9fa;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+</style>
     
- 
+    <div class="search-wrapper">
+        <div class="search-container">
+            <input type="search" id = "searchInput" class="search-input" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="filter-wrapper">
+            <button class="filter-btn" aria-label="Filter options" id="filterButton">
+                <i class="fas fa-filter"></i>
+                <span>Filters</span>
+            </button>
+            <div class="filter-dropdown" id="filterDropdown">
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="position">
+                        Position
+                    </label>
+                </div>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="price">
+                        Price
+                    </label>
+                </div>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="dimension">
+                        Dimension
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item-list" id="itemList"></div>
             
 
  <div class="container-fluid">
@@ -224,11 +353,6 @@
 <!-- End Page content -->
 <!-- ============================================================== -->
 
-   
-
-       
- 
-      
     
 
    

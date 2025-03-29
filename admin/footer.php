@@ -300,5 +300,114 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 
+
+       <script>
+
+   // const items = [
+   //          { name: 'Wooden Chair', price: 125.99, dimension: '80x50x60 cm', position: 'Warehouse A' },
+   //          { name: 'Office Desk', price: 299.50, dimension: '150x75x70 cm', position: 'Showroom' },
+   //          { name: 'Reading Lamp', price: 45.00, dimension: '30x30x40 cm', position: 'Storage Room' },
+   //          { name: 'Bookshelf', price: 179.95, dimension: '180x40x200 cm', position: 'Warehouse B' },
+   //          { name: 'Coffee Table', price: 149.99, dimension: '120x60x45 cm', position: 'Display Area' },
+   //          { name: 'Computer Monitor', price: 199.00, dimension: '52x35x5 cm', position: 'Electronics Section' },
+   //          { name: 'Filing Cabinet', price: 89.75, dimension: '45x40x70 cm', position: 'Office Supplies' },
+   //          { name: 'Patio Umbrella', price: 129.50, dimension: '300x300x250 cm', position: 'Outdoor Section' },
+   //          { name: 'Throw Pillow', price: 24.99, dimension: '40x40x10 cm', position: 'Home Decor' },
+   //          { name: 'Wall Clock', price: 34.95, dimension: '30x30x5 cm', position: 'Decorations' }
+   //      ];
+
+            var  items = <?php echo json_encode($search_array); ?>;
+
+
+       // Initial render
+        renderItems(items);
+
+
+         // Search functionality
+        document.getElementById('searchInput').addEventListener('input',function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredItems = items.filter(item => {
+                return item.name.toLowerCase().includes(searchTerm) ||
+                       item.position.toLowerCase().includes(searchTerm) || item.dimension.toLowerCase().includes(searchTerm);
+                        });
+              renderItems(filteredItems);
+
+            });
+
+            
+
+
+     // Render items function
+        function renderItems(itemsToRender) {
+            const itemList = document.getElementById('itemList');
+            if (itemsToRender.length === 0) {
+                itemList.innerHTML = '<div class="no-items">No items found matching your search</div>';
+                return;
+            }
+
+
+              itemList.innerHTML = itemsToRender.map(item => `
+                <div class="item-card">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-property">
+                        <i class="fas fa-tag"></i> Price: $${item.price.toFixed(2)}
+                    </div>
+                    <div class="item-property">
+                        <i class="fas fa-ruler-combined"></i> Dimension: ${item.dimension}
+                    </div>
+                    <div class="item-property">
+                        <i class="fas fa-map-marker-alt"></i> Position: ${item.position}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const filterButton = document.getElementById('filterButton');
+        const filterDropdown = document.getElementById('filterDropdown');
+
+        // Toggle dropdown
+        filterButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            filterDropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.filter-wrapper')) {
+                filterDropdown.classList.remove('active');
+            }
+        });
+
+        // Optional: Close dropdown when scrolling
+        window.addEventListener('scroll', () => {
+            filterDropdown.classList.remove('active');
+        });
+    </script>
+ 
+      
+
 </body>
 </html>

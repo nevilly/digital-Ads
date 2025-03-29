@@ -237,7 +237,7 @@
 
         <div class="container py-5">
 
-            <h2 style = "padding:10$;"> Top CHoice</h2>
+            <h2 > Top CHoice</h2>
             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
                 <!-- Card 1 -->
                 <div class="col"  >
@@ -246,14 +246,11 @@
                         <div class="card-body" style = >
                             <h5 class="card-title">Banner</h5>
                             <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content..</p>
-                            <div class="d-flex justify-content-between">
-                                <small class="text-muted">Memory: 8GB</small>
-                                <small class="text-muted">Camera: 12MP</small>
-                            </div>
+                       
                         </div>
                         <div class="card-footer bg-white">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">$299</span>
+                                <span class="h4 text-danger">0.00 Tsh</span>
                                 <button class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
@@ -267,42 +264,18 @@
                         <div class="card-body">
                             <h5 class="card-title">Article</h5>
                             <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content.</p>
-                            <div class="d-flex justify-content-between">
-                                <small class="text-muted">Memory: 16GB</small>
-                                <small class="text-muted">Camera: 16MP</small>
-                            </div>
+                          
                         </div>
                         <div class="card-footer bg-white">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">0.00 Sh</span>
-                                <button class="btn btn-primary"> Check</button>
+                                <span class="h4 text-danger">0.00 Tsh</span>
+                                <button class="btn btn-primary"> Buy Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="col">
-                    <div class="card shadow-lg">
-                        <img src="/public/uploads/MwananchiAds/SharedScreenshot.jpg " class="card-img-top" alt="Product Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Vedeo</h5>
-                            <p class="card-text">Video Ad in Mwananchi are displayed on all pages across the platform and will be played automatically..</p>
-                            <div class="d-flex justify-content-between">
-                                <small class="text-muted">Memory: 32GB</small>
-                                <small class="text-muted">Camera: 20MP</small>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">$699</span>
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+             
                 <!-- Card 3 -->
                 <div class="col">
                     <div class="card  shadow-lg">
@@ -310,10 +283,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Road Block</h5>
                             <p class="card-text">Roadblock Ads in Mwananchi are high-impact ads that will block all the ad placements on the platform for 24 hours.</p>
-                            <div class="d-flex justify-content-between">
-                                <small class="text-muted">Memory: 32GB</small>
-                                <small class="text-muted">Camera: 20MP</small>
-                            </div>
+                          
                         </div>
                         <div class="card-footer bg-white">
                             <div class="d-flex justify-content-between align-items-center">
@@ -323,6 +293,27 @@
                         </div>
                     </div>
                 </div>
+
+
+                   <!-- Card 3 -->
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/SharedScreenshot.jpg " class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Vedeo</h5>
+                            <p class="card-text">Video Ad in Mwananchi are displayed on all pages across the platform and will be played automatically..</p>
+                       
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 text-danger">0.00 Tsh</span>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             
 
             </div>
