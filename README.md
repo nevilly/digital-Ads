@@ -1,5 +1,35 @@
 # digital-Ads Website
 
+## Here’s a overview of what I accomplished:
+
+1. User Interface & Navigation
+
+   -The platform should be simple, intuitive, and easy to navigate. [x]
+   - Users should be able to search and filter available ad slots based on position, size, and price.[xx]
+   - Avoid directly copying the reference example—creativity is encouraged. [x]
+
+2. Ad Booking System
+
+
+   - Users should be able to select the number of ads they want to book. [x]
+   - The system must calculate the total cost in real time. [x]
+
+3. Checkout & Invoice Generation
+
+   - Once ads are selected, users should be able to proceed to a checkout screen.
+   - An invoice should be generated with details of booked ads, total cost, and payment options.
+
+4. Technical Documentation
+
+   - Provide a breakdown of the technology stack (frontend, backend, database, hosting).
+
+   - Define API integrations (if needed for payments or other functionalities).
+   
+   - Security measures for handling user data.
+   Considerations for scalability and future enhancements.
+
+
+
 
 ## Table of Contents
 - [Prerequisites](#Prerequisites)
