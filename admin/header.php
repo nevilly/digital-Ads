@@ -275,7 +275,7 @@ $notNo =  Util::CartNotification();
             <ul id="side-menu">
 
                 <li>
-                    <a href="/admin/Hom">
+                    <a href="/admin/Home">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="badge bg-success rounded-pill float-end"></span>
                         <span> Home </span>
@@ -288,9 +288,28 @@ $notNo =  Util::CartNotification();
  
 
                    <!------Home---------->
+                     <li>
+                    <a href="/admin/Hom">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="badge bg-success rounded-pill float-end"></span>
+                        <span> Digital rate </span>
+                    </a>
+                </li>
                   
 
+           
                 <!------Booking---------->
+                <li>
+                    <a href="/admin/Newz/">
+                       <i class="mdi mdi-account-multiple"></i>
+                        <span class="badge bg-success rounded-pill float-end"></span>
+                        <span> News Ads </span>
+                    </a>
+                </li>
+
+           
+                        
+                   <!------Booking---------->
                 <li>
                     <a href="/admin/Booking/">
                        <i class="mdi mdi-account-multiple"></i>
@@ -299,9 +318,6 @@ $notNo =  Util::CartNotification();
                     </a>
                 </li>
 
-           
-                        
-         
          
 
 

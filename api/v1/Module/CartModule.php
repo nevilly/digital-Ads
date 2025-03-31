@@ -51,9 +51,6 @@ class CartModule extends Database
      */
     public function get($id = '',$limit =''){
         $where = !empty($id)? "id='$id' AND payed = '0'" :'';
-
-       
-
              return parent::query(parent::encode(['query'=>"select COUNT(*) as Cnt from $this->table  where payed = '0' $limit "])); 
     }
 
@@ -64,9 +61,6 @@ class CartModule extends Database
      */
     public function get_c($id = '',$limit =''){
         $where = !empty($id)? "id='$id' AND payed = '0'" :'';
-
-       
-
              return parent::query(parent::encode(['query'=>"select * from $this->table  where payed = '0' $limit "])); 
     }
 

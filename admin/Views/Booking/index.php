@@ -4,9 +4,9 @@
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col-sm-8" style="background-color: #141627;">
+        <div class="col-sm-8" >
             <div class="card mb-4">
-                <div class="card-body" style="background-color: #141627;">
+                <div class="card-body" >
                      <?=$booking;?>
                     <!-- Continue Shopping Button -->
                     <div class="text-start mb-4">
@@ -22,7 +22,6 @@
         <!----Left Sid----->  
         <div class="col-sm-4">
             <div class="card" style="background-color: #1C1F37;  ">
-
                 <div class="card  text-white rounded-3" style="background-color: #1C1F37; border-radius:30px; padding:0.4rem; ">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -42,29 +41,30 @@
 
                         <form class="mt-4">
                           <div data-mdb-input-init class="form-outline form-white mb-4">
-                            <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                            <input type="text" id="typeName" class="form-control " 
                               placeholder="Cardholder's Name" />
                             <label class="form-label" for="typeName">Cardholder's Name</label>
                           </div>
 
                           <div data-mdb-input-init class="form-outline form-white mb-4">
-                            <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                            <input type="text" id="typeText" class="form-control " siez="17"
                               placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
                             <label class="form-label" for="typeText">Card Number</label>
                           </div>
 
                           <div class="row mb-4">
                             <div class="col-md-6">
-                              <div data-mdb-input-init class="form-outline form-white">
-                                <input type="text" id="typeExp" class="form-control form-control-lg"
+                              <div data-mdb-input-init class="form-outline ">
+                                <input type="text" id="typeExp" class="form-control "
                                   placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
                                 <label class="form-label" for="typeExp">Expiration</label>
                               </div>
                             </div>
+
                             <div class="col-md-6">
                               <div data-mdb-input-init class="form-outline form-white">
                                 <input type="password" id="typeText" class="form-control form-control-lg"
-                                  placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                  placeholder="" size="1" minlength="3" maxlength="3" />
                                 <label class="form-label" for="typeText">Cvv</label>
                               </div>
                             </div>
@@ -89,12 +89,12 @@
                           <p class="mb-2"><?=$totalPrice; ?></p>
                         </div>
 
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg">
+                        <a href = "/admin/Invoice"><button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg">
                           <div class="d-flex justify-content-between">
                             
                             <span>Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                           </div>
-                        </button>
+                        </button></a>
 
                     </div>
                 </div>

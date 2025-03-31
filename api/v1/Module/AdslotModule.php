@@ -247,4 +247,25 @@ class AdslotModule extends Database
 
         return parent::query(parent::encode(['query'=>"Select * from  m_vedeo_production  $limit"]));
     }
+
+
+
+
+
+
+
+
+
+
+    /**
+     * @param string $id
+     * @param string $limit
+     * @return mixed
+     */
+    public function get_newz($brand = '',$category =''){
+       // $date  =  date("Y-m-d");
+        //$where = !empty($id)? "where user_id='$id'" :'';
+
+        return parent::query(parent::encode(['query'=>"Select * from  news where category = '$category' AND brand = '$brand' "]));
+    }
 }

@@ -30,7 +30,9 @@
     <link href="<?=Util::staticUrl()?>assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
 
 <style>
-
+   .myColor{
+   background-color: #141627
+   }
 
 	.cart-item img {
      max-width: 100px;
@@ -262,8 +264,8 @@
    // let client = {a : "<?=$this->token;?>",uri:"<?=Util::staticUrl();?>"}
 </script>
 <!-- body start -->
-<body class="loading" data-layout-color="light"  data-layout-mode="default" data-layout-size="fluid" data-topbar-color="light" data-leftbar-position="fixed" data-leftbar-color="light" data-leftbar-size='default' data-sidebar-user='true' style = 'background-color: #141627;'>
+<body class="loading" data-layout-color="light"  data-layout-mode="default" data-layout-size="fluid" data-topbar-color="light" data-leftbar-position="fixed" data-leftbar-color="light" data-leftbar-size='default' data-sidebar-user='true' style = ''>
 
 <!-- Begin page -->
-<div id="wrapper" style = 'background-color: #141627;'>
+<div id="wrapper" style = ''>
 	

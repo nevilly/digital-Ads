@@ -4,7 +4,7 @@
 
 1. User Interface & Navigation
 
-   - simpleplatform, intuitive, and easy to navigate.        ✔️✔️
+   - simple platform, intuitive, and easy to navigate.       ✔️✔️
    - search and filter ad slots, position, size, and price.  ✔️✔️
    - Avoid directly copying example—creativity is encouraged.✔️✔️
 
@@ -16,16 +16,20 @@
 3. Checkout & Invoice Generation
 
    - Once ads are selected, users should be able to proceed to a checkout screen. ✔️✔️
-   - An invoice should be generated with details of booked ads, total cost, and payment options.
+   - An invoice should be generated with details of booked ads, total cost, and payment options.                   ✔️✔️
 
 4. Technical Documentation
 
-   - Provide a breakdown of the technology stack (frontend, backend, database, hosting).
+   - Provide a breakdown of the technology stack (frontend, backend, database, hosting).                             ✔️✔️ 
 
    - Define API integrations (if needed for payments or other functionalities).
    
    - Security measures for handling user data.
    Considerations for scalability and future enhancements.
+
+
+## "creativity is encouraged." Extra functiion
+
 
 
 
@@ -133,6 +137,9 @@ Break down of Technology Stack on this project.
 
 2. Passwords are hashed before storage.
 
---------------------------------------------------------------
+----------------------------
 >> Thank you
------------------------------------------------------------
+----------------------------
+
+
+

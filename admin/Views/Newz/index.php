@@ -192,78 +192,109 @@
         }
 </style>
     
-
-<!--    Search Wrap -->
-<div class="search-wrapper">
-    <div class="search-container">
-        <input type="search" id = "searchInput" class="search-input" placeholder="Search...">
-        <i class="fas fa-search search-icon"></i>
-    </div>
-    <div class="filter-wrapper">
-        <button class="filter-btn" aria-label="Filter options" id="filterButton">
-            <i class="fas fa-filter"></i>
-            <span>Filters</span>
-        </button>
-        <div class="filter-dropdown" id="filterDropdown">
-            <div class="filter-option">
-                <label>
-                    <input type="checkbox" name="position">
-                    Position
-                </label>
-            </div>
-            <div class="filter-option">
-                <label>
-                    <input type="checkbox" name="price">
-                    Price
-                </label>
-            </div>
-            <div class="filter-option">
-                <label>
-                    <input type="checkbox" name="dimension">
-                    Dimension
-                </label>
+    <div class="search-wrapper">
+        <div class="search-container">
+            <input type="search" id = "searchInput" class="search-input" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="filter-wrapper">
+            <button class="filter-btn" aria-label="Filter options" id="filterButton">
+                <i class="fas fa-filter"></i>
+                <span>Filters</span>
+            </button>
+            <div class="filter-dropdown" id="filterDropdown">
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="position">
+                        Position
+                    </label>
+                </div>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="price">
+                        Price
+                    </label>
+                </div>
+                <div class="filter-option">
+                    <label>
+                        <input type="checkbox" name="dimension">
+                        Dimension
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="item-list" id="itemList"></div>
-<!-- End   Search Wrap -->   
+    <div class="item-list" id="itemList"></div>
+            
 
-<div class="container-fluid">
+ <div class="container-fluid">
     <div class="row">
 
-        <div class="container py-5">
-            <h2 class="text-center mb-5" style="color: #2d3436;">Display Rate Cards</h2>
-            
-            <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
-                <!-- Card 1 -->
-                <?=$dr; ?>
-            </div>
+    <div class="container py-5">
+        <h2 class="text-center mb-5" style="color: #2d3436;"> Mwananchi Ads Cards</h2>
+        
+        <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
+            <!-- Card 1 -->
+            <?=$Mwananchi; ?>
         </div>
+    </div>
 
 
-        <div class="container py-5">
-            <h2 class="text-center mb-5" style="color: #2d3436;">Social Media Ads</h2>
-            
-            <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
-                <!-- Card 1 -->
-                <?=$scm; ?>
-            </div>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-5" style="color: #2d3436;">Citizen Ads</h2>
+        
+        <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
+            <!-- Card 1 -->
+            <?=$Citizen; ?>
         </div>
+    </div>
+
+
+
+
+
+
+    <div class="container py-5">
+        <h2 class="text-center mb-5" style="color: #2d3436;">MwanaSpoti Ads</h2>
+        
+        <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
+            <!-- Card 1 -->
+            <?=$mwanaspoti; ?>
+        </div>
+    </div>
+
+
+     
+
+
+
+
+
+
+
+           
                
-        <!--    SPONSORED CONTENT -->
-        <div class="row" style = 'margin-bottom:5px;margin-top:8%; display: none;'>
-            <div class="col-md-9 border-right" style = 'margin-bottom:5%;margin-top:22px;'>
-                <h3 style = 'color: #D0D4E7;'> SPONSORED CONTENT</h3>
+            <!--    SPONSORED CONTENT -->
+            <div class="row" style = 'margin-bottom:5px;margin-top:8%; display: none;'>
+                <div class="col-md-9 border-right" style = 'margin-bottom:5%;margin-top:22px;'>
+                    <h3 style = 'color: #D0D4E7;'> SPONSORED CONTENT</h3>
+                </div>
+
+
+                <?=$sc; ?>
             </div>
-            <?=$sc; ?>
-        </div>
     
     </div> <!-- end row --> 
 
 
 </div> <!-- container-fluid -->
 
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+    
 
    
 

@@ -111,6 +111,8 @@
 
 
 
+
+
     </style>
 
 
@@ -120,15 +122,13 @@
 
 
 
-    <div class="content" style="background-color:white; padding:-2rem;margin:-5px;">
+    <div class="content" style=" padding:-2rem;margin:-5px;">
 
         <!-- Start Content-->
         <div class="container-fluid">
 
 
         <header class="header-clip">
-          
-
             <div class="container container-fluid flex-grow-1 header-content">
                 <div class="row">
                     <div class="col-md-4">
@@ -139,7 +139,6 @@
                         <a href="/admin/Hom"><button class="btn btn-light btn-lg" style = "background-color:white; border:1px solid #141627;border-radius:23px;padding:15px,15px, 0px, 0px;width: 200px; margin-top:10px;"  >Book Ads</button></a>
                     </div>
                     <div class="col-md-8 " >
-
 
                         <div class="container ">
                             <div class="row  ">

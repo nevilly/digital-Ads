@@ -2,7 +2,7 @@
 
 include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Controller/AdslotController.php";
 
-class Hom extends AdslotController{
+class Newz extends AdslotController{
     static $APP;
     static $page;
     static $view;
@@ -16,36 +16,51 @@ class Hom extends AdslotController{
     public function render($params = ''){
         $p = json_decode($params);
         $data = [];
-        $display_rate = [];
+        $newz_mwananchi = [];
+        $newz_citizen = [];
+        $newz_mwanaSpot = [];
         $sponser_content = [];
         $social_medias = [];
         $vedeo_production = [];
         if(!empty($p->page))
             $data = self::user($p->token);
         else{
-            $data = self::all_employee();
-            $display_rate = self::all_displayRate();
+         
+            $newz_mwananchi = self::all_mwanaNchi('Mwananchi','news');
+            $newz_citizen = self::all_mwanaNchi('Citizen','news');
+            $newz_mwanaSpot = self::all_mwanaNchi('Spoti','news');
             $sponser_content = self::all_sponser_content();
             $social_medias = self::all_social_medias();
             $vedeo_production = self::allvedeo_production();
             
         }
+
   
 
-          $dr = '';
-          if($display_rate !== null && is_array($display_rate))
-            foreach ($display_rate as $datum) {
+
+
+
+
+          $Mwananchi = '';
+          if($newz_mwananchi !== null && is_array($newz_mwananchi))
+            foreach ($newz_mwananchi as $datum) {
               # code...
 
               $id =  $datum['id']; 
+              $brand =  $datum['brand'];  
               $ad_type =  $datum['ad_type'];  
-              $dimension =  $datum['dimension']; 
+              $dimension =  $datum['size']; 
+              $ad_unit =  $datum['ad_unit'];
+              $position =  $datum['position'];
+              $appearence =  $datum['appearence'];
               $ad_unit =  $datum['ad_unit'];
               $device =  $datum['device'];
               $descr =  $datum['descr'];
               $img =  $datum['img'];
               $rate =  $datum['rate'];
               $price =  $datum['price'];
+              $cashType =  $datum['cashType'];
+              $category =  $datum['category'];
         
               $placement_type =  $datum['placement_type'];
               $createDate =  $datum['createDate'];
@@ -55,7 +70,7 @@ class Hom extends AdslotController{
 
 
 
-               $dr .=" 
+               $Mwananchi .=" 
 
                       <div class=\"col\">
                 <div class=\"card\">
@@ -65,19 +80,17 @@ class Hom extends AdslotController{
 
                     <div class=\"card-body\">
                           
-                        <h4 class=\"card-title\">$ad_type</h4>
+                        <h4 class=\"card-title\">$brand</h4>
                             
-                        <p class=\"card-text\">Select info to see preferred size to to corresponding product Ads images.</p>
-                        <div class=\"price-tag\">$rate</div>
+                        <p class=\"card-text\">
+                         Size: <b>$dimension</b> <br/>
+                         Color: <b>$appearence</b> <br/>
+                         Position: <b>$position</b> <br/></p>
+                        <div class=\"price-tag\">$price $cashType</div>
                         <button class=\"btn btn-book\" data-bs-toggle=\"modal\" data-bs-target=\"#addBooking$id\" >Book Now</button>
                     </div>
                 </div>
             </div>
-
-
-
-
-           
 
 
 
@@ -88,25 +101,25 @@ class Hom extends AdslotController{
 
                   
 
-                   <div class=\"modal fade\" tabindex=\"1\"  id=\"addBooking$id\">
-        <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\">
-                    <h5 class=\"modal-title\">BOOKING ADS</h5>
-                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
-                </div>
+        <div class=\"modal fade\" tabindex=\"1\"  id=\"addBooking$id\">
+            <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+                <div class=\"modal-content\">
+	                <div class=\"modal-header\">
+	                    <h5 class=\"modal-title\">BOOKING ADS</h5>
+	                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+	                </div>
              
                 <div class=\"modal-body\">
 
 
-          <input type='text' value = '$dimension' id = 'dimension' hidden/>
-          <input type='text' value = '$img' id = 'img' hidden/>
-          <input type='text' value = '$ad_type' id = 'ad_type' hidden/>
-          <input type='text' value = '$ad_unit' id = 'ad_unit' hidden/>
-          <input type='text' value = '$device' id = 'device' hidden/>
-          <input type='text' value = '$rate' id = 'rate' hidden/>
-          <input type='text' value = '$price' id = 'price' hidden/>
-          <input type='text' value = '$dimension' id = 'dimension' hidden/>
+		            <input type='text' value = '$dimension' id = 'dimension' hidden/>
+		            <input type='text' value = '$img' id = 'img' hidden/>
+		            <input type='text' value = '$ad_type' id = 'ad_type' hidden/>
+		            <input type='text' value = '$ad_unit' id = 'ad_unit' hidden/>
+		            <input type='text' value = '$device' id = 'device' hidden/>
+		            <input type='text' value = '$rate' id = 'rate' hidden/>
+		            <input type='text' value = '$price' id = 'price' hidden/>
+		            <input type='text' value = '$dimension' id = 'dimension' hidden/>
 
 
 
@@ -175,9 +188,9 @@ class Hom extends AdslotController{
 
      <div class=\"modal fade\" tabindex=\"1\"  id=\"addModal$id\" style=\" color:white;\">
         <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
-            <div class=\"modal-content\" style=\"background-color: #1C1F37;   border-radius: 30px; color:white;\">
+            <div class=\"modal-content\" ;   border-radius: 30px; color:white;\">
                 <div class=\"modal-header\">
-                    <h5 class=\"modal-title\" style=\"color:white;\" >BANNER INFO </h5>
+                    <h5 class=\"modal-title\" style=\"color:white;\" >$brand INFO </h5>
                     <button type=\"button\" class=\"btn-close\" style=\" color:white;\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
                 </div>
              
@@ -190,15 +203,19 @@ class Hom extends AdslotController{
                     
             <div class=\"card-body\">
                 <h4 class=\"card-title\" style=\"color:white;\">$ad_type</h4>
-                <p class=\"card-text\">Select your preferred size to see corresponding product images.</p>
+                <p class=\"card-text\">
+                  Size: <b>$dimension</b><br/>
+                  Color: <b>$appearence</b><br/>
+                  Color: <b>$position</b><br/>
+
+               </p>
                 
             
                 <div class=\"mb-3\">
-                    <h5 style=\" color:white;\">Select Size (px):</h5>
+                    <h5 style=\" color:white;\">Select Size (px):$diamension</h5>
                     <div class=\"d-flex gap-2\">
                         <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
-                        <div class=\"size-option border p-2 rounded\" data-size=\"30\">30x40</div>
-                        <div class=\"size-option border p-2 rounded\" data-size=\"40\">40x60</div>
+                       
                     </div>
                 </div>
             </div>
@@ -227,6 +244,426 @@ class Hom extends AdslotController{
 
                  ";
            } 
+
+
+
+
+          $Citizen = '';
+          if($newz_citizen !== null && is_array($newz_citizen))
+            foreach ($newz_citizen as $datum) {
+              # code...
+
+              $id =  $datum['id']; 
+              $brand =  $datum['brand'];  
+              $ad_type =  $datum['ad_type'];  
+              $dimension =  $datum['size']; 
+              $ad_unit =  $datum['ad_unit'];
+              $position =  $datum['position'];
+              $appearence =  $datum['appearence'];
+              $ad_unit =  $datum['ad_unit'];
+              $device =  $datum['device'];
+              $descr =  $datum['descr'];
+              $img =  $datum['img'];
+              $rate =  $datum['rate'];
+              $price =  $datum['price'];
+              $cashType =  $datum['cashType'];
+              $category =  $datum['category'];
+        
+              $placement_type =  $datum['placement_type'];
+              $createDate =  $datum['createDate'];
+
+             $avatar = !empty($img) && $img !== ''? Util::Url()."/public/uploads/mwananchiAds/$img" : Util::Url()."/public/uploads/mwananchiAds/mlog.jpg";
+
+
+
+
+               $Citizen .=" 
+
+                      <div class=\"col\">
+                <div class=\"card\">
+                    <div class=\"badge-trending\">POPULAR</div>
+                    <div class=\"rating\"><i class=\"fas fa-star\" ></i> 4.8</div>
+                     <img src=\"$avatar\" class=\"card-img-top card-img-custom\" alt=\"Product Image\" style = \"margin-top: 20px;\"  data-bs-toggle=\"modal\" data-bs-target=\"#addModal$id\">
+
+                    <div class=\"card-body\">
+                          
+                        <h4 class=\"card-title\">$brand</h4>
+                            
+                        <p class=\"card-text\">
+                         Size: <b>$dimension</b> <br/>
+                         Color: <b>$appearence</b> <br/>
+                         Position: <b>$position</b> <br/></p>
+                        <div class=\"price-tag\">$price $cashType</div>
+                        <button class=\"btn btn-book\" data-bs-toggle=\"modal\" data-bs-target=\"#addBooking$id\" >Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                <!-- end col -->
+
+
+
+                  
+
+        <div class=\"modal fade\" tabindex=\"1\"  id=\"addBooking$id\">
+            <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+                <div class=\"modal-content\">
+	                <div class=\"modal-header\">
+	                    <h5 class=\"modal-title\">BOOKING ADS</h5>
+	                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+	                </div>
+             
+                <div class=\"modal-body\">
+
+
+		            <input type='text' value = '$dimension' id = 'dimension' hidden/>
+		            <input type='text' value = '$img' id = 'img' hidden/>
+		            <input type='text' value = '$ad_type' id = 'ad_type' hidden/>
+		            <input type='text' value = '$ad_unit' id = 'ad_unit' hidden/>
+		            <input type='text' value = '$device' id = 'device' hidden/>
+		            <input type='text' value = '$rate' id = 'rate' hidden/>
+		            <input type='text' value = '$price' id = 'price' hidden/>
+		            <input type='text' value = '$dimension' id = 'dimension' hidden/>
+
+
+
+
+
+                    
+                    <img src=\"$avatar\"  alt=\"Size 20x30\", style= \"width:100%\">
+
+
+                    <!-- Card Body -->
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">$ad_type</h5>
+                            <p class=\"card-text\">Select your preferred size to see corresponding product images.</p>
+                            
+                            <!-- Size Selection -->
+                            <div class=\"mb-3\">
+                                <h6>Select Size (px):</h6>
+                                <div class=\"d-flex gap-2\">
+                                    <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
+                                    <div class=\"size-option border p-2 rounded\" data-size=\"30\">30x40</div>
+                                    <div class=\"size-option border p-2 rounded\" data-size=\"40\">40x60</div>
+                                </div>
+                            </div>
+                            </div>
+
+                    
+                    <!--------First Name---------->
+              
+
+                    <div class=\"mb-3\">
+                        <label for=\"status-select\" class=\"me-2\">Select Platform</label>
+                        <div class=\"me-sm-2\">
+                            <select class=\"form-select my-1 my-md-0\" id=\"selectPlatform\" name=\"selectPlatform\">
+                                <option  value = 'Facebook' >Facebook</option>
+                                <option value = 'Instagram'>Instagram</option>
+                                <option value = 'Youtube'>Youtube</option>
+                                <option value = 'Mwananchi'>Mwananchi</option>
+                                <option value = 'Citizen'>Citizen</option>
+                                <option value = 'Mwanaspoti'>Mwanaspoti</option>
+                                <option value = 'X'>X</option>
+                            </select>
+                        </div> 
+                    </div>
+
+
+                    <!--------First Name---------->
+                    <div class=\"mb-3\">
+                      <label for=\"exampleFormControlInput1\" class=\"form-label\">Date</label>
+                   
+                    <input id=\"bookingDate\" class=\"form-control not_required\" type=\"date\" />
+                    </div>
+                
+                </div>
+
+                <!-----Submit---------->
+                <div class=\"modal-footer d-flex justify-content-between align-items-center\">
+                    <h4 class=\"text-primary\">$rate</h4>
+                    <button type=\"button\" class=\"btn btn-primary addCart\">Booking Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+     <div class=\"modal fade\" tabindex=\"1\"  id=\"addModal$id\" style=\" color:white;\">
+        <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+            <div class=\"modal-content\" ;   border-radius: 30px; color:white;\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title\" style=\"color:white;\" >$brand INFO </h5>
+                    <button type=\"button\" class=\"btn-close\" style=\" color:white;\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                </div>
+             
+               <div class=\"modal-body\">
+
+               <img src=\"$avatar\" class=\"card-img-top\" alt=\"Product Image\" style = ' width:  100%;'>
+                             
+
+
+                    
+            <div class=\"card-body\">
+                <h4 class=\"card-title\" style=\"color:white;\">$ad_type</h4>
+                <p class=\"card-text\">
+                  Size: <b>$dimension</b><br/>
+                  Color: <b>$appearence</b><br/>
+                  Color: <b>$position</b><br/>
+
+               </p>
+                
+            
+                <div class=\"mb-3\">
+                    <h5 style=\" color:white;\">Select Size (px):$diamension</h5>
+                    <div class=\"d-flex gap-2\">
+                        <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"mb-3\">
+                <div class=\"me-sm-2\">
+                    <div class=\" d-flex justify-content-between align-items-center\" >
+                        <span class=\"price\" >Rate : $rate</span>
+                        <span class=\"price \" >Price : $price</span>
+         
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+
+                <div class=\"modal-footer d-flex justify-content-between align-items-center\">
+                    <h4 class=\"text-primary\">$rate</h4>
+                    <button type=\"button\" class=\"btn btn-primary addEmployee\"  data-bs-dismiss=\"modal\"  >Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+                 ";
+           } 
+
+
+        
+
+
+          $mwanaspoti = '';
+          if($newz_mwanaSpot !== null && is_array($newz_mwanaSpot))
+            foreach ($newz_mwanaSpot as $datum) {
+              # code...
+
+              $id =  $datum['id']; 
+              $brand =  $datum['brand'];  
+              $ad_type =  $datum['ad_type'];  
+              $dimension =  $datum['size']; 
+              $ad_unit =  $datum['ad_unit'];
+              $position =  $datum['position'];
+              $appearence =  $datum['appearence'];
+              $ad_unit =  $datum['ad_unit'];
+              $device =  $datum['device'];
+              $descr =  $datum['descr'];
+              $img =  $datum['img'];
+              $rate =  $datum['rate'];
+              $price =  $datum['price'];
+              $cashType =  $datum['cashType'];
+              $category =  $datum['category'];
+        
+              $placement_type =  $datum['placement_type'];
+              $createDate =  $datum['createDate'];
+
+             $avatar = !empty($img) && $img !== ''? Util::Url()."/public/uploads/mwananchiAds/$img" : Util::Url()."/public/uploads/mwananchiAds/mlog.jpg";
+
+
+
+
+               $mwanaspoti .=" 
+
+                      <div class=\"col\">
+                <div class=\"card\">
+                    <div class=\"badge-trending\">POPULAR</div>
+                    <div class=\"rating\"><i class=\"fas fa-star\" ></i> 4.8</div>
+                     <img src=\"$avatar\" class=\"card-img-top card-img-custom\" alt=\"Product Image\" style = \"margin-top: 20px;\"  data-bs-toggle=\"modal\" data-bs-target=\"#addModal$id\">
+
+                    <div class=\"card-body\">
+                          
+                        <h4 class=\"card-title\">$brand</h4>
+                            
+                        <p class=\"card-text\">
+                         Size: <b>$dimension</b> <br/>
+                         Color: <b>$appearence</b> <br/>
+                         Position: <b>$position</b> <br/></p>
+                        <div class=\"price-tag\">$price $cashType</div>
+                        <button class=\"btn btn-book\" data-bs-toggle=\"modal\" data-bs-target=\"#addBooking$id\" >Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                <!-- end col -->
+
+
+
+                  
+
+        <div class=\"modal fade\" tabindex=\"1\"  id=\"addBooking$id\">
+            <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+                <div class=\"modal-content\">
+	                <div class=\"modal-header\">
+	                    <h5 class=\"modal-title\">BOOKING ADS</h5>
+	                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+	                </div>
+             
+                <div class=\"modal-body\">
+
+
+		            <input type='text' value = '$dimension' id = 'dimension' hidden/>
+		            <input type='text' value = '$img' id = 'img' hidden/>
+		            <input type='text' value = '$ad_type' id = 'ad_type' hidden/>
+		            <input type='text' value = '$ad_unit' id = 'ad_unit' hidden/>
+		            <input type='text' value = '$device' id = 'device' hidden/>
+		            <input type='text' value = '$rate' id = 'rate' hidden/>
+		            <input type='text' value = '$price' id = 'price' hidden/>
+		            <input type='text' value = '$dimension' id = 'dimension' hidden/>
+
+
+
+
+
+                    
+                    <img src=\"$avatar\"  alt=\"Size 20x30\", style= \"width:100%\">
+
+
+                    <!-- Card Body -->
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">$ad_type</h5>
+                            <p class=\"card-text\">Select your preferred size to see corresponding product images.</p>
+                            
+                            <!-- Size Selection -->
+                            <div class=\"mb-3\">
+                                <h6>Select Size (px):</h6>
+                                <div class=\"d-flex gap-2\">
+                                    <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
+                                    <div class=\"size-option border p-2 rounded\" data-size=\"30\">30x40</div>
+                                    <div class=\"size-option border p-2 rounded\" data-size=\"40\">40x60</div>
+                                </div>
+                            </div>
+                            </div>
+
+                    
+                    <!--------First Name---------->
+              
+
+                    <div class=\"mb-3\">
+                        <label for=\"status-select\" class=\"me-2\">Select Platform</label>
+                        <div class=\"me-sm-2\">
+                            <select class=\"form-select my-1 my-md-0\" id=\"selectPlatform\" name=\"selectPlatform\">
+                                <option  value = 'Facebook' >Facebook</option>
+                                <option value = 'Instagram'>Instagram</option>
+                                <option value = 'Youtube'>Youtube</option>
+                                <option value = 'Mwananchi'>Mwananchi</option>
+                                <option value = 'Citizen'>Citizen</option>
+                                <option value = 'Mwanaspoti'>Mwanaspoti</option>
+                                <option value = 'X'>X</option>
+                            </select>
+                        </div> 
+                    </div>
+
+
+                    <!--------First Name---------->
+                    <div class=\"mb-3\">
+                      <label for=\"exampleFormControlInput1\" class=\"form-label\">Date</label>
+                   
+                    <input id=\"bookingDate\" class=\"form-control not_required\" type=\"date\" />
+                    </div>
+                
+                </div>
+
+                <!-----Submit---------->
+                <div class=\"modal-footer d-flex justify-content-between align-items-center\">
+                    <h4 class=\"text-primary\">$rate</h4>
+                    <button type=\"button\" class=\"btn btn-primary addCart\">Booking Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+     <div class=\"modal fade\" tabindex=\"1\"  id=\"addModal$id\" style=\" color:white;\">
+        <div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">
+            <div class=\"modal-content\" ;   border-radius: 30px; color:white;\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title\" style=\"color:white;\" >$brand INFO </h5>
+                    <button type=\"button\" class=\"btn-close\" style=\" color:white;\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                </div>
+             
+               <div class=\"modal-body\">
+
+               <img src=\"$avatar\" class=\"card-img-top\" alt=\"Product Image\" style = ' width:  100%;'>
+                             
+
+
+                    
+            <div class=\"card-body\">
+                <h4 class=\"card-title\" style=\"color:white;\">$ad_type</h4>
+                <p class=\"card-text\">
+                  Size: <b>$dimension</b><br/>
+                  Color: <b>$appearence</b><br/>
+                  Color: <b>$position</b><br/>
+
+               </p>
+                
+            
+                <div class=\"mb-3\">
+                    <h5 style=\" color:white;\">Select Size (px):$diamension</h5>
+                    <div class=\"d-flex gap-2\">
+                        <div class=\"size-option border p-2 rounded active\" data-size=\"20\">$dimension</div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"mb-3\">
+                <div class=\"me-sm-2\">
+                    <div class=\" d-flex justify-content-between align-items-center\" >
+                        <span class=\"price\" >Rate : $rate</span>
+                        <span class=\"price \" >Price : $price</span>
+         
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+
+                <div class=\"modal-footer d-flex justify-content-between align-items-center\">
+                    <h4 class=\"text-primary\">$rate</h4>
+                    <button type=\"button\" class=\"btn btn-primary addEmployee\"  data-bs-dismiss=\"modal\"  >Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+                 ";
+           } 
+
+
+
+
+
 
 
           $sc = '';
@@ -530,8 +967,8 @@ class Hom extends AdslotController{
     public function all_employee(){
         return parent::get_attendency_by_today();
     }
-    public function all_displayRate(){
-        return parent::get_displayRate();
+    public function all_mwanaNchi($brand,$ctr){
+        return parent::get_news($brand, $ctr);
     }
 
     public function all_sponser_content(){
