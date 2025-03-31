@@ -34,29 +34,28 @@
 
 ### 💬 **Live Chat Integration**  
 - Integrated **tawk.com** directly into the front end to enable real-time visitor communication.  
-- Customized the chat widget’s UI to match the website’s color scheme and branding.  
+  
 - Added automated greeting messages and FAQs to simulate a professional customer-support experience.  
 
 **Why it stands out:**  
 - Demonstrates practical use of third-party APIs for user engagement.  
 - Shows awareness of real-world business needs (e.g., instant client interaction).  
 
-- 🎨 **Custom Visual Design**  
-  Designed a dynamic, animated PowerPoint/Canva template to emphasize key findings and improve engagement.  
+---
 
-- 📊 **Interactive Data Storytelling**  
-  Created an interactive infographic using [Tool Name] to simplify complex data (see `assets/` folder for previews).  
-
-- 🎯 **Metaphor-Driven Narrative**  
-  Developed a Spotify playlist metaphor to explain [concept], praised by peers for originality in reviews.  
-
-- 🛠️ **Unique Tools & Techniques**  
-  Leveraged Adobe Spark/Canva + design thinking principles to brainstorm user-centric solutions.  
+### 📄 **Digital Ads Rate Card Viewer**  
+- Integrated an interactive **PDF viewer** for displaying rate cards.  
+- Designed a clean, user-friendly interface with zoom, download, and page navigation controls.  
+- Ensured mobile responsiveness for seamless viewing across devices.
 
 ---
 
+### ⌨️ **Auto-Typing Header Animation**  
+- Built a dynamic typing effect in the header using **HTML, CSS, and vanilla JavaScript**.  
+- Programmed the animation to cycle through keywords (e.g., "Advartise", "Connect", "Succeed").  
+- Customized typing speed, cursor style, and infinite loop functionality for smooth transitions.  
 
-
+---
 
 
 ## Table of Contents
