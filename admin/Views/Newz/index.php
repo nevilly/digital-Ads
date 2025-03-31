@@ -230,6 +230,45 @@
  <div class="container-fluid">
     <div class="row">
 
+            <div class="container py-5">
+         
+            
+        <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
+
+        <div class="container mt-5">
+            <!-- PDF Card -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Digital Rate card</h5>
+                    <p class="card-text">Click the button below to view the Digital Rate CardPDF document.</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pModal">
+                        View PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container mt-5">
+            <!-- PDF Card -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Print Rate Card</h5>
+                    <p class="card-text">Click the button below to view the Rate card PDF document.</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                        View PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
     <div class="container py-5">
         <h2 class="text-center mb-5" style="color: #2d3436;"> Mwananchi Ads Cards</h2>
         
@@ -295,6 +334,61 @@
 <!-- ============================================================== -->
 
     
+    <!-- PDF Viewer Modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF Viewer -->
+                    <embed 
+                        src="/public/uploads/pdf/p.pdf" 
+                        type="application/pdf" 
+                        style="width: 100%; height: 80vh;"
+                        aria-label="PDF Document"
+                    >
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- PDF Viewer Modal -->
+<div class="modal fade" id="pModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF Viewer -->
+                    <embed 
+                        src="/public/uploads/pdf/d.pdf" 
+                        type="application/pdf" 
+                        style="width: 100%; height: 80vh;"
+                        aria-label="PDF Document"
+                    >
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
    
 
