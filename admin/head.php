@@ -31,7 +31,7 @@
 
 <style>
    .myColor{
-   background-color: #141627
+   background-color: #141627;
    }
 
 	.cart-item img {

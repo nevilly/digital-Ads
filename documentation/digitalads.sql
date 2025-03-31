@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2025 at 06:28 AM
+-- Generation Time: Mar 31, 2025 at 05:19 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -51,9 +51,13 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `pId`, `tablename`, `qty`, `price`, `ad_type`, `selectPlatform`, `device`, `dimension`, `ad_unit`, `rate`, `payed`, `bookDate`, `img`, `userID`, `createdDate`) VALUES
-(79, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 04:33:41'),
-(80, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 07:22:07'),
-(81, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-27 08:21:51');
+(97, '1', 'm_display_rate_card', '1', 2, '', 'Facebook', '', 'Full Page', '', '', '0', '', '', '', '2025-03-30 19:06:24'),
+(98, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-31 10:57:17'),
+(99, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-31 10:58:10'),
+(100, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-31 16:43:11'),
+(101, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-31 16:43:23'),
+(102, '1', 'm_display_rate_card', '1', 2, '', 'Facebook', '', 'Full Page', '', '', '0', '', '', '', '2025-03-31 17:53:38'),
+(103, '1', 'm_display_rate_card', '1', 3967, 'Standard Banner', 'Facebook', 'Desktop & Mobile', '728x90', 'Leader board & Square Banner', 'CPM 1.5 USD ', '0', '', 'Banner_728x90.png', '', '2025-03-31 18:14:59');
 
 -- --------------------------------------------------------
 
@@ -167,6 +171,43 @@ INSERT INTO `m_vedeo_production` (`id`, `platform`, `rate`, `specification`, `v_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `brand` text NOT NULL,
+  `ad_type` text NOT NULL,
+  `img` text NOT NULL,
+  `size` text NOT NULL,
+  `position` text NOT NULL,
+  `appearence` text NOT NULL,
+  `price` text NOT NULL,
+  `ad_unit` text NOT NULL,
+  `cashType` text NOT NULL,
+  `category` enum('news','rate') NOT NULL,
+  `placement_type` text NOT NULL,
+  `createDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `brand`, `ad_type`, `img`, `size`, `position`, `appearence`, `price`, `ad_unit`, `cashType`, `category`, `placement_type`, `createDate`) VALUES
+(1, 'Mwananchi', '', '', 'Full Page', 'Normal', 'B/white', '2,400,000', '', 'Tsh', 'news', '', '0000-00-00 00:00:00'),
+(2, 'Mwananchi', '', '', 'Full Page', 'Normal', 'F/color', '3,700,000', '', 'Tsh', 'news', '', '0000-00-00 00:00:00'),
+(3, 'Mwananchi', '', '', 'Half Page', 'Normal', 'B/White', '1,3000,000', '', 'Tsh', 'news', '', '2025-03-29 16:15:59'),
+(4, 'Mwananchi', '', '', 'Half Page', 'Normal', 'F/Color', '2,070,000', '', 'Tsh', 'news', '', '2025-03-29 16:15:59'),
+(5, 'Mwananchi', '', '', 'Front Strip', 'Special', 'F/color', '1,500,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
+(6, 'Citien', '', '', 'One Eight', 'Normal', 'F/color', '500,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
+(7, 'Citizen', '', '', 'Front-strip', 'Special', 'F/color', '1,000,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
+(8, 'Spoti', '', '', 'Full Page', 'Normal', 'F/color', '2,400,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
+(9, 'MwanaSpoti', '', '', 'Column Depth 33cm', 'Dimensions', '', '', '', '', 'news', '', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -205,7 +246,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `gender`, `avatar`, `bio`, `position`, `birth`, `password`, `experience`, `qualifications`, `industry`, `address`, `country`, `phone_number`, `fb`, `google`, `apple`, `created_at`, `last_login`, `privilege`, `type`, `status`, `notified`, `token`) VALUES
-(1, 'John', 'joel', 'reddeath', 'emwansasu@gmail.com', 'notspecified', '', NULL, NULL, NULL, 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'Dar es salaam', NULL, 2147483647, NULL, NULL, NULL, '2025-02-14 07:40:32', '2025-03-27 08:20:02', '2', 'individual', '1', '0', 'SWh4TnJCOEp5UVVPQWxrM3ZkWWowS0pnYU50aTZodzVoalN5enJoZithWmM5aUN5T2FTOW9xL2t6Q04rWHpYNnk5NXNjRHBPM1BkbGdhMTVEeVhOaUNGOGg5REhBby9yeGZxNVdlM1pjTDBVYlFqRm1YZEE3U0FBcWR0eXI1ZVcxK0dRWkk0ckh1YVRTSGYzTURTVUpxTDFqelM2Zkg5RnNMR2F5R2pjS1F1NWRPVkpKdkpBRGtiWE5pSVQ3VVpnTUtCemphSFdKZ0wzU1FnRGh2MWY0RkkwcGxoYnFrMHg0NDUyUFBYVVhtNE1TTFBMTUlHTExVbVRhVi9xUTRDaXg0djFhUmJPdjFrQUdmODVpVW1TY1E9PQ=='),
+(1, 'John', 'joel', 'reddeath', 'emwansasu@gmail.com', 'notspecified', '', NULL, NULL, NULL, 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'Dar es salaam', NULL, 2147483647, NULL, NULL, NULL, '2025-02-14 07:40:32', '2025-03-31 16:48:00', '2', 'individual', '1', '0', 'SWh4TnJCOEp5UVVPQWxrM3ZkWWowS0pnYU50aTZodzVoalN5enJoZithWmM5aUN5T2FTOW9xL2t6Q04rWHpYNnk5NXNjRHBPM1BkbGdhMTVEeVhOaUNGOGg5REhBby9yeGZxNVdlM1pjTDBVYlFqRm1YZEE3U0FBcWR0eXI1ZVcxK0dRWkk0ckh1YVRTSGYzTURTVUpxTDFqelM2Zkg5RnNMR2F5R2pjS1F1NWRPVkpKdkpBRGtiWE5pSVQ3VVpnTUtCemphSFdKZ0wzU1FnRGh2MWY0RkkwcGxoYnFrMHg0NDUyUFBYVVhtNE1TTFBMTUlHTExVbVRhVi9xUTRDaXg0djFhUmJPdjFrQUdmODVpVW1TY1E9PQ=='),
 (2, 'ermy', 'mwnss', 'mzee Coder', 'emwansasu@gmail.com', 'male', NULL, 'hkhk', NULL, '2024-10-09', 'd20d3ce6dd8b2a24e26efd84a', NULL, NULL, NULL, 'dar', NULL, 57575, '7867868', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2', 'individual', '1', '0', ''),
 (3, 'James', 'Mchicha', 'JamesBond', 'Jmchicha@gmail.com', 'male', NULL, 'Ok simple Brief', 'CEO', '2025-01-16', 'd20d3ce6dd8b2a24e26efd84a', 'fgdsgsdg', NULL, NULL, NULL, 'Tz', 436345, NULL, NULL, NULL, '2025-02-21 12:17:08', '0000-00-00 00:00:00', '1', 'company', '1', '0', '');
 
@@ -244,6 +285,12 @@ ALTER TABLE `m_vedeo_production`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -257,7 +304,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `m_display_rate_card`
@@ -282,6 +329,12 @@ ALTER TABLE `m_sponsered_content`
 --
 ALTER TABLE `m_vedeo_production`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
