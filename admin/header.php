@@ -12,7 +12,7 @@ $notNo =  Util::CartNotification();
 ?>
 
 <!-- Topbar Start -->
-<div class="navbar-custom " style = 'background-color: #141627'>
+<div class="navbar-custom " >
     <ul class="list-unstyled topnav-menu float-end mb-0">
 
         <li class="d-none d-lg-block">
@@ -24,7 +24,45 @@ $notNo =  Util::CartNotification();
                             <i class="fe-search"></i>
                         </button>
                     </div>
-               
+                    <div class="dropdown-menu dropdown-lg" id="search-dropdown">
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h5 class="text-overflow mb-2">Found 22 results</h5>
+                        </div>
+
+                        
+
+                   
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
+                        </div>
+
+                        <div class="notification-list">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="d-flex align-items-start">
+                                    <img class="d-flex me-2 rounded-circle" src="<?= Util::Url();?>/public/assets/images/user.png" alt="Generic placeholder image" height="32">
+                                    <div class="w-100">
+                                        <h5 class="m-0 font-14">Erwin E. Brown</h5>
+                                        <span class="font-12 mb-0">UI Designer</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="d-flex align-items-start">
+                                    <img class="d-flex me-2 rounded-circle" src="<?= Util::Url();?>/public/assets/images/users.png" alt="Generic placeholder image" height="32">
+                                    <div class="w-100">
+                                        <h5 class="m-0 font-14">Jacob Deo</h5>
+                                        <span class="font-12 mb-0">Developer</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </form>
         </li>
@@ -164,16 +202,12 @@ $notNo =  Util::CartNotification();
             </div>
         </li>
 
-        <li class="dropdown notification-list">
-            <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
-                <i class="fe-settings noti-icon"></i>
-            </a>
-        </li>
+   
 
     </ul>
 
     <!-- LOGO -->
-    <div class="logo-box" style = 'background-color: #141627'>
+    <div class="logo-box" style = ''>
 
         <a href="/admin/" class="logo logo-light text-center">
                            <span class="logo-sm" >
@@ -183,7 +217,7 @@ $notNo =  Util::CartNotification();
                                 <?= self::$APP.' '; // echo getenv("Version");?>
                             </span>
         </a>
-        <a href="/admin/" class="logo logo-dark text-center" style = 'background-color: #141627'>
+        <a href="/admin/" class="logo logo-dark text-center" style = ''>
                             <span class="logo-sm">
                                 <?= self::$APP.' ';  //echo getenv("Version");?>
                             </span>
@@ -218,7 +252,7 @@ $notNo =  Util::CartNotification();
 <!-- end Topbar -->
 
 <!-- ========== Left Sidebar Start ========== -->
-<div class="left-side-menu" style = 'background-color: #141627'>
+<div class="left-side-menu" style = ''>
 
     <div class="h-100 w-100" data-simplebar  >
 
@@ -255,11 +289,6 @@ $notNo =  Util::CartNotification();
             <p class="text-muted left-user-info"><?=$this->role;?></p>
 
             <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a class="text-muted left-user-info setting">
-                        <i class="mdi mdi-cog"></i>
-                    </a>
-                </li>
 
                 <li class="list-inline-item">
                     <a href="/admin/auth/logout">

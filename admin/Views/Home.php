@@ -109,10 +109,22 @@
         transform: translateY(-3px);
         }
 
+    </style>
 
 
-
-
+     <style>
+        .product-item {
+            transition: all 0.2s;
+            border-bottom: 1px solid #eee;
+        }
+        .product-item:hover {
+            background-color: #f8f9fa;
+        }
+        .product-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
     </style>
 
 
@@ -179,7 +191,7 @@
         </header>
 
 
-
+       
         <div class="container mt-5">
             <div class="card">
                 <div class="card-header" style ="color:#0062cc;">
@@ -236,8 +248,12 @@
 
         <div class="container py-5">
 
-            <h2 > Top CHoice</h2>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+             <!-- Product List -->
+       
+
+
+            <h2 > Top Choice</h2>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-2 g-2">
                 <!-- Card 1 -->
                 <div class="col"  >
                     <div class="card  shadow-lg">
@@ -249,7 +265,7 @@
                         </div>
                         <div class="card-footer bg-white">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">0.00 Tsh</span>
+                              
                                 <button class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
@@ -267,8 +283,8 @@
                         </div>
                         <div class="card-footer bg-white">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">0.00 Tsh</span>
-                                <button class="btn btn-primary"> Buy Now</button>
+                            
+                              <a href = "">  <button class="btn btn-primary"> Buy Now</button> </a>
                             </div>
                         </div>
                     </div>
@@ -276,7 +292,7 @@
 
              
                 <!-- Card 3 -->
-                <div class="col">
+             <!--    <div class="col">
                     <div class="card  shadow-lg">
                         <img src="https://placehold.co/600x400" class="card-img-top" alt="Product Image">
                         <div class="card-body">
@@ -293,7 +309,7 @@
                     </div>
                 </div>
 
-
+ -->
                    <!-- Card 3 -->
                 <div class="col">
                     <div class="card shadow-lg">

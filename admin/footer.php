@@ -1,7 +1,7 @@
 
 <!-- Footer Start -->
-<footer class="footer" style = 'background-color: #141627;'>
-    <div class="container-fluid" style = 'background-color: #141627;'>
+<footer class="footer" >
+    <div class="container-fluid" >
         <div class="row">
             <div class="col-md-6">
                 <script>document.write(new Date().getFullYear())</script> &copy; <?= self::$APP.' ';  echo getenv("Version");?> by <a href="https://www.linkedin.com/in/frankgalos/">Nehemia Mwansasu</a>
@@ -24,9 +24,9 @@
 <!-- END wrapper -->
 
 <!-- Right Sidebar -->
-<div class="right-bar" style = 'background-color: #141627;'>
+<div class="right-bar" >
 
-    <div data-simplebar class="w-100 h-100"style = 'background-color: #141627;' >
+    <div data-simplebar class="w-100 h-100" >
 
         <div class="rightbar-title">
             <a href="javascript:void(0);" class="right-bar-toggle float-end">
@@ -303,20 +303,20 @@ s0.parentNode.insertBefore(s1,s0);
 
        <script>
 
-   // const items = [
-   //          { name: 'Wooden Chair', price: 125.99, dimension: '80x50x60 cm', position: 'Warehouse A' },
-   //          { name: 'Office Desk', price: 299.50, dimension: '150x75x70 cm', position: 'Showroom' },
-   //          { name: 'Reading Lamp', price: 45.00, dimension: '30x30x40 cm', position: 'Storage Room' },
-   //          { name: 'Bookshelf', price: 179.95, dimension: '180x40x200 cm', position: 'Warehouse B' },
-   //          { name: 'Coffee Table', price: 149.99, dimension: '120x60x45 cm', position: 'Display Area' },
-   //          { name: 'Computer Monitor', price: 199.00, dimension: '52x35x5 cm', position: 'Electronics Section' },
-   //          { name: 'Filing Cabinet', price: 89.75, dimension: '45x40x70 cm', position: 'Office Supplies' },
-   //          { name: 'Patio Umbrella', price: 129.50, dimension: '300x300x250 cm', position: 'Outdoor Section' },
-   //          { name: 'Throw Pillow', price: 24.99, dimension: '40x40x10 cm', position: 'Home Decor' },
-   //          { name: 'Wall Clock', price: 34.95, dimension: '30x30x5 cm', position: 'Decorations' }
-   //      ];
+    const items = [
+             { name: 'Wooden Chair', price: 125.99, dimension: '80x50x60 cm', position: 'Warehouse A' },
+             { name: 'Office Desk', price: 299.50, dimension: '150x75x70 cm', position: 'Showroom' },
+            { name: 'Reading Lamp', price: 45.00, dimension: '30x30x40 cm', position: 'Storage Room' },
+             { name: 'Bookshelf', price: 179.95, dimension: '180x40x200 cm', position: 'Warehouse B' },
+             { name: 'Coffee Table', price: 149.99, dimension: '120x60x45 cm', position: 'Display Area' },
+             { name: 'Computer Monitor', price: 199.00, dimension: '52x35x5 cm', position: 'Electronics Section' },
+             { name: 'Filing Cabinet', price: 89.75, dimension: '45x40x70 cm', position: 'Office Supplies' },
+             { name: 'Patio Umbrella', price: 129.50, dimension: '300x300x250 cm', position: 'Outdoor Section' },
+             { name: 'Throw Pillow', price: 24.99, dimension: '40x40x10 cm', position: 'Home Decor' },
+            { name: 'Wall Clock', price: 34.95, dimension: '30x30x5 cm', position: 'Decorations' }
+      ];
 
-            var  items = <?php echo json_encode($search_array); ?>;
+           
 
 
        // Initial render
@@ -339,40 +339,38 @@ s0.parentNode.insertBefore(s1,s0);
 
      // Render items function
         function renderItems(itemsToRender) {
-            const itemList = document.getElementById('itemList');
+            const itemList = document.getElementById('search-dropdown');
             if (itemsToRender.length === 0) {
                 itemList.innerHTML = '<div class="no-items">No items found matching your search</div>';
                 return;
             }
 
 
-              itemList.innerHTML = itemsToRender.map(item => `
-                <div class="item-card">
-                    <div class="item-name">${item.name}</div>
-                    <div class="item-property">
-                        <i class="fas fa-tag"></i> Price: $${item.price.toFixed(2)}
-                    </div>
-                    <div class="item-property">
-                        <i class="fas fa-ruler-combined"></i> Dimension: ${item.dimension}
-                    </div>
-                    <div class="item-property">
-                        <i class="fas fa-map-marker-alt"></i> Position: ${item.position}
+              itemList.innerHTML = itemsToRender.map(item => `<div id="resultsContainer" class="bg-white rounded shadow-sm">
+                    <div class="product-item p-3">
+                        <div class="row align-items-center g-0">
+                            <!-- Image First -->
+                            <div class="col-auto">
+                                <img src="https://via.placeholder.com/120x120" 
+                                     class="product-img rounded"
+                                     alt="Product Image">
+                            </div>
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-property">
+                                <i class="fas fa-tag"></i> Price: $${item.price.toFixed(2)}
+                            </div>
+                            <div class="item-property">
+                                <i class="fas fa-ruler-combined"></i> Dimension: ${item.dimension}
+                            </div>
+                            <div class="item-property">
+                                <i class="fas fa-map-marker-alt"></i> Position: ${item.position}
+                            </div>
+                        </div>
                     </div>
                 </div>
             `).join('');
         }
         
-
-
-
-
-
-
-
-
-
-
-
 
 
 

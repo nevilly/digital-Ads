@@ -1,5 +1,4 @@
 
-
     
 <div class="container-fluid">
 
@@ -7,7 +6,8 @@
         <div class="col-sm-8" >
             <div class="card mb-4">
                 <div class="card-body" >
-                     <?=$booking;?>
+
+              <?=$booking;?>
                     <!-- Continue Shopping Button -->
                     <div class="text-start mb-4">
                         <a href="/admin/Hom/" class="btn btn-outline-primary" data-bs-toggle=\modal\ data-bs-target=\#addModalDelete$id\ >
@@ -21,23 +21,22 @@
 
         <!----Left Sid----->  
         <div class="col-sm-4">
-            <div class="card" style="background-color: #1C1F37;  ">
-                <div class="card  text-white rounded-3" style="background-color: #1C1F37; border-radius:30px; padding:0.4rem; ">
-                    <div class="card-body">
+            <div class="card"   ">
+                <div class="card  text-white rounded-3" style="color:grey;">
+                    <div class="card-body" style="color:grey;">
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                          <h5 class="mb-0">Card details</h5>
-                          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                            class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
+                          <h5 class="text-center mb-0" style="color:black;">Card details</h5>
+                        
                         </div>
 
-                        <p class="small mb-2">Card type</p>
-                        <a href="#!" type="submit" class="text-white"><i
+                        <p class="small mb-2" style="color:black;">Card type</p>
+                        <a href="#!" type="submit" class=""><i
                             class="fab fa-cc-mastercard fa-2x me-2"></i></a>
-                        <a href="#!" type="submit" class="text-white"><i
+                        <a href="#!" type="submit" class=""><i
                             class="fab fa-cc-visa fa-2x me-2"></i></a>
-                        <a href="#!" type="submit" class="text-white"><i
+                        <a href="#!" type="submit" class=""><i
                             class="fab fa-cc-amex fa-2x me-2"></i></a>
-                        <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                        <a href="#!" type="submit" class=""><i class="fab fa-cc-paypal fa-2x"></i></a>
 
                         <form class="mt-4">
                           <div data-mdb-input-init class="form-outline form-white mb-4">
@@ -86,14 +85,15 @@
 
                         <div class="d-flex justify-content-between mb-4">
                           <p class="mb-2">Total(Incl. taxes)</p>
-                          <p class="mb-2"><?=$totalPrice; ?></p>
+                          <p class="mb-2" style="color:black;,font-weight: bold;"><?=$totalPrice; ?> Tsh</p>
                         </div>
 
-                        <a href = "/admin/Invoice"><button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg">
-                          <div class="d-flex justify-content-between">
+                        <a href = "/admin/Invoice">
+                            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg">
+                      
                             
                             <span>Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
-                          </div>
+                   
                         </button></a>
 
                     </div>
@@ -102,9 +102,9 @@
             </div>
 
 
-            <div class="card" style="background-color: #1C1F37; color:white;border-radius:30px;" >
+            <div class="card" >
                 <div class="card-body">
-                        <h4 class="header-title mt-0 mb-3"  style="background-color: #1C1F37; color:white;">Booking Calender</h4>
+                        <h4 class="header-title mt-0 mb-3"  style="">Booking Calender</h4>
                             <div  class="span12 justify-content-center table-responsive-md center">
                                 <table class="table-condensed  ">
                                     <thead>

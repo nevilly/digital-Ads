@@ -160,7 +160,6 @@
             padding: 0.8rem 2rem;
             width: 100%;
             transition: all 0.3s;
-
         }
         
         .btn-book:hover {
@@ -194,39 +193,7 @@
     
 
 <!--    Search Wrap -->
-<div class="search-wrapper">
-    <div class="search-container">
-        <input type="search" id = "searchInput" class="search-input" placeholder="Search...">
-        <i class="fas fa-search search-icon"></i>
-    </div>
-    <div class="filter-wrapper">
-        <button class="filter-btn" aria-label="Filter options" id="filterButton">
-            <i class="fas fa-filter"></i>
-            <span>Filters</span>
-        </button>
-        <div class="filter-dropdown" id="filterDropdown">
-            <div class="filter-option">
-                <label>
-                    <input type="checkbox" name="position">
-                    Position
-                </label>
-            </div>
-            <div class="filter-option">
-                <label>
-                    <input type="checkbox" name="price">
-                    Price
-                </label>
-            </div>
-            <div class="filter-option">
-                <label>
-                    <input type="checkbox" name="dimension">
-                    Dimension
-                </label>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="item-list" id="itemList"></div>
+
 <!-- End   Search Wrap -->  
 
 
