@@ -22,10 +22,6 @@
 
    - Provide a breakdown of the technology stack (frontend, backend, database, hosting).                             ✔️✔️ 
 
-   - Define API integrations (if needed for payments or other functionalities).
-   
-   - Security measures for handling user data.
-   Considerations for scalability and future enhancements.
 
 
 ## 🚀 Creative Contributions  
@@ -50,12 +46,6 @@
 
 ---
 
-### ⌨️ **Auto-Typing Header Animation**  
-- Built a dynamic typing effect in the header using **HTML, CSS, and vanilla JavaScript**.  
-- Programmed the animation to cycle through keywords (e.g., "Advartise", "Connect", "Succeed").  
-- Customized typing speed, cursor style, and infinite loop functionality for smooth transitions.  
-
----
 
 
 ## Table of Contents
@@ -92,42 +82,14 @@ To use the Digital-ads website, follow these steps:
 
 Setup to use the Digital-ads website, follow these steps:
 
-## API
-
-For this website i use php API the following step to make it work
-1. create file in htdocs  and name it "api".
-2. put all files downloaded from gitHub in "api" file.
-
-## VirtualHost
-
-1. go to C:\xampp\apache\conf\extra
-2. open file with a name  httpd-vhosts.conf
-3. add this block of line inside VirtualHost tag 
-
-    ##<VirtualHost :80>
-	    ##ServerAdmin webmaster@dummy-host2.example.com
-	    ##DocumentRoot "C:/xampp/htdocs/dummy-host2.example.com"
-	    ##ServerName dummy-host2.example.com
-	    ##ErrorLog "logs/dummy-host2.example.com-error.log"
-	    ##CustomLog "logs/dummy-host2.example.com-access.log" common
-
-	    ServerAdmin myApi.code
-	    DocumentRoot "C:/xampp/htdocs/api"
-
-	    ##ServerName localhost
-	    ##DocumentRoot "C:/xampp/htdocs"
-    ##</VirtualHost>
-
-4. restart xampp.
-5. Enter link on browser: http://localhost/admin/.
 
 
 
 ## Database
 
-- Create Database by the name "digitalads" in Mysql.
-- Get in documentation file in dir  "xampp\htdocs\api\documentation".
-- Grab digitalads.sql file and import to Mysql database digitalads.
+- Create Database by the name "project" in Mysql.
+- Get in documentation file 
+- Grab project.sql file and import to Mysql database digitalads.
 
 
 ## 🔑 Authentification
