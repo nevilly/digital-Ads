@@ -106,10 +106,6 @@ Break down of Technology Stack on this project.
 
 
 
-## Home
-![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
-
-
 
 
 
@@ -159,9 +155,22 @@ Open your browser and go to
 http://localhost/digital/index.php  
 ```
 
+
+
+
+
+
+## Home
+![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
+
+
 ## Home
 
 ![Shshot](https://github.com/user-attachments/assets/92a52109-fa7b-4c32-a6c7-fe40c98d228c)
+
+
+## Home
+![bookiingPage](https://github.com/user-attachments/assets/21676f8c-7170-40a4-b72c-e96d208b3c94)
 
 ## Cashout
 ![checjOut](https://github.com/user-attachments/assets/da28650e-97ef-4709-ad62-67b0fa740038)
