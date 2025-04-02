@@ -110,6 +110,55 @@ Break down of Technology Stack on this project.
 ![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
 
 
+
+
+
+
+# 📥 Install GitHub Repository to XAMPP `htdocs` 🔧
+
+A step-by-step guide to clone and run a GitHub repository in **XAMPP** for local development. 🚀
+
+---
+
+## Prerequisites 🛠️
+- [XAMPP](https://www.apachefriends.org/) installed and running (Apache + MySQL). 🐘
+- [Git](https://git-scm.com/) installed on your machine. 📦
+
+---
+
+## Steps to Install 🔄
+
+### 1. Clone the Repository into `htdocs` 📂
+```bash
+# Navigate to XAMPP's htdocs folder
+cd /opt/lampp/htdocs          # Linux/macOS
+cd C:\xampp\htdocs            # Windows 🖥️
+
+# Clone your GitHub repo (replace with your URL)
+git clone  https://github.com/nevilly/digital-Ads.git
+
+```
+### 2.  Start XAMPP Services 🚦
+   
+  1. Open the XAMPP Control Panel.
+
+  2. Start Apache (🌐 Web Server) and MySQL (🗃️ Database if needed).
+XAMPP Control Panel
+
+
+
+### 5. Set up Database 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/install.php  
+```
+
+### 5. Access Your Project 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/index.php  
+```
+
 ## Home
 
 ![Shshot](https://github.com/user-attachments/assets/92a52109-fa7b-4c32-a6c7-fe40c98d228c)
