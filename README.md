@@ -39,57 +39,76 @@
 
 ---
 
-### 📄 **Digital Ads Rate Card Viewer**  
-- Integrated an interactive **PDF viewer** for displaying rate cards.  
-- Designed a clean, user-friendly interface with zoom, download, and page navigation controls.  
-- Ensured mobile responsiveness for seamless viewing across devices.
+
+
+# 📥 Install GitHub Repository to XAMPP `htdocs` 🔧
+
+A step-by-step guide to clone and run a GitHub repository in **XAMPP** for local development. 🚀
 
 ---
 
+## Prerequisites 🛠️
+- [XAMPP](https://www.apachefriends.org/) installed and running (Apache + MySQL). 🐘
+- [Git](https://git-scm.com/) installed on your machine. 📦
 
+---
 
-## Table of Contents
-- [Prerequisites](#Prerequisites)
-- [Download](#Download)
-- [Setup](#Setup)
-  - [API](#API)
-  - [VirtualHost](#VirtualHost)
-  - [Database](#Database)
-- [Authentification](#Authentification)
-- [Usage](#Usage)
-- [Technical-Documentation](#Technical-Documentation)
-- [API-Intergration](#API-Intergration)
-- [Security](#Security)
-- [License](#license)
+## Steps to Install 🔄
 
+### 1. Clone the Repository into `htdocs` 📂
+```bash
+# Navigate to XAMPP's htdocs folder
+cd /opt/lampp/htdocs          # Linux/macOS
+cd C:\xampp\htdocs            # Windows 🖥️
 
-## Prerequisites
-- Xampp 
-- Windows, macOS, or Linux operating system
+# Clone your GitHub repo (replace with your URL)
+git clone  https://github.com/nevilly/digital-Ads.git
 
+```
+### 2.  Start XAMPP Services 🚦
+   
+  1. Open the XAMPP Control Panel.
 
-## Download
-
-To use the Digital-ads website, follow these steps:
-
-1. Download and install the latest release XAMPP. https://www.apachefriends.org/fr/download.html
- 
-2. Clone the repo: git clone https://github.com/nevilly/digital-Ads.git
- 
-
-
-## Setup
-
-Setup to use the Digital-ads website, follow these steps:
+  2. Start Apache (🌐 Web Server) and MySQL (🗃️ Database if needed).
+XAMPP Control Panel
 
 
 
+### 5. Set up Database 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/install.php  
+```
 
-## Database
+### 5. Access Your Project 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/index.php  
+```
 
-- Create Database by the name "project" in Mysql.
-- Get in documentation file 
-- Grab project.sql file and import to Mysql database digitalads.
+
+
+
+## Demo Screenshot 📸  
+
+## Home
+![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
+
+
+## Home
+
+![Shshot](https://github.com/user-attachments/assets/92a52109-fa7b-4c32-a6c7-fe40c98d228c)
+
+
+## Booking Sysem
+![bookiingPage](https://github.com/user-attachments/assets/21676f8c-7170-40a4-b72c-e96d208b3c94)
+
+## Cashout
+![checjOut](https://github.com/user-attachments/assets/da28650e-97ef-4709-ad62-67b0fa740038)
+
+
+## Invoice
+![InvoicePrint](https://github.com/user-attachments/assets/57b54091-10da-44a0-b54c-9f5347829060)
 
 
 
@@ -104,7 +123,14 @@ Break down of Technology Stack on this project.
 
        
 
+<<<<<<< HEAD
  
+=======
+
+
+
+
+>>>>>>> 3067bcb5217083d467543e8852549ea25942c057
 
 
 
