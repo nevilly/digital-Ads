@@ -1,0 +1,381 @@
+     :root {
+            --primary-color: #6366f1;
+            --secondary-color: #a855f7;
+            --accent-color: #ec4899;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .clipped-header {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding-bottom: 8rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            position: relative;
+            margin: 0 1rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero-content {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            transform: translateY(-50%);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: -30px auto 1.5rem;
+        }
+
+        .btn-custom {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border: none;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .clipped-header {
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+                padding-bottom: 6rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card{
+
+    background-color: #fff;
+    border:none;
+    border-radius: 10px;
+    width: 190px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.image-container{
+
+    position: relative;
+}
+
+.thumbnail-image{
+    border-radius: 10px !important;
+}
+
+
+.discount{
+
+    background-color: red;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.wishlist{
+
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.first{
+
+    position: absolute;
+    width: 100%;
+        padding: 9px;
+}
+
+
+.dress-name{
+    font-size: 13px;
+    font-weight: bold;
+    width: 75%;
+}
+
+
+.new-price{
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+    
+}
+.old-price{
+    font-size: 8px;
+    font-weight: bold;
+    color: grey;
+}
+
+
+.btn{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.creme{
+    background-color: #fff;
+    border: 2px solid grey;
+    
+
+}
+.creme:hover {
+    border: 3px solid grey;
+}
+
+.creme:focus {
+    background-color: grey;
+
+}
+
+
+.red{
+    background-color: #fff;
+    border: 2px solid red;
+    
+}
+
+
+.red:hover {
+    border: 3px solid red;
+}
+.red:focus {
+    background-color: red;
+}
+
+
+
+.blue{
+    background-color: #fff;
+    border: 2px solid #40C4FF;
+}
+
+.blue:hover {
+    border: 3px solid #40C4FF;
+}
+.blue:focus {
+    background-color: #40C4FF;
+}
+.darkblue{
+    background-color: #fff;
+    border: 2px solid #01579B;
+}
+.darkblue:hover {
+    border: 3px solid #01579B;
+}
+.darkblue:focus {
+    background-color: #01579B;
+}
+.yellow{
+    background-color: #fff;
+    border: 2px solid #FFCA28;
+}
+.yellow:hover {
+    border-radius: 3px solid #FFCA28;
+}
+.yellow:focus {
+    background-color: #FFCA28;
+}
+
+
+.item-size{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.rating-star{
+    font-size: 10px !important;
+}
+.rating-number{
+    font-size: 10px;
+    color: grey;
+
+}
+.buy{
+    font-size: 12px;
+    color: purple;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+.voutchers{
+    background-color: #fff;
+    border:none;
+    border-radius: 10px;
+    width: 190px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
+}
+.voutcher-divider{
+
+    display: flex;
+
+}
+.voutcher-left{
+    width: 60%
+}
+.voutcher-name{
+    color: grey;
+    font-size: 9px;
+    font-weight: 500;
+}
+.voutcher-code{
+    color: red;
+    font-size: 11px;
+    font-weight: bold;
+}
+.voutcher-right{
+    width: 40%;  
+    background-color: purple;
+    color: #fff;
+}
+
+.discount-percent{
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+.off{
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+
+  .cart-icon {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+        
+
+ .badge {
+            font-size: 0.6em;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
