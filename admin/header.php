@@ -3,13 +3,20 @@ include_once Util::root()."/admin/head.php";
 include_once $_SERVER["DOCUMENT_ROOT"]."/api/v1/Util/Util.php";
 
 $notNo =  Util::CartNotification();
+
  $countNot = '';
   if($notNo !== null && is_array($notNo))
   	 foreach ($notNo as $datum) {
          $countNot =  $datum['Cnt']; 
   	 }
 
+    $searchList =  Util::searchList();
+ //$countNot = '';
+  if($searchList !== null && is_array($searchList))
+    
+
 ?>
+<div id="data-container" class = "hidden" data-array="<?php echo htmlspecialchars(json_encode($searchList)); ?>"></div>
 
 <!-- Topbar Start -->
 <div class="navbar-custom " >

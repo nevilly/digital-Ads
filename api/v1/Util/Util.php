@@ -698,5 +698,10 @@ class Util
        	return $notification->get(); 
         
     }
+       public static  function searchList(){
+         $notification = new CartController(); 
+        return $notification->get_search(); 
+        
+    }
 
 }

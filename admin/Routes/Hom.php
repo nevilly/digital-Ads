@@ -55,9 +55,7 @@ class Hom extends AdslotController{
 
 
 
-               $dr .=" 
-
-                      <div class=\"col\">
+               $dr .="<div class=\"col\">
                 <div class=\"card\">
                     <div class=\"badge-trending\">POPULAR</div>
                     <div class=\"rating\"><i class=\"fas fa-star\" ></i> 4.8</div>
@@ -73,12 +71,6 @@ class Hom extends AdslotController{
                     </div>
                 </div>
             </div>
-
-
-
-
-           
-
 
 
 

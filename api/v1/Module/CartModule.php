@@ -59,6 +59,16 @@ class CartModule extends Database
      * @param string $limit
      * @return mixed
      */
+    public function get_searchList($id = '',$limit =''){
+        $where = !empty($id)? "id='$id' AND payed = '0'" :'';
+             return parent::query(parent::encode(['query'=>"select *  from news $limit "])); 
+    }
+
+    /**
+     * @param string $id
+     * @param string $limit
+     * @return mixed
+     */
     public function get_c($id = '',$limit =''){
         $where = !empty($id)? "id='$id' AND payed = '0'" :'';
              return parent::query(parent::encode(['query'=>"select * from $this->table  where payed = '0' $limit "])); 

@@ -43,6 +43,24 @@ class CartController extends CartModule
         return $data;
     }
 
+
+    /**
+     * @param string $id
+     * @param string $category
+     * @param bool $not
+     * @param string $limit
+     * @return array
+     */
+    public function get_search($id = '',$limit = ''){
+        $user = parent::get_searchList($id,$limit);
+        $data = false;
+
+        if($user->num_rows > 0)
+            $data = $user->fetch_all(MYSQLI_ASSOC);
+
+        return $data;
+    }
+
     /**
      * @param $user
      * @param string $limit

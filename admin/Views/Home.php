@@ -125,6 +125,24 @@
             height: 120px;
             object-fit: cover;
         }
+
+        #myPointer{
+          border-radius: 50px; background-color: #DBEAFE ;  color: #1E40AF; border:none; 
+          margin: 4px;
+                
+             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        #myPointer:hover{
+        
+            background-color: #a9cdfc ;
+             
+        }
+
+
+        #tryNow{
+              border-radius: 50px; background-color: #0066FF ;  color: white; border:none; 
+        }
     </style>
 
 
@@ -191,8 +209,108 @@
         </header>
 
 
-       
         <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                     <button class="px-4 py-2  text-sm font-medium " id ='tryNow'>Try Digital APP Now
+                        </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-3">
+       
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+      
+                <button class="px-4 py-2  text-sm font-medium " id = "myPointer" data-bs-toggle="modal" data-bs-target="#pdfModal">Preview RateCard pdf
+                </button>
+               
+                <button class="px-4 py-2  text-sm font-medium " id = "myPointer" data-bs-toggle="modal" data-bs-target="#pModal">Preview Digital Rate pdf
+                </button> 
+
+                 <a href="/admin/Booking">
+                    <button class="px-4 py-2  text-sm font-medium " id = "myPointer" style="">View Booking Page
+                    </button>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="container py-5">
+           
+            <h2 style="padding-bottom: 3%;"> Top Choice</h2>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-2">
+                <!-- Card 1 -->
+                <div class="col" >
+                    <div class="card  shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/youtube.jpg" alt="Product Image">
+                        <div class="card-body" style = >
+                            <h5 class="card-title">Banner</h5>
+                            <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content..</p>
+                       
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                              
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card mb-5 shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/youtube.jpg" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Article</h5>
+                            <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content.</p>
+                          
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                            
+                              <a href = "">  <button class="btn btn-primary"> Buy Now</button> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             
+             
+
+                   <!-- Card 3 -->
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="/public/uploads/MwananchiAds/SharedScreenshot.jpg " class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Vedeo</h5>
+                            <p class="card-text">Video Ad in Mwananchi are displayed on all pages ..</p>
+                       
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                               
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            
+
+            </div>
+        </div>
+
+
+
+    
+        <div class="container mt-5">
+   
             <div class="card">
                 <div class="card-header" style ="color:#0062cc;">
                   <h4> <i class="bi bi-robot me-2"></i>Ask Mwananchi, Our AI chatbot </h4>
@@ -243,100 +361,8 @@
                 </div>
                
             </div>
-        </div>
-
-
-        <div class="container py-5">
-
-             <!-- Product List -->
-       
-
-
-            <h2 > Top Choice</h2>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-2 g-2">
-                <!-- Card 1 -->
-                <div class="col"  >
-                    <div class="card  shadow-lg">
-                        <img src="/public/uploads/MwananchiAds/youtube.jpg" alt="Product Image">
-                        <div class="card-body" style = >
-                            <h5 class="card-title">Banner</h5>
-                            <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content..</p>
-                       
-                        </div>
-                        <div class="card-footer bg-white">
-                            <div class="d-flex justify-content-between align-items-center">
-                              
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col">
-                    <div class="card mb-5 shadow-lg">
-                        <img src="/public/uploads/MwananchiAds/youtube.jpg" alt="Product Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Article</h5>
-                            <p class="card-text">Mwananchi provides Banner Ads which are rectangular ads that are displayed along with the content.</p>
-                          
-                        </div>
-                        <div class="card-footer bg-white">
-                            <div class="d-flex justify-content-between align-items-center">
-                            
-                              <a href = "">  <button class="btn btn-primary"> Buy Now</button> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-             
-                <!-- Card 3 -->
-             <!--    <div class="col">
-                    <div class="card  shadow-lg">
-                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Product Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Road Block</h5>
-                            <p class="card-text">Roadblock Ads in Mwananchi are high-impact ads that will block all the ad placements on the platform for 24 hours.</p>
-                          
-                        </div>
-                        <div class="card-footer bg-white">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">0.00Sh</span>
-                                <button class="btn btn-primary">Check</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
- -->
-                   <!-- Card 3 -->
-                <div class="col">
-                    <div class="card shadow-lg">
-                        <img src="/public/uploads/MwananchiAds/SharedScreenshot.jpg " class="card-img-top" alt="Product Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Vedeo</h5>
-                            <p class="card-text">Video Ad in Mwananchi are displayed on all pages across the platform and will be played automatically..</p>
-                       
-                        </div>
-                        <div class="card-footer bg-white">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h4 text-danger">0.00 Tsh</span>
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             
-
-            </div>
         </div>
-
-
-
-
                  
 
 
@@ -386,4 +412,60 @@
 </header>
 
 ======= -->
+
+
+
+
+    <!-- PDF Viewer Modal -->
+<div class="modal fade" id="pModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF Viewer -->
+                    <embed 
+                        src="/public/uploads/pdf/d.pdf" 
+                        type="application/pdf" 
+                        style="width: 100%; height: 80vh;"
+                        aria-label="PDF Document"
+                    >
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- PDF Viewer Modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF Viewer -->
+                    <embed 
+                        src="/public/uploads/pdf/p.pdf" 
+                        type="application/pdf" 
+                        style="width: 100%; height: 80vh;"
+                        aria-label="PDF Document"
+                    >
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 

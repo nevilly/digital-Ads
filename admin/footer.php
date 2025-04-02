@@ -301,19 +301,26 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 
-       <script>
+<script>
+
+
+    const dataElement = document.getElementById('data-container');
+ console.log(dataElement);
+
+   // const items = JSON.parse(dataElement.dataset.array);
+    //console.log(items);
 
     const items = [
-             { name: 'Wooden Chair', price: 125.99, dimension: '80x50x60 cm', position: 'Warehouse A' },
-             { name: 'Office Desk', price: 299.50, dimension: '150x75x70 cm', position: 'Showroom' },
-            { name: 'Reading Lamp', price: 45.00, dimension: '30x30x40 cm', position: 'Storage Room' },
-             { name: 'Bookshelf', price: 179.95, dimension: '180x40x200 cm', position: 'Warehouse B' },
-             { name: 'Coffee Table', price: 149.99, dimension: '120x60x45 cm', position: 'Display Area' },
-             { name: 'Computer Monitor', price: 199.00, dimension: '52x35x5 cm', position: 'Electronics Section' },
-             { name: 'Filing Cabinet', price: 89.75, dimension: '45x40x70 cm', position: 'Office Supplies' },
-             { name: 'Patio Umbrella', price: 129.50, dimension: '300x300x250 cm', position: 'Outdoor Section' },
-             { name: 'Throw Pillow', price: 24.99, dimension: '40x40x10 cm', position: 'Home Decor' },
-            { name: 'Wall Clock', price: 34.95, dimension: '30x30x5 cm', position: 'Decorations' }
+             { brand: 'Wooden Chair', price: 125.99, dimension: '80x50x60 cm', position: 'Warehouse A' },
+             { brand: 'Office Desk', price: 299.50, dimension: '150x75x70 cm', position: 'Showroom' },
+            { brand: 'Reading Lamp', price: 45.00, dimension: '30x30x40 cm', position: 'Storage Room' },
+             { brand: 'Bookshelf', price: 179.95, dimension: '180x40x200 cm', position: 'Warehouse B' },
+             { brand: 'Coffee Table', price: 149.99, dimension: '120x60x45 cm', position: 'Display Area' },
+             { brand: 'Computer Monitor', price: 199.00, dimension: '52x35x5 cm', position: 'Electronics Section' },
+             { brand: 'Filing Cabinet', price: 89.75, dimension: '45x40x70 cm', position: 'Office Supplies' },
+             { brand: 'Patio Umbrella', price: 129.50, dimension: '300x300x250 cm', position: 'Outdoor Section' },
+             { brand: 'Throw Pillow', price: 24.99, dimension: '40x40x10 cm', position: 'Home Decor' },
+            { brand: 'Wall Clock', price: 34.95, dimension: '30x30x5 cm', position: 'Decorations' }
       ];
 
            
@@ -327,8 +334,10 @@ s0.parentNode.insertBefore(s1,s0);
         document.getElementById('searchInput').addEventListener('input',function(e) {
             const searchTerm = e.target.value.toLowerCase();
             const filteredItems = items.filter(item => {
-                return item.name.toLowerCase().includes(searchTerm) ||
-                       item.position.toLowerCase().includes(searchTerm) || item.dimension.toLowerCase().includes(searchTerm);
+
+                console.log(filteredItems);
+                return item.brand.toLowerCase().includes(searchTerm) ||
+                       item.position.toLowerCase().includes(searchTerm) || item.size.toLowerCase().includes(searchTerm);
                         });
               renderItems(filteredItems);
 
@@ -340,12 +349,17 @@ s0.parentNode.insertBefore(s1,s0);
      // Render items function
         function renderItems(itemsToRender) {
             const itemList = document.getElementById('search-dropdown');
+
+            console.log('------Am Here-----');
+            console.log(itemList);
+             console.log('------Am Here-----');
+
             if (itemsToRender.length === 0) {
                 itemList.innerHTML = '<div class="no-items">No items found matching your search</div>';
                 return;
             }
 
-
+              console.log(itemList);
               itemList.innerHTML = itemsToRender.map(item => `<div id="resultsContainer" class="bg-white rounded shadow-sm">
                     <div class="product-item p-3">
                         <div class="row align-items-center g-0">
@@ -355,20 +369,24 @@ s0.parentNode.insertBefore(s1,s0);
                                      class="product-img rounded"
                                      alt="Product Image">
                             </div>
-                            <div class="item-name">${item.name}</div>
+                            <div class="item-name">${item.brand}</div>
                             <div class="item-property">
-                                <i class="fas fa-tag"></i> Price: $${item.price.toFixed(2)}
+                                <i class="fas fa-tag"></i> Price: ${item.price.toFixed(2)}
                             </div>
                             <div class="item-property">
-                                <i class="fas fa-ruler-combined"></i> Dimension: ${item.dimension}
+                                <i class="fas fa-ruler-combined"></i> Dimension: ${item.brand}
                             </div>
                             <div class="item-property">
-                                <i class="fas fa-map-marker-alt"></i> Position: ${item.position}
+                                <i class="fas fa-map-marker-alt"></i> Position: ${item.brand}
                             </div>
                         </div>
                     </div>
                 </div>
             `).join('');
+
+
+
+              console.log( );
         }
         
 
