@@ -92,10 +92,6 @@ Setup to use the Digital-ads website, follow these steps:
 - Grab project.sql file and import to Mysql database digitalads.
 
 
-## 🔑 Authentification
-
-All credential username and password found in Documentation folder:
-
 
 ## Technical-Documentation
   
