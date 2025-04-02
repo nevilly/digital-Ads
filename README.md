@@ -118,10 +118,21 @@ Break down of Technology Stack on this project.
 1. HTTPS is mandatory.
 
 2. Passwords are hashed before storage.
-
 ----------------------------
 >> Thank you
 ----------------------------
+
+
+![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
+
+
+
+![Shshot](https://github.com/user-attachments/assets/92a52109-fa7b-4c32-a6c7-fe40c98d228c)
+
+
+![InvoicePrint](https://github.com/user-attachments/assets/57b54091-10da-44a0-b54c-9f5347829060)
+![checjOut](https://github.com/user-attachments/assets/da28650e-97ef-4709-ad62-67b0fa740038)
+
 
 
 
