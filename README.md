@@ -105,23 +105,53 @@ Break down of Technology Stack on this project.
        
 
  
-## API-Intergration
-1. Purpose:  API can  manage user accounts, Process payments.
-2. Authentication: it use  API keys, OAuth 2.0, JWT tokens.
-3. Base URL: Provide the root endpoint http://localhost/admin/.
-
- 
-
-
-## 🔒 Security
-
-1. HTTPS is mandatory.
-
-2. Passwords are hashed before storage.
-
-----------------------------
->> Thank you
-----------------------------
 
 
 
+
+
+
+# 📥 Install GitHub Repository to XAMPP `htdocs` 🔧
+
+A step-by-step guide to clone and run a GitHub repository in **XAMPP** for local development. 🚀
+
+---
+
+## Prerequisites 🛠️
+- [XAMPP](https://www.apachefriends.org/) installed and running (Apache + MySQL). 🐘
+- [Git](https://git-scm.com/) installed on your machine. 📦
+
+---
+
+## Steps to Install 🔄
+
+### 1. Clone the Repository into `htdocs` 📂
+```bash
+# Navigate to XAMPP's htdocs folder
+cd /opt/lampp/htdocs          # Linux/macOS
+cd C:\xampp\htdocs            # Windows 🖥️
+
+# Clone your GitHub repo (replace with your URL)
+git clone  https://github.com/nevilly/digital-Ads.git
+
+```
+### 2.  Start XAMPP Services 🚦
+   
+  1. Open the XAMPP Control Panel.
+
+  2. Start Apache (🌐 Web Server) and MySQL (🗃️ Database if needed).
+XAMPP Control Panel
+
+
+
+### 5. Set up Database 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/install.php  
+```
+
+### 5. Access Your Project 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/index.php  
+```

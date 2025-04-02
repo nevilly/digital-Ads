@@ -3,8 +3,82 @@
 include_once('db.php');
 include_once('head.php');
 
- 
+$products = [
+    ['id' => 1, 'name' => 'Citizen', 'size' => 'One Eight', 'position' => 'Normal', 'price' => 500000],
+    ['id' => 2, 'name' => 'Mwananchi', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
+    ['id' => 8, 'name' => 'MwanaSpoti', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
+    ['id' => 7, 'name' => 'Citizen', 'size' => 'small', 'position' => 'Special', 'price' => 1000000],
+];
+
+// Initialize filtered products
+$filteredProducts = $products;
+
+// Filter functions
+if (!empty($_GET['search'])) {
+    $search = strtolower($_GET['search']);
+    $filteredProducts = array_filter($filteredProducts, function($product) use ($search) {
+        return strpos(strtolower($product['name']), $search) !== false;
+    });
+}
+
+if (!empty($_GET['size'])) {
+    $size = $_GET['size'];
+    $filteredProducts = array_filter($filteredProducts, function($product) use ($size) {
+        return $product['size'] === $size;
+    });
+}
+
+if (!empty($_GET['position'])) {
+    $position = $_GET['position'];
+    $filteredProducts = array_filter($filteredProducts, function($product) use ($position) {
+        return $product['position'] === $position;
+    });
+}
+
+$minPrice = isset($_GET['min_price']) ? (float)$_GET['min_price'] : null;
+$maxPrice = isset($_GET['max_price']) ? (float)$_GET['max_price'] : null;
+
+$filteredProducts = array_filter($filteredProducts, function($product) use ($minPrice, $maxPrice) {
+    
+    //echo var_dump($product['price']);
+
+    $price =  400 ;
+   
+
+    return (($minPrice === null || $price >= $minPrice) && 
+            ($maxPrice === null || $price <= $maxPrice));
+});
+
+// Reset array keys
+$filteredProducts = array_values($filteredProducts);
+
+
+// AJAX response
+if (isset($_GET['ajax'])) {
+    if (empty($filteredProducts)) {
+        echo '';
+    } else {
+        foreach ($filteredProducts as $product) {
+            echo '<div class="card mb-3">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title">' . htmlspecialchars($product['name']) . '</h5>';
+            echo '<p class="card-title"> Adv on ' . htmlspecialchars($product['name']) . '</p>';
+            echo '<div class="row">';
+            echo '<div class="col">Size: <span class="badge bg-primary">' . htmlspecialchars($product['size']) . '</span></div>';
+            echo '<div class="col">Position: <span class="badge bg-secondary">' . htmlspecialchars($product['position']) . '</span></div>';
+            echo '<div class="col"><span class="badge bg-success">$' . htmlspecialchars($product['price']) . '</span></div>';
+            echo '</div>    <div class=\"voutcher-right text-center border-left\" type=\"button\" onClick = bookNow('.$product['id'].')  >
+                                    <h5 class=\"discount-percent\">Book</h5>
+                                    <span class=\"off\">Now</span>
+                                    
+                                </div></div></div>';
+        }
+    }
+    exit;
+}
 ?>
+
+
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark clipped-header">
@@ -16,10 +90,10 @@ include_once('head.php');
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Downloads</a>
+                        <a class="nav-link" href="Download.php">Downloads</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
@@ -59,32 +133,101 @@ include_once('head.php');
         </div>
     </div> -->
 
-   
+     <div class="container py-5">
+        <h1 class="mb-4 text-center">Ads Finder</h1>
+        
+        <!-- Search Form -->
+        <form id="searchForm" method="GET" class="mb-4 bg-light p-4 rounded-3 shadow-sm">
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" name="search" placeholder="Search products..."
+                           value="<?= htmlspecialchars($_GET['search'] ?? '') ?>">
+                </div>
+                
+                <div class="col-md-3">
+                    <select class="form-select" name="size">
+                        <option value="">All Sizes</option>
+                        <option value="Full Page" <?= ($_GET['size'] ?? '') === 'Full Page' ? 'selected' : '' ?>>Full Page</option>
+                        <option value="One Eight" <?= ($_GET['size'] ?? '') === 'One Eight' ? 'selected' : '' ?>>One Eight</option>
+                        <option value="Half Page" <?= ($_GET['size'] ?? '') === 'Half Page ' ? 'selected' : '' ?>>Half Page</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-3">
+                    <select class="form-select" name="position">
+                        <option value="">All Positions</option>
+                        <option value="Normal" <?= ($_GET['position'] ?? '') === 'Normal' ? 'selected' : '' ?>>Normal</option>
+                        <option value="Special" <?= ($_GET['position'] ?? '') === 'Special' ? 'selected' : '' ?>>Special</option>
+                        <option value="showroom" <?= ($_GET['position'] ?? '') === 'showroom' ? 'selected' : '' ?>>Showroom</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-3">
+                    <input type="number" class="form-control" name="min_price" placeholder="Min Price"
+                           value="<?= htmlspecialchars($_GET['min_price'] ?? '') ?>" step="1">
+                </div>
+                
+                <div class="col-md-3">
+                    <input type="number" class="form-control" name="max_price" placeholder="Max Price"
+                           value="<?= htmlspecialchars($_GET['max_price'] ?? '') ?>" step="1">
+                </div>
+            </div>
+        </form>
+
+        <!-- Results Container -->
+        <div id="results">
+            <?php if (empty($filteredProducts)): ?>
+                <div class="alert alert-warning">No products found</div>
+            <?php else: ?>
+                <div class ="row">
+                    <div class = "col">
+                <?php foreach ($filteredProducts as $product): ?>
+                    <div class="card mb-3" style="display: none">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= htmlspecialchars($product['name']) ?></h5>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="badge bg-primary"><?= htmlspecialchars($product['size']) ?></span>
+                                </div>
+                                <div class="col">
+                                    <span class="badge bg-secondary"><?= htmlspecialchars($product['position']) ?></span>
+                                </div>
+                                <div class="col">
+                                    <span class="badge bg-success">$<?= htmlspecialchars($product['price']) ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container mt-5">
-
+        <div class ="ju">
+<h1 class="mb-4 text-center ">advertisement Rate</h1>
+</div>
 
     	<div class="row">
 
+
     	<?= $news; ?>
-
-
-
-
-
-
-
-
-
-
-
     		
 
     	</div>
 
     </div>
 
-     onclick=""
+    
 
   <div class="overlay" id="overlay" style="display: none"></div>
     <div class="custom-alert" id="customAlert">
@@ -106,50 +249,77 @@ include_once('head.php');
 </html>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        const loadResults = () => {
+            $('#loader').show();
+            $.ajax({
+                url: window.location.pathname + '?ajax=1',
+                data: $('#searchForm').serialize(),
+                success: (response) => {
+                    $('#results').html(response);
+                    $('#loader').hide();
+                },
+                error: () => {
+                    $('#results').html('<div class="alert alert-danger">Error loading results</div>');
+                    $('#loader').hide();
+                }
+            });
+        };
+
+        // Initial load
+        loadResults();
+
+        // Trigger search on any filter change
+        $('#searchForm input, #searchForm select').on('input change', function() {
+            history.replaceState(null, '', '?' + $('#searchForm').serialize());
+            loadResults();
+        });
+    });
+    </script>
 
 
 <!-- HTML Part -->
 
 
 <script>
-
-// bookNow(id,brandNm,ad_type, img,size,position,appearence,price,ad_unit,cashType,category,placement_type) 
 // JavaScript Part
-function bookNow(id) {
-  // Collect form data
-  const bookingData = {
-    id: id
-    
-    // email: document.getElementById('email').value,
-    // date: document.getElementById('date').value
-  };
+    function bookNow(id) {
+      // Collect form data
+      const bookingData = {
+        id: id
+      };
 
-  //console.log(bookingData.id);
 
-  //Send data to server
-  fetch('util.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(bookingData),
-  })
-  .then(response => response.text())
-  .then(data => {
-      showSmoothAlert('Action completed successfully!');
-    // Reload window after successful submission
-    window.location.reload();
 
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-}
+      //Send data to server
+      fetch('util.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookingData),
+      })
+      .then(response => response.text())
+      .then(data => {
+       
+        // Reload window after successful submission
+        window.location.reload();
+        showSmoothAlert('Action completed successfully!');
+
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    }
 </script>
 
 
 <script>
-        function showSmoothAlert(message) {
+    function showSmoothAlert(message) {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('customAlert').style.display = 'block';
         document.getElementById('alertMessage').textContent = message;
@@ -163,17 +333,20 @@ function bookNow(id) {
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67e6bae9338fd8190ed1c41d/1inekk8t9';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67e6bae9338fd8190ed1c41d/1inekk8t9';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
 
 
+
+
+  

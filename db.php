@@ -17,10 +17,11 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM news";
 $result = $conn->query($sql);
 
-
 $news = '';
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+
+           
 
     	 $id =  $row['id'];
     	 $brandName =  $row['brand'];
@@ -34,7 +35,7 @@ if ($result->num_rows > 0) {
     	 $cashType =  $row['cashType'];
     	 $category =  $row['category'];
     	 $placement_type =  $row['placement_type'];
-        $news  .= 	"<div class=\"col-md-3\" style = 'margin-bottom:5%;'>
+        $news  .= 	"<div class=\"col-md-3 col-6 col-sm-2\" style = 'margin-bottom:5%;'>
 
     				<div class=\"card\">
 
@@ -61,7 +62,7 @@ if ($result->num_rows > 0) {
 
     							<div class=\"d-flex justify-content-between align-items-center\">
 
-    								<h5 class=\"dress-name\">$size</h5>
+    								<h5 class=\"dress-name\">$category</h5>
                                   
 
     								<div class=\"d-flex flex-column mb-2\">
@@ -76,7 +77,7 @@ if ($result->num_rows > 0) {
     							<div class=\"d-flex justify-content-between align-items-center pt-1\">
 
     								<div class=\" d-flex \" style = \"font-size:12px\">
-                                             $size, $position, $category
+                                          Adv Size: $size, $position, $category
     									
 
     								</div>
@@ -109,8 +110,8 @@ if ($result->num_rows > 0) {
     						<div class=\"voutcher-divider\">
 
     							<div class=\"voutcher-left text-center\">
-    								<span class=\"voutcher-name\">Monday Happy</span>
-    								<h5 class=\"voutcher-code\">#MONHPY</h5>
+    								<span class=\"voutcher-name\">Color</span>
+    								<h5 class=\"voutcher-code\"># $appearence</h5>
     								
     							</div>
     							<div class=\"voutcher-right text-center border-left\" type=\"button\" onClick = bookNow('$id')	>
@@ -135,20 +136,18 @@ if ($result->num_rows > 0) {
 
     }
 } 
-
-
-
+// End Query
 
 
 // Booking count
 $sql_badge = "SELECT COUNT(*) as c FROM booking";
- $result_badge = $conn->query($sql_badge);
+$result_badge = $conn->query($sql_badge);
 
 $result_badge_count = '';
 if ($result_badge->num_rows > 0) {
     while($row = $result_badge->fetch_assoc()) {
 
-       $result_badge_count .=  $row['c'];
+     $result_badge_count .=  $row['c'];
 
     }
 } 
@@ -276,29 +275,4 @@ if ($result_invoice->num_rows > 0) {
     }
 } 
 
-
-
-
-
-
-
-
-
-
-
-
-// // Close connection
-// $conn->close();
-
-/**************** Procedural Style ****************/
-// $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// // Check connection
-// if (!$conn) {
-//     die("Connection failed: " . mysqli_connect_error());
-// }
-// echo "Connected successfully (Procedural style)";
-
-// // Close connection
-// mysqli_close($conn);
 ?>

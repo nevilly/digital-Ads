@@ -94,6 +94,11 @@
             margin: 15px 0;
             line-height: 1.5;
         }
+
+
+          .card-n { transition: transform 0.2s; }
+        .card-n:hover { transform: translateY(-5px); }
+        .loader { display: none; }
    
     </style>
 </head>

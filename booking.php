@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Bootstrap Template</title>
+    <title>MwanaAds</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -115,7 +115,7 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark clipped-header">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-rocket me-2"></i>TechVision</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-rocket me-2"></i>MwanaAds</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -125,10 +125,13 @@
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Download</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.php">Booking</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -140,9 +143,9 @@
                             <i class="bi bi-cart3 fs-5"></i>
                             <span class="badge bg-warning text-dark"><?=$result_badge_count; ?></span>
                         </a>
-                        <a href="#" class="text-white cart-icon">
+              <!--           <a href="#" class="text-white cart-icon">
                             <i class="bi bi-person-circle fs-5"></i>
-                        </a>
+                        </a> -->
                     </div></a>
                     </li>
 
