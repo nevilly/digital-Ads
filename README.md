@@ -104,34 +104,23 @@ Break down of Technology Stack on this project.
 
        
 
- 
-## API-Intergration
-1. Purpose:  API can  manage user accounts, Process payments.
-2. Authentication: it use  API keys, OAuth 2.0, JWT tokens.
-3. Base URL: Provide the root endpoint http://localhost/admin/.
-
- 
 
 
-## 🔒 Security
-
-1. HTTPS is mandatory.
-
-2. Passwords are hashed before storage.
-----------------------------
->> Thank you
-----------------------------
-
-
+## Home
 ![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
 
 
+## Home
 
 ![Shshot](https://github.com/user-attachments/assets/92a52109-fa7b-4c32-a6c7-fe40c98d228c)
 
-
-![InvoicePrint](https://github.com/user-attachments/assets/57b54091-10da-44a0-b54c-9f5347829060)
+## Cashout
 ![checjOut](https://github.com/user-attachments/assets/da28650e-97ef-4709-ad62-67b0fa740038)
+
+
+## Invoice
+![InvoicePrint](https://github.com/user-attachments/assets/57b54091-10da-44a0-b54c-9f5347829060)
+
 
 
 
