@@ -39,75 +39,6 @@
 
 ---
 
-### 📄 **Digital Ads Rate Card Viewer**  
-- Integrated an interactive **PDF viewer** for displaying rate cards.  
-- Designed a clean, user-friendly interface with zoom, download, and page navigation controls.  
-- Ensured mobile responsiveness for seamless viewing across devices.
-
----
-
-
-
-## Table of Contents
-- [Prerequisites](#Prerequisites)
-- [Download](#Download)
-- [Setup](#Setup)
-  - [API](#API)
-  - [VirtualHost](#VirtualHost)
-  - [Database](#Database)
-- [Authentification](#Authentification)
-- [Usage](#Usage)
-- [Technical-Documentation](#Technical-Documentation)
-- [API-Intergration](#API-Intergration)
-- [Security](#Security)
-- [License](#license)
-
-
-## Prerequisites
-- Xampp 
-- Windows, macOS, or Linux operating system
-
-
-## Download
-
-To use the Digital-ads website, follow these steps:
-
-1. Download and install the latest release XAMPP. https://www.apachefriends.org/fr/download.html
- 
-2. Clone the repo: git clone https://github.com/nevilly/digital-Ads.git
- 
-
-
-## Setup
-
-Setup to use the Digital-ads website, follow these steps:
-
-
-
-
-## Database
-
-- Create Database by the name "project" in Mysql.
-- Get in documentation file 
-- Grab project.sql file and import to Mysql database digitalads.
-
-
-
-## Technical-Documentation
-  
-Break down of Technology Stack on this project.
-
-1. Frontend: HTML5 + Bootstrap 5 + JS.
-2. Backend: PHP + AJAX.
-3. Database: Mysql / Localhost.
-4. Version Control: Git.
-
-       
-
-
-
-
-
 
 
 # 📥 Install GitHub Repository to XAMPP `htdocs` 🔧
@@ -178,6 +109,22 @@ http://localhost/digital/index.php
 
 ## Invoice
 ![InvoicePrint](https://github.com/user-attachments/assets/57b54091-10da-44a0-b54c-9f5347829060)
+
+
+
+## Technical-Documentation
+  
+Break down of Technology Stack on this project.
+
+1. Frontend: HTML5 + Bootstrap 5 + JS.
+2. Backend: PHP + AJAX.
+3. Database: Mysql / Localhost.
+4. Version Control: Git.
+
+       
+
+
+
 
 
 
