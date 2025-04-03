@@ -193,7 +193,7 @@ if ($result_book->num_rows > 0) {
 
                                   
                                
-                                 <div class=\"cart_item_image\"><img src=\"https://thetownofcicero.com/wp-content/uploads/2020/11/600x600.png\" ></div>
+                                 <div class=\"cart_item_image\"><img  src=\"https://thetownofcicero.com/wp-content/uploads/2020/11/600x600.png\" style = \"width:150px\" ></div>
 
 
                                  <div class=\"cart_item_info d-flex flex-md-row flex-column justify-content-between\">
@@ -209,10 +209,7 @@ if ($result_book->num_rows > 0) {
                                          <div class=\"cart_item_title\">Size</div>
                                          <div class=\"cart_item_text\">$size</div>
                                      </div>
-                                     <div class=\"cart_item_price cart_info_col\">
-                                         <div class=\"cart_item_title\">Categery</div>
-                                         <div class=\"cart_item_text\">$category</div>
-                                     </div>
+                                     
                                      <div class=\"cart_item_total cart_info_col\">
                                          <div class=\"cart_item_title\">Total</div>
                                          <div class=\"cart_item_text\">$price</div>

@@ -8,6 +8,7 @@ $products = [
     ['id' => 2, 'name' => 'Mwananchi', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
     ['id' => 8, 'name' => 'MwanaSpoti', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
     ['id' => 7, 'name' => 'Citizen', 'size' => 'small', 'position' => 'Special', 'price' => 1000000],
+    ['id' => 4, 'name' => 'The citizen', 'size' => 'small', 'position' => 'Special', 'price' => 50],
 ];
 
 // Initialize filtered products
@@ -59,15 +60,16 @@ if (isset($_GET['ajax'])) {
         echo '';
     } else {
         foreach ($filteredProducts as $product) {
-            echo '<div class="card mb-3">';
+            echo '<div class="card mb-6">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">' . htmlspecialchars($product['name']) . '</h5>';
             echo '<p class="card-title"> Adv on ' . htmlspecialchars($product['name']) . '</p>';
             echo '<div class="row">';
-            echo '<div class="col">Size: <span class="badge bg-primary">' . htmlspecialchars($product['size']) . '</span></div>';
-            echo '<div class="col">Position: <span class="badge bg-secondary">' . htmlspecialchars($product['position']) . '</span></div>';
+            echo '<div class="col"> <span class="badge bg-primary">' . htmlspecialchars($product['size']) . '</span></div>';
+            echo '<div class="col"> <span class="badge bg-secondary">' . htmlspecialchars($product['position']) . '</span></div>';
             echo '<div class="col"><span class="badge bg-success">$' . htmlspecialchars($product['price']) . '</span></div>';
-            echo '</div>    <div class=\"voutcher-right text-center border-left\" type=\"button\" onClick = bookNow('.$product['id'].')  >
+
+            echo '</div>    <div class=\"voutcher-right text-center border-left\" type=\"button\" onClick = bookNow('.$product['id'].')  style:\"background-color:blue\">
                                     <h5 class=\"discount-percent\">Book</h5>
                                     <span class=\"off\">Now</span>
                                     
@@ -175,29 +177,27 @@ if (isset($_GET['ajax'])) {
         </form>
 
         <!-- Results Container -->
-        <div id="results">
+        <div id="results" class ="row" >
             <?php if (empty($filteredProducts)): ?>
                 <div class="alert alert-warning">No products found</div>
             <?php else: ?>
-                <div class ="row">
-                    <div class = "col">
+                <div class ="row col-md-3">
+                
                 <?php foreach ($filteredProducts as $product): ?>
-                    <div class="card mb-3" style="display: none">
+                    <div class="card mb-6" wdith= "3" style="display: none">
                         <div class="card-body">
                             <h5 class="card-title"><?= htmlspecialchars($product['name']) ?></h5>
-                            <div class="row">
+                            <div class="row col-md-3">
                                 <div class="col">
                                     <span class="badge bg-primary"><?= htmlspecialchars($product['size']) ?></span>
                                 </div>
                                 <div class="col">
                                     <span class="badge bg-secondary"><?= htmlspecialchars($product['position']) ?></span>
                                 </div>
-                                <div class="col">
-                                    <span class="badge bg-success">$<?= htmlspecialchars($product['price']) ?></span>
-                                </div>
+                           
                             </div>
                         </div>
-                    </div>
+                    
                 <?php endforeach; ?>
             </div>
             <?php endif; ?>
