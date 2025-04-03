@@ -69,7 +69,7 @@ if (isset($_GET['ajax'])) {
             echo '<div class="col"> <span class="badge bg-secondary">' . htmlspecialchars($product['position']) . '</span></div>';
             echo '<div class="col"><span class="badge bg-success">' . htmlspecialchars($product['price']) . '</span></div>';
             echo '</div>    </div>
-             <div class=\"col text-center \" style="background:linear-gradient(45deg, #9D50BB, #6E48AA); border-radius:24px 24px 0px 0px; cursor:pointer;" type=\"button\" id="\btnT\" onClick = bookNow('.$product['id'].')  >
+             <div class=\"col text-center \" style="background:purple; border-radius:24px 24px 0px 0px; cursor:pointer;" type=\"button\" id="\btnT\" onClick = bookNow('.$product['id'].')  >
                                     <h5 class=\"text-center\" style="margin-left:40%; color:white;padding-top:10px;">Book</h5>
                                   
                                     
