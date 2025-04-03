@@ -157,7 +157,7 @@ if ($result_badge->num_rows > 0) {
 
 
 // Example query
-$sql_book = "SELECT * FROM booking LEFT JOIN news ON booking.ads_id = news.id";
+$sql_book = "SELECT b.*, b.id AS bid, n.* FROM booking AS b LEFT JOIN news AS n ON b.ads_id = n.id";
 $result_book = $conn->query($sql_book);
 
 
@@ -168,6 +168,7 @@ if ($result_book->num_rows > 0) {
 
     	 $id =  $row['id'];
     	 $brandName =  $row['brand'];
+         $bid =  $row['bid'];
     	 $ads_id =  $row['ads_id'];
     	 $ad_type =  $row['ad_type'];
     	 $img =  $row['img'];
@@ -215,6 +216,11 @@ if ($result_book->num_rows > 0) {
                                      <div class=\"cart_item_total cart_info_col\">
                                          <div class=\"cart_item_title\">Total</div>
                                          <div class=\"cart_item_text\">$price</div>
+                                     </div>
+
+                                     <div class=\"cart_item_total cart_info_col\" onClick = deleteBook('$bid'); style = \"cursor: pointer;\">
+                                         <div class=\"cart_item_title\">Remove</div>
+                                         <div class=\"cart_item_text\">X</div>
                                      </div>
                                  </div>
                             </li>

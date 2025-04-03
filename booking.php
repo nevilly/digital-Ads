@@ -264,5 +264,40 @@
 
 
 
+<script>
+// JavaScript Part
+    function deleteBook(id) {
+      // Collect form data
+      const deleteData = {
+        id: id
+      };
+
+
+
+      //Send data to server
+      fetch('delete.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(deleteData),
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log(data);
+        // Reload window after successful submission
+        window.location.reload();
+        //showSmoothAlert('Action completed successfully!');
+
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    }
+</script>
+
+
+
+
 
 
