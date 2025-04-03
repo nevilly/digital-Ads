@@ -9,6 +9,8 @@ $products = [
     ['id' => 8, 'name' => 'MwanaSpoti', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
     ['id' => 7, 'name' => 'Citizen', 'size' => 'small', 'position' => 'Special', 'price' => 1000000],
     ['id' => 4, 'name' => 'The citizen', 'size' => 'small', 'position' => 'Special', 'price' => 50],
+    ['id' => 10, 'name' => 'Facebook', 'size' => 'medium', 'position' => 'Font', 'price' => 1],
+    ['id' => 11, 'name' => 'Instagram', 'size' => 'medium', 'position' => 'Font', 'price' => 211385],
 ];
 
 // Initialize filtered products
@@ -71,9 +73,7 @@ if (isset($_GET['ajax'])) {
             echo '</div>    </div>
              <div class=\"col text-center \" style="background:purple; border-radius:24px 24px 0px 0px; cursor:pointer;" type=\"button\" id="\btnT\" onClick = bookNow('.$product['id'].')  >
                                     <h5 class=\"text-center\" style="margin-left:40%; color:white;padding-top:10px;">Book</h5>
-                                  
-                                    
-                                </div>
+                                  </div>
 
             </div>';
         }
@@ -138,7 +138,7 @@ if (isset($_GET['ajax'])) {
         <form id="searchForm" method="GET" class="mb-4 bg-light p-4 rounded-3 shadow-sm">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <input type="text" class="form-control" name="search" placeholder="Search products..."
+                    <input type="text" class="form-control" name="search" placeholder="Search Brand Eg Mwananchi..."
                            value="<?= htmlspecialchars($_GET['search'] ?? '') ?>">
                 </div>
                 
@@ -156,7 +156,7 @@ if (isset($_GET['ajax'])) {
                         <option value="">All Positions</option>
                         <option value="Normal" <?= ($_GET['position'] ?? '') === 'Normal' ? 'selected' : '' ?>>Normal</option>
                         <option value="Special" <?= ($_GET['position'] ?? '') === 'Special' ? 'selected' : '' ?>>Special</option>
-                        <option value="showroom" <?= ($_GET['position'] ?? '') === 'showroom' ? 'selected' : '' ?>>Showroom</option>
+                        <option value="Font" <?= ($_GET['position'] ?? '') === 'Font' ? 'selected' : '' ?>>Font</option>
                     </select>
                 </div>
                 

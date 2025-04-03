@@ -63,16 +63,18 @@ if ($conn->query($sql) === TRUE) {
 
 
 // Insert dummy news
-$sql = "INSERT INTO `news` (`id`, `brand`, `ad_type`, `img`, `size`, `position`, `appearence`, `price`, `ad_unit`, `cashType`, `category`, `placement_type`, `createDate`) VALUES
-(1, 'Mwananchi', '', '', 'Full Page', 'Normal', 'B/white', '2,400,000', '', 'Tsh', 'news', '', '0000-00-00 00:00:00'),
-(2, 'Mwananchi', '', '', 'Full Page', 'Normal', 'F/color', '3,700,000', '', 'Tsh', 'news', '', '0000-00-00 00:00:00'),
-(3, 'Mwananchi', '', '', 'Half Page', 'Normal', 'B/White', '1,3000,000', '', 'Tsh', 'news', '', '2025-03-29 16:15:59'),
-(4, 'Mwananchi', '', '', 'Half Page', 'Normal', 'F/Color', '2,070,000', '', 'Tsh', 'news', '', '2025-03-29 16:15:59'),
-(5, 'Mwananchi', '', '', 'Front Strip', 'Special', 'F/color', '1,500,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
-(6, 'Citien', '', '', 'One Eight', 'Normal', 'F/color', '500,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
-(7, 'Citizen', '', '', 'Front-strip', 'Special', 'F/color', '1,000,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
-(8, 'Spoti', '', '', 'Full Page', 'Normal', 'F/color', '2,400,000', '', 'Tsh', 'news', '', '2025-03-29 16:22:51'),
-(9, 'MwanaSpoti', '', '', 'Column Depth 33cm', 'Dimensions', '', '', '', '', 'news', '', '0000-00-00 00:00:00')";
+$sql = "INSERT INTO `news` (`id`, `brand`, `ad_type`, `ad_unit`, `img`, `size`, `position`, `appearence`, `price`, `cashType`, `category`, `placement_type`, `createDate`) VALUES
+(1, 'Mwananchi', '', '', '', 'Full Page', 'Normal', 'B/white', '2,400,000', 'Tsh', 'news', '', '0000-00-00 00:00:00'),
+(2, 'Mwananchi', '', '', '', 'Full Page', 'Normal', 'F/color', '3,700,000', 'Tsh', 'news', '', '0000-00-00 00:00:00'),
+(3, 'Mwananchi', '', '', '', 'Half Page', 'Normal', 'B/White', '1,3000,000', 'Tsh', 'news', '', '2025-03-29 13:15:59'),
+(4, 'Mwananchi', '', '', '', 'Half Page', 'Normal', 'F/Color', '2,070,000', 'Tsh', 'news', '', '2025-03-29 13:15:59'),
+(5, 'Mwananchi', '', '', '', 'Front Strip', 'Special', 'F/color', '1,500,000', 'Tsh', 'news', '', '2025-03-29 13:22:51'),
+(6, 'Citien', '', '', '', 'One Eight', 'Normal', 'F/color', '500,000', 'Tsh', 'news', '', '2025-03-29 13:22:51'),
+(7, 'Citizen', '', '', '', 'Front-strip', 'Special', 'F/color', '1,000,000', 'Tsh', 'news', '', '2025-03-29 13:22:51'),
+(8, 'Spoti', '', '', '', 'Full Page', 'Normal', 'F/color', '2,400,000', 'Tsh', 'news', '', '2025-03-29 13:22:51'),
+(9, 'MwanaSpoti', '', '', '', 'Column Depth 33cm', 'Dimensions', '', '', '', 'news', '', '0000-00-00 00:00:00'),
+(10, 'Facebook', 'social Media', NULL, NULL, 'font page', '', '', '211385', 'Tsh', '', '', '2025-04-03 08:57:37'),
+(11, 'Instagram', 'social Media', NULL, NULL, 'font page', 'middle', '', '50000', 'Tsh', '', '', '2025-04-03 09:00:20')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Dummy news inserted successfully\n <br />";
