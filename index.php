@@ -60,18 +60,17 @@ if (isset($_GET['ajax'])) {
         echo '';
     } else {
         foreach ($filteredProducts as $product) {
-            echo '<div class="card mb-6">';
+            echo '<div class="card mb-3">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">' . htmlspecialchars($product['name']) . '</h5>';
             echo '<p class="card-title"> Adv on ' . htmlspecialchars($product['name']) . '</p>';
             echo '<div class="row">';
             echo '<div class="col"> <span class="badge bg-primary">' . htmlspecialchars($product['size']) . '</span></div>';
             echo '<div class="col"> <span class="badge bg-secondary">' . htmlspecialchars($product['position']) . '</span></div>';
-            echo '<div class="col"><span class="badge bg-success">$' . htmlspecialchars($product['price']) . '</span></div>';
-
-            echo '</div>    <div class=\"voutcher-right text-center border-left\" type=\"button\" onClick = bookNow('.$product['id'].')  style:\"background-color:blue\">
-                                    <h5 class=\"discount-percent\">Book</h5>
-                                    <span class=\"off\">Now</span>
+            echo '<div class="col"><span class="badge bg-success">' . htmlspecialchars($product['price']) . '</span></div>';
+            echo '</div>    <div class=\"col style = \"margin-bottom:5%;\" text-center \"style="background-color:red;" type=\"button\" id="\btnT\" onClick = bookNow('.$product['id'].')  >
+                                    <h5 class=\"\">Book</h5>
+                                  
                                     
                                 </div></div></div>';
         }
@@ -94,18 +93,12 @@ if (isset($_GET['ajax'])) {
                     <li class="nav-item">
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Download.php">Downloads</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
+                   
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="booking.php">Booking</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">  <!-- Icons -->
                     <div class="d-flex gap-3">
@@ -182,12 +175,12 @@ if (isset($_GET['ajax'])) {
                 <div class="alert alert-warning">No products found</div>
             <?php else: ?>
                 <div class ="row col-md-3">
-                
+                    <div class = "col col-md-3">
                 <?php foreach ($filteredProducts as $product): ?>
                     <div class="card mb-6" wdith= "3" style="display: none">
                         <div class="card-body">
                             <h5 class="card-title"><?= htmlspecialchars($product['name']) ?></h5>
-                            <div class="row col-md-3">
+                            <div class="row col-md-12">
                                 <div class="col">
                                     <span class="badge bg-primary"><?= htmlspecialchars($product['size']) ?></span>
                                 </div>
@@ -197,7 +190,7 @@ if (isset($_GET['ajax'])) {
                            
                             </div>
                         </div>
-                    
+                    </div>
                 <?php endforeach; ?>
             </div>
             <?php endif; ?>

@@ -51,18 +51,12 @@ include_once('db.php');
                     <li class="nav-item">
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Download.php">Downloads</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
+                   
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="booking.php">Booking</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">  <!-- Icons -->
                     <div class="d-flex gap-3">

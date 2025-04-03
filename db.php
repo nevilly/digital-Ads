@@ -35,6 +35,8 @@ if ($result->num_rows > 0) {
     	 $cashType =  $row['cashType'];
     	 $category =  $row['category'];
     	 $placement_type =  $row['placement_type'];
+        
+
         $news  .= 	"<div class=\"col-md-3 col-6 col-sm-2\" style = 'margin-bottom:5%;'>
 
     				<div class=\"card\">
