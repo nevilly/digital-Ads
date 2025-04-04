@@ -96,7 +96,7 @@ http://localhost/digital/index.php
 
 ## Demo Screenshot 📸  
 
-## Home
+## Home (search & Filters)
 
 ![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
 
