@@ -73,11 +73,22 @@ git clone  https://github.com/nevilly/digital-Ads.git
 XAMPP Control Panel
 
 
+### 3. Create Dir 🌍
+Create dir in htdocs named digital 
+```bash
+http://localhost/digital  
+```
 
-### 5. Set up Database 🌍
-Open your browser and go to
+### 4. Set up Database 🌍
+Open your browser and go to link
 ```bash
 http://localhost/digital/install.php  
+```
+
+### 5. Access Your Project 🌍
+Open your browser and go to
+```bash
+http://localhost/digital/index.php  
 ```
 
 ### 5. Access Your Project 🌍
@@ -89,9 +100,11 @@ http://localhost/digital/index.php
 
 
 
+
 ## Demo Screenshot 📸  
 
 ## Home
+
 ![SharedScreenshot](https://github.com/user-attachments/assets/7b204b86-c41c-4540-a7c5-92c5148e2850)
 
 
@@ -100,8 +113,12 @@ http://localhost/digital/index.php
 ![Shshot](https://github.com/user-attachments/assets/92a52109-fa7b-4c32-a6c7-fe40c98d228c)
 
 
+
 ## Booking Sysem
+
 ![bookiingPage](https://github.com/user-attachments/assets/21676f8c-7170-40a4-b72c-e96d208b3c94)
+
+
 
 ## Cashout
 ![checjOut](https://github.com/user-attachments/assets/da28650e-97ef-4709-ad62-67b0fa740038)
@@ -122,15 +139,6 @@ Break down of Technology Stack on this project.
 4. Version Control: Git.
 
        
-
-<<<<<<< HEAD
- 
-=======
-
-
-
-
->>>>>>> 3067bcb5217083d467543e8852549ea25942c057
 
 
 
