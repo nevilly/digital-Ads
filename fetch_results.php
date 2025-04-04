@@ -48,8 +48,8 @@ if ($result->num_rows > 0) {
     
     while ($row = $result->fetch_assoc()) {
         echo '
-        <div class="col-md-4 mb-4">
-            <div class="card">
+        <div class="col col-md-4 mb-4 ">
+            <div class="card w-100">
                 <div class="card-body">
                     <h5 class="card-title">'.htmlspecialchars($row['brand']).'</h5>
                     <p class="card-text">Category: '.htmlspecialchars($row['category']).'</p>
@@ -68,9 +68,7 @@ if ($result->num_rows > 0) {
 
 
 
-} else {
-    echo '<div class="alert alert-warning">No results found.</div>';
-}
+} #
 
 $stmt->close();
 $conn->close();

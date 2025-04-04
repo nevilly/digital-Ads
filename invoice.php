@@ -94,18 +94,7 @@
             <tbody>
                 
                 <?= $invoice; ?>
-                <tr>
-                    <td>Name</td>
-                    <td>Color</td>
-                    <td>Position</td>
-                    <td>Price</td>
-                </tr>
-                <tr>
-                    <td>SEO Package</td>
-                    <td>1</td>
-                    <td>$500.00</td>
-                    <td>$500.00</td>
-                </tr>
+               
             </tbody>
         </table>
 

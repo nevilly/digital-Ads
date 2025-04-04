@@ -46,12 +46,12 @@
 
    
     <div class="container mt-5">
-        <h2>Ads Finder</h2>
+        <h1 class="mb-4 text-center">Ads Finder</h1>
         
         <!-- Search and Filters -->
         <div class="row mb-4">
             <div class="col-md-12">
-                <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search... Eg: Mwananchi">
             </div>
             <div class="col-md-3 mt-3">
                 <select class="form-select" id="priceFilter">
@@ -81,7 +81,7 @@
 
         <!-- Results Container -->
         <div class="row mt-5" >
-              <div class=" col col-md-3 mt-3 w-100" id="resultsContainer">
+              <div class=" row  w-100" id="resultsContainer">
 
         </div>
         </div>
