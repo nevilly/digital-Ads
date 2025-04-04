@@ -61,7 +61,7 @@ A step-by-step guide to clone and run a GitHub repository in **XAMPP** for local
 cd /opt/lampp/htdocs          # Linux/macOS
 cd C:\xampp\htdocs            # Windows 🖥️
 
-# Clone your GitHub repo (replace with your URL)
+# Clone  GitHub repo 
 git clone  https://github.com/nevilly/digital-Ads.git
 
 ```
