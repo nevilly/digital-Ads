@@ -4,7 +4,7 @@
 
 1. User Interface & Navigation
 
-   - simple platform, intuitive, and easy to navigate.       ✔️✔️
+   - simple platform, intuitive,and easy to navigate.       ✔️✔️
    - search and filter ad slots, position, size, and price.  ✔️✔️
    - Avoid directly copying example—creativity is encouraged.✔️✔️
 
