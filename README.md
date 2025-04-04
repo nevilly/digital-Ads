@@ -69,7 +69,7 @@ git clone  https://github.com/nevilly/digital-Ads.git
    
   1. Open the XAMPP Control Panel.
 
-  2. Start Apache (🌐 Web Server) and MySQL (🗃️ Database if needed).
+  2. Start Apache (🌐 Web Server) and MySQL .
 XAMPP Control Panel
 
 
