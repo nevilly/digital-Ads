@@ -1,85 +1,9 @@
 
 <?php 
-include_once('db.php');
-include_once('head.php');
-
-$products = [
-    ['id' => 1, 'name' => 'Citizen', 'size' => 'One Eight', 'position' => 'Normal', 'price' => 500000],
-    ['id' => 2, 'name' => 'Mwananchi', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
-    ['id' => 8, 'name' => 'MwanaSpoti', 'size' => 'Full Page', 'position' => 'Normal', 'price' => 2400000],
-    ['id' => 7, 'name' => 'Citizen', 'size' => 'small', 'position' => 'Special', 'price' => 1000000],
-    ['id' => 4, 'name' => 'The citizen', 'size' => 'small', 'position' => 'Special', 'price' => 50],
-    ['id' => 10, 'name' => 'Facebook', 'size' => 'medium', 'position' => 'Font', 'price' => 1],
-    ['id' => 11, 'name' => 'Instagram', 'size' => 'medium', 'position' => 'Font', 'price' => 211385],
-];
-
-// Initialize filtered products
-$filteredProducts = $products;
-
-// Filter functions
-if (!empty($_GET['search'])) {
-    $search = strtolower($_GET['search']);
-    $filteredProducts = array_filter($filteredProducts, function($product) use ($search) {
-        return strpos(strtolower($product['name']), $search) !== false;
-    });
-}
-
-if (!empty($_GET['size'])) {
-    $size = $_GET['size'];
-    $filteredProducts = array_filter($filteredProducts, function($product) use ($size) {
-        return $product['size'] === $size;
-    });
-}
-
-if (!empty($_GET['position'])) {
-    $position = $_GET['position'];
-    $filteredProducts = array_filter($filteredProducts, function($product) use ($position) {
-        return $product['position'] === $position;
-    });
-}
-
-$minPrice = isset($_GET['min_price']) ? (float)$_GET['min_price'] : null;
-$maxPrice = isset($_GET['max_price']) ? (float)$_GET['max_price'] : null;
-
-$filteredProducts = array_filter($filteredProducts, function($product) use ($minPrice, $maxPrice) {
-    
-    //echo var_dump($product['price']);
-
-    $price =  400 ;
-   
-
-    return (($minPrice === null || $price >= $minPrice) && 
-            ($maxPrice === null || $price <= $maxPrice));
-});
-
-// Reset array keys
-$filteredProducts = array_values($filteredProducts);
+    include_once('db.php');
+    include_once('head.php');
 
 
-// AJAX response
-if (isset($_GET['ajax'])) {
-    if (empty($filteredProducts)) {
-        echo '';
-    } else {
-        foreach ($filteredProducts as $product) {
-            echo '<div class="card mb-3">';
-            echo '<div class="card-body">';
-            echo '<h5 class="card-title">' . htmlspecialchars($product['name']) . '</h5>';
-            echo '<p class="card-title"> Adv on ' . htmlspecialchars($product['name']) . '</p>';
-            echo '<div class="row">';
-            echo '<div class="col"> <span class="badge bg-primary">' . htmlspecialchars($product['size']) . '</span></div>';
-            echo '<div class="col"> <span class="badge bg-secondary">' . htmlspecialchars($product['position']) . '</span></div>';
-            echo '<div class="col"><span class="badge bg-success">' . htmlspecialchars($product['price']) . '</span></div>';
-            echo '</div>    </div>
-             <div class=\"col text-center \" style="background:purple; border-radius:24px 24px 0px 0px; cursor:pointer;" type=\"button\" id="\btnT\" onClick = bookNow('.$product['id'].')  >
-                                    <h5 class=\"text-center\" style="margin-left:40%; color:white;padding-top:10px;">Book</h5>
-                                  </div>
-
-            </div>';
-        }
-    }
-    exit;
-}
 ?>
 
 
@@ -120,21 +44,57 @@ if (isset($_GET['ajax'])) {
         </div>
     </nav>
 
-    <!-- Hero Section -->
-  <!--   <div class="container">
-        <div class="hero-content">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bold mb-4">Transform Your Digital Experience</h1>
-                <p class="lead mb-4">Innovative solutions for modern businesses</p>
-                <button class="btn btn-custom">Start Free Trial</button>
+   
+    <div class="container mt-5">
+        <h2>Ads Finder</h2>
+        
+        <!-- Search and Filters -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+            </div>
+            <div class="col-md-3 mt-3">
+                <select class="form-select" id="priceFilter">
+                    <option value="">Price Range</option>
+                    <option value="0-50">0 Tsh - 50 Tsh</option>
+                    <option value="51-100">$51 - $100</option>
+                    <option value="101-200">$101 - $200</option>
+                </select>
+            </div>
+            <div class="col-md-3 mt-3">
+                <select class="form-select" id="sizeFilter">
+                    <option value="">Position Size</option>
+                    <option value="One Eight">One Eight</option>
+                    <option value="Front Strip">Front Strip</option>
+                    <option value="Half Page">Half Page</option>
+                    <option value="Column Depth 33cm">Column Depth 33cm</option>
+                </select>
+            </div>
+            <div class="col-md-3 mt-3">
+                <select class="form-select" id="categoryFilter">
+                    <option value="">Category</option>
+                    <option value="card rate">card rate</option>
+                    <option value="news">News</option>
+                </select>
             </div>
         </div>
-    </div> -->
 
-     <div class="container py-5">
+        <!-- Results Container -->
+        <div class="row mt-5" >
+              <div class=" col col-md-3 mt-3 w-100" id="resultsContainer">
+
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+<!--     <div class="container py-5">
         <h1 class="mb-4 text-center">Ads Finder</h1>
         
-        <!-- Search Form -->
+        <!-- Search Form --
         <form id="searchForm" method="GET" class="mb-4 bg-light p-4 rounded-3 shadow-sm">
             <div class="row g-3">
                 <div class="col-md-12">
@@ -172,7 +132,7 @@ if (isset($_GET['ajax'])) {
             </div>
         </form>
 
-        <!-- Results Container -->
+        <!-- Results Container --
         <div id="results" class ="row" >
             <?php if (empty($filteredProducts)): ?>
                 <div class="alert alert-warning">No products found</div>
@@ -199,33 +159,96 @@ if (isset($_GET['ajax'])) {
             <?php endif; ?>
         </div>
 
-        <!-- Loader -->
+        <!-- Loader --
         <div id="loader" class="loader text-center">
             <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
     </div>
-
+ -->
 
     <div class="container mt-5">
         <div class ="ju">
-<h1 class="mb-4 text-center ">advertisement Rate</h1>
-</div>
+            <h1 class="mb-4 text-left display-6 ">advertisement Rate</h1>
+        </div>
 
-    	<div class="row">
-
-
-    	<?= $news; ?>
-    		
-
+    	<div class="row  justify-content-center " >
+    	   <?= $news; ?>
     	</div>
-
     </div>
 
     
 
-  <div class="overlay" id="overlay" style="display: none"></div>
+ 
+    
+
+
+
+    <div class="container content-section py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 w-100" >
+                <h3 class="text-left mb-4 display-6 fw-bold ">MwanaAds Digital Advertise</h3>
+                
+                <div class="paragraph-group">
+                    <p class="lead mb-4 fs-5">
+                        MwanaAds  advertising encompasses marketing strategies that leverage online channels to promote 
+                        products, services, and brands. Through targeted approaches using social media, search engines, 
+                        and websites, businesses can reach specific audiences with precision and efficiency.
+                    </p>
+                    
+                    <p class="mb-4 fs-5">
+                        Modern digital advertising offers real-time analytics and performance tracking, enabling marketers 
+                        to optimize campaigns dynamically. Platforms like Google Ads and Facebook Ads provide sophisticated 
+                        targeting options based on demographics, interests, and user behavior.
+                    </p>
+                    
+                    <p class="mb-0 fs-5">
+                        The evolution of mobile technology and AI-driven personalization has transformed digital advertising, 
+                        allowing for hyper-personalized content delivery. Emerging trends like video marketing and influencer 
+                        partnerships continue to reshape the digital advertising landscape.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="container py-5">
+        <div class="row justify-content-center g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="custom-card card shadow p-4">
+                  
+                        <img src = "https://cdn.landesa.org/wp-content/uploads/Mwananchi-logo.jpg" style="width: 200px;">
+                    
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="custom-card card shadow p-4">
+                
+
+                     <img src = "https://1000logos.net/wp-content/uploads/2023/07/Citizen-logo.jpg" style="width: 200px; padding-top:35px;">
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="custom-card card shadow p-4">
+                
+
+                     <img src = "https://live.staticflickr.com/6059/5914426481_747a3e81db_b.jpg" style="width: 200px; padding-top:35px;">
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+    
+    <div class="overlay" id="overlay" style="display: none"></div>
+
     <div class="custom-alert" id="customAlert">
         <div class="alert-content">
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
@@ -237,47 +260,129 @@ if (isset($_GET['ajax'])) {
         </div>
     </div>
 
-   
+      <footer class="gradient-footer pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <h4 class="footer-heading">About Us</h4>
+                    <p>We transform digital experiences through innovative solutions and creative thinking.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            123 Tb Street, Dar
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            +255
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            emwansasu@gmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-3">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <button class="btn btn-light" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row pt-5 pb-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 Nehemia David. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
 </body>
 </html>
 
-
+    
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+ <script>
     $(document).ready(function() {
-        const loadResults = () => {
-            $('#loader').show();
+        // Function to load filtered results
+        function loadResults() {
+            const search = $('#searchInput').val();
+            const price = $('#priceFilter').val();
+            const size = $('#sizeFilter').val();
+            const category = $('#categoryFilter').val();
+
             $.ajax({
-                url: window.location.pathname + '?ajax=1',
-                data: $('#searchForm').serialize(),
-                success: (response) => {
-                    $('#results').html(response);
-                    $('#loader').hide();
+                url: 'fetch_results.php',
+                type: 'GET',
+                data: {
+                    search: search,
+                    price: price,
+                    size: size,
+                    category: category
                 },
-                error: () => {
-                    $('#results').html('<div class="alert alert-danger">Error loading results</div>');
-                    $('#loader').hide();
+                success: function(response) {
+                    $('#resultsContainer').html(response);
                 }
             });
-        };
+        }
+
+        // Event listeners for filters
+        $('#searchInput, #priceFilter, #sizeFilter, #categoryFilter').on('input change', function() {
+            loadResults();
+        });
 
         // Initial load
         loadResults();
-
-        // Trigger search on any filter change
-        $('#searchForm input, #searchForm select').on('input change', function() {
-            history.replaceState(null, '', '?' + $('#searchForm').serialize());
-            loadResults();
-        });
     });
     </script>
-
-
 <!-- HTML Part -->
 
 

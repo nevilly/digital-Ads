@@ -37,9 +37,9 @@ if ($result->num_rows > 0) {
     	 $placement_type =  $row['placement_type'];
         
 
-        $news  .= 	"<div class=\"col-md-3 \" style = 'margin-bottom:5%;'>
+        $news  .= 	"<div class=\"col-md-3  col-lg-3\" style = 'margin-bottom:5%;'>
 
-    				<div class=\"card\">
+    				<div class=\"card w-100\">
 
     					<div class=\"image-container\">
 
@@ -107,7 +107,7 @@ if ($result->num_rows > 0) {
 
 
     				<div class=\"mt-3\">
-    					<div class=\"card voutchers\">
+    					<div class=\"card voutchers w-100\">
 
     						<div class=\"voutcher-divider\">
 

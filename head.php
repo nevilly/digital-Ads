@@ -25,6 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 
 
 
@@ -96,10 +97,74 @@
         }
 
 
-          .card-n { transition: transform 0.2s; }
+        .card-n { transition: transform 0.2s; }
         .card-n:hover { transform: translateY(-5px); }
         .loader { display: none; }
-   
+        
+        .content-section {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+        }
+
+        .custom-card {
+            width: 250px;
+            height: 250px;
+            border-radius: 24px;
+            transition: transform 0.3s ease;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+
+         .gradient-footer {
+                 background-color:rgb(0 0 0 / .2);
+           color: rgba(0, 0, 0, 0.8);
+            margin-top: 100px;
+        }
+        
+        .footer-link {
+            color: rgba(0, 0, 0, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: black;
+            transform: translateX(5px);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            color: black;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-heading:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.4);
+        }
     </style>
 </head>
 <body>
