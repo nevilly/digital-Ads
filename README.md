@@ -107,7 +107,7 @@ http://localhost/digital/index.php
 
 
 
-## Booking Sysem
+## Booking System
 
 ![bookiingPage](https://github.com/user-attachments/assets/21676f8c-7170-40a4-b72c-e96d208b3c94)
 
