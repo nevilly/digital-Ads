@@ -56,9 +56,9 @@
             <div class="col-md-3 mt-3">
                 <select class="form-select" id="priceFilter">
                     <option value="">Price Range</option>
-                    <option value="0-50">0 Tsh - 50 Tsh</option>
-                    <option value="51-100">$51 - $100</option>
-                    <option value="101-200">$101 - $200</option>
+                    <option value="0-50">1 Tsh - 100000 Tsh</option>
+                    <option value="100001-1000000">100001 Tsh - 1000000 Tsh</option>
+                    <option value="10000001-10000001">10000001 Tsh - 10000000 Tsh</option>
                 </select>
             </div>
             <div class="col-md-3 mt-3">
