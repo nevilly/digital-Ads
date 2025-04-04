@@ -91,13 +91,6 @@ Open your browser and go to
 http://localhost/digital/index.php  
 ```
 
-### 6. Access Your Project 🌍
-Open your browser and go to
-```bash
-http://localhost/digital/index.php  
-```
-
-
 
 
 
